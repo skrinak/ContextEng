@@ -15,7 +15,7 @@ Replace uppercase names with your specifics, i.e. YOUR_APP, DATA_SOURCE_1, etc
 ### 2. Platform Requirements
 - **React Web**: TypeScript, Redux Toolkit, RTK Query
 - **Deployment**: `cd platforms/web && ./deploy-alpha.sh`
-- **Alpha URL**: http://xact.ai.s3-website-us-west-2.amazonaws.com/alpha/
+- **Alpha URL**: http://your-public-s3-bucket/alpha/
 
 ### 3. Compliance Mandatory
 - **Every feature**: Include disclaimers ("Educational only, not advice")

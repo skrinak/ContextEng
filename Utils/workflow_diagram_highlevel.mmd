@@ -1,0 +1,35 @@
+%% High-Level AI-Assisted Development Workflow
+%% Narrative-style process flow from PRD to completion
+
+graph LR
+    %% Main workflow
+    start([🎯 Start:<br/>Project Concept]):::purple
+
+    prd["📋 PRD Development<br/><br/>The process begins with writing<br/>a well-articulated PRD using the<br/>PRD Development Prompt provided<br/>in this repo<br/><br/>Iterate over the prompt for several<br/>days, speaking with stakeholders<br/>and integrating knowledge of<br/>agentic AI software development<br/><br/>Output: PRD.md (finalized)"]:::blue
+
+    tasks["📝 Task Generation<br/><br/>Once the PRD.md is finalized, the<br/>development team and stakeholders<br/>use the Task List Generator.md to<br/>create a comprehensive task list<br/><br/>The task list is hierarchical with<br/>dependencies and parallel execution<br/>opportunities identified<br/><br/>Output: tasks.md"]:::violet
+
+    development["💻 Iterative Development<br/><br/>Now you're ready to develop code<br/><br/>Continually clear context in your AI<br/>development agent, then read the<br/>foundational documents (CLAUDE.md,<br/>README.md, .env) before iterating on<br/>each phase of the task list<br/><br/>Clear and refresh after each phase,<br/>though sometimes clearing should<br/>occur within a phase as needed<br/><br/>Output: Working code"]:::teal
+
+    completion["✅ Completion<br/><br/>Verify all tasks are completed,<br/>run comprehensive tests, and<br/>deploy the working solution to<br/>production<br/><br/>Final validation ensures the<br/>implementation matches the<br/>original PRD requirements<br/><br/>Output: Production release"]:::lightgreen
+
+    success([🎊 Success:<br/>Project Complete]):::green
+
+    %% Flow with descriptive labels
+    start ==>|Begin with<br/>requirements| prd
+    prd ==>|PRD finalized,<br/>generate tasks| tasks
+    tasks ==>|Tasks defined,<br/>start coding| development
+    development ==>|Code complete,<br/>verify & deploy| completion
+    completion ==>|Deployed| success
+
+    %% Memory Management note
+    memory["🧠 Memory Management Protocol<br/><br/>Context management is critical throughout development.<br/>Use /clear to reset context, /context to view current state,<br/>/compact to compress history, and /resume to continue work.<br/><br/>Refresh after each phase or when context exceeds 80% capacity.<br/>Strategic memory management provides 39% performance improvement."]:::memory
+
+    %% Styling
+    classDef purple fill:#A23B72,stroke:#A23B72,color:#fff,stroke-width:3px,font-size:12px
+    classDef blue fill:#2E86AB,stroke:#2E86AB,color:#fff,stroke-width:3px,font-size:10px,text-align:left
+    classDef violet fill:#7209B7,stroke:#7209B7,color:#fff,stroke-width:3px,font-size:10px,text-align:left
+    classDef teal fill:#06A77D,stroke:#06A77D,color:#fff,stroke-width:3px,font-size:10px,text-align:left
+    classDef lightgreen fill:#52B788,stroke:#52B788,color:#fff,stroke-width:3px,font-size:10px,text-align:left
+    classDef green fill:#6A994E,stroke:#6A994E,color:#fff,stroke-width:3px,font-size:12px
+    classDef memory fill:#FFF9E3,stroke:#A23B72,color:#333,stroke-width:2px,font-size:10px,text-align:left

@@ -2,13 +2,21 @@
   "permissions": {
     "allow": [
       "Bash",
-      "Read",
-      "Write",
+      "BashOutput", 
       "Edit",
-      "MultiEdit",
-      "Grep",
+      "ExitPlanMode", 
       "Glob",
-      "WebFetch"
+      "Grep",
+      "KillBash", 
+      "LS", 
+      "MultiEdit",
+      "NotebookEdit", 
+      "Read",
+      "Task", 
+      "TodoWrite", 
+      "WebFetch",
+      "Write"
     ]
   }
 }
+
