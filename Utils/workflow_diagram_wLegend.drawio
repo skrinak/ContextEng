@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="26.2.12">
   <diagram name="AI Development Workflow" id="workflow">
-    <mxGraphModel dx="1507" dy="968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1206" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,7 +16,7 @@
         <mxCell id="round4" value="Round 4:&#xa;Claude Optimization&#xa;(Task Decomposition)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C73E1D;strokeColor=#C73E1D;fontColor=#FFFFFF;fontSize=9;" parent="1" vertex="1">
           <mxGeometry x="720" y="70" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="sIHpbdeY9dWf071PL_TP-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=100;exitDy=37.5;exitPerimeter=0;" parent="1" source="prd_output" target="phase2_box" edge="1">
+        <mxCell id="sIHpbdeY9dWf071PL_TP-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=100;exitDy=37.5;exitPerimeter=0;" edge="1" parent="1" source="prd_output" target="phase2_box">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="prd_output" value="PRD.md&#xa;(Complete)" style="shape=note;whiteSpace=wrap;html=1;fillColor=#6A994E;strokeColor=#6A994E;fontColor=#FFFFFF;fontSize=10;size=15;" parent="1" vertex="1">
@@ -64,7 +64,7 @@
         <mxCell id="verification" value="Add Verification&#xa;Criteria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#560BAD;strokeColor=#560BAD;fontColor=#FFFFFF;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="690" y="250" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="sIHpbdeY9dWf071PL_TP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="tasks_output" target="phase3_box" edge="1">
+        <mxCell id="sIHpbdeY9dWf071PL_TP-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tasks_output" target="phase3_box">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tasks_output" value="tasks.md&#xa;[pending]&#xa;Hierarchical" style="shape=note;whiteSpace=wrap;html=1;fillColor=#6A994E;strokeColor=#6A994E;fontColor=#FFFFFF;fontSize=10;size=15;" parent="1" vertex="1">
@@ -161,7 +161,13 @@
         <mxCell id="arrow4_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6A994E;" parent="1" source="deploy" target="success" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sIHpbdeY9dWf071PL_TP-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.445;entryY=0.03;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="phase_complete" target="completion_box" edge="1">
+        <mxCell id="memory_box" value="Context Management Protocol" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9E3;strokeColor=#A23B72;strokeWidth=2;verticalAlign=top;fontSize=11;fontStyle=1;align=left;arcSize=3;" parent="1" vertex="1">
+          <mxGeometry x="1280" y="40" width="170" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="memory_text" value="&lt;b&gt;Context Commands:&lt;br&gt;&lt;/b&gt;• /clear - Reset context&lt;br&gt;• /context - View current&lt;br&gt;• /compact - Compress&lt;br&gt;• /resume - Continue&lt;br&gt;&lt;br&gt;&lt;b&gt;When to Refresh:&lt;br&gt;&lt;/b&gt;• After each phase&lt;br&gt;• Within phase (complex)&lt;br&gt;• On errors/rate limits&lt;br&gt;• Context &amp;gt; 80%&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="1290" y="65" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sIHpbdeY9dWf071PL_TP-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.445;entryY=0.03;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="phase_complete" target="completion_box">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="phase_complete" value="Phase&#xa;Complete?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F18F01;strokeColor=#F18F01;fontColor=#FFFFFF;fontSize=9;" parent="1" vertex="1">
