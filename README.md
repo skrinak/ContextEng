@@ -32,7 +32,7 @@ The process begins with writing a well-articulated Product Requirements Document
 
 ### 2. Generate Task List
 
-Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](documents/Task List Generator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
+Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](documents/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
 
 **Why this matters**: Breaking work into clear, discrete tasks allows you to maintain minimal context in each session. The AI assistant can focus on one specific objective at a time, leading to better code quality and fewer errors.
 
@@ -69,7 +69,7 @@ When all specified tasks are completed but more work is needed, you have two app
 
 ### Documentation
 - **[documents/PRD_DevelopmentPrompt.md](documents/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
-- **[documents/Task List Generator.md](documents/Task List Generator.md)** - Transform PRDs into structured task lists
+- **[documents/TaskListGenerator.md](documents/TaskListGenerator.md)** - Transform PRDs into structured task lists
 - **[documents/UV Setup.md](documents/UV Setup.md)** - Python UV package manager setup guide
 - **[documents/WORKFLOW_NARRATIVE.md](documents/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
 
