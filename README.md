@@ -22,17 +22,17 @@ Context window management is critical in AI-assisted development because of two 
 
 The development workflow is designed around a fundamental principle: humans are not good at being clear about what they want. Agentic AI coding assistants are aggressive about achieving their goals. Claude Code works best when given clear requirements, structured tasks, and minimal, focused context. This approach transforms software development from ad-hoc prompting into a systematic process that produces consistent, high-quality results.
 
-![Workflow](documents/images/CompleteWorkflow.png)
+![Workflow](docs/images/CompleteWorkflow.png)
 
 ### 1. Create Your PRD
 
-The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](documents/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
+The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](docs/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
 
 **Why this matters**: This initial phase should not be rushed. Iterating with the prompt for several days is recommended because this foundation determines your project's success. A clear PRD gives the AI assistant the context it needs to make intelligent decisions throughout development. During this time, speak with stakeholders to capture diverse perspectives and integrate your knowledge of both traditional and agentic AI software development.
 
 ### 2. Generate Task List
 
-Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](documents/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
+Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](docs/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
 
 **Why this matters**: Breaking work into clear, discrete tasks allows you to maintain minimal context in each session. The AI assistant can focus on one specific objective at a time, leading to better code quality and fewer errors.
 
@@ -68,14 +68,14 @@ When all specified tasks are completed but more work is needed, you have two app
 - **[.claude/settings.local.json](.claude/settings.local.json)** - Local settings override (gitignored)
 
 ### Documentation
-- **[documents/PRD_DevelopmentPrompt.md](documents/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
-- **[documents/TaskListGenerator.md](documents/TaskListGenerator.md)** - Transform PRDs into structured task lists
-- **[documents/UV Setup.md](documents/UV Setup.md)** - Python UV package manager setup guide
-- **[documents/WORKFLOW_NARRATIVE.md](documents/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
+- **[docs/PRD_DevelopmentPrompt.md](docs/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
+- **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists
+- **[docs/UV Setup.md](docs/UV Setup.md)** - Python UV package manager setup guide
+- **[docs/WORKFLOW_NARRATIVE.md](docs/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
 
 ### Diagrams
-- **[documents/images/CompleteWorkflow.png](documents/images/CompleteWorkflow.png)** - PRD → Tasks → Development visual
-- **[documents/images/AI_Development_Workflow.png](documents/images/AI_Development_Workflow.png)** - Process visualization
+- **[docs/images/CompleteWorkflow.png](docs/images/CompleteWorkflow.png)** - PRD → Tasks → Development visual
+- **[docs/images/AI_Development_Workflow.png](docs/images/AI_Development_Workflow.png)** - Process visualization
 
 ### Utilities
 - **[utils/generate_workflow_diagram.py](utils/generate_workflow_diagram.py)** - Generate workflow diagrams

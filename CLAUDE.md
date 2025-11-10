@@ -10,7 +10,7 @@
 5. **NO claiming success without verification** - Test and verify actual behavior, check actual data exists
 6. **NO code deletion without dependency analysis** - Check helper functions, imports, cross-references first
 7. **NO assuming API response structure** - Verify actual structure vs expectations
-8. **NO documentation in root folder** - All .md files go to documents/
+8. **NO documentation in root folder** - All .md files go to docs/
 9. **NO creating tech debt** - Fix lint issues now. Fix errors now. No shortcuts
 10. **NO committing code without explicit request** - Wait for user instruction
 11. **NO adding comments unless requested** - Keep code clean
@@ -86,7 +86,7 @@ YOUR_APP/
 ├── backend/
 │   ├── infrastructure/   # CDK/CloudFormation templates
 │   └── lambda/           # Business logic
-├── documents/            # All documentation and diagrams
+├── docs/                 # All documentation and diagrams
 │   └── images/
 ├── frontend/
 │   ├── android/
@@ -101,8 +101,8 @@ YOUR_APP/
 ## 🗄️ INFRASTRUCTURE REFERENCE
 
 **Documentation**:
-- `documents/infrastructure.md` - Complete infrastructure details
-- `documents/architecture_diagram.png` - System architecture
+- `docs/infrastructure.md` - Complete infrastructure details
+- `docs/architecture_diagram.png` - System architecture
 
 **DynamoDB Tables**: * Specify here
 
@@ -128,7 +128,7 @@ PUT  /refresh/{symbol}          # Refresh data
 ## 🔧 AWS OPERATIONS
 
 **CRITICAL**: AWS commands require uv initialization first
-- See documents/UV Setup.md for initialization
+- See docs/UV Setup.md for initialization
 - Dual account strategy:
   - S3 deployment (frontend): Account XXXXXXXXXX with --profile my_profile
   - Infrastructure (Lambda/DynamoDB/API Gateway): Account XXXXXXXXXX default profile
