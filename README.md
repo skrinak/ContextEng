@@ -16,7 +16,13 @@ Templates and configurations for context engineering with AI code assistants.
 
 This repository provides templates for managing context in AI code writing tools such as Claude Code. These templates establish project guidelines, structure conventions, and development practices that enable AI assistants to work effectively on your codebase.
 
-Context window management is critical in AI-assisted development. Regular use of the `/clear` command helps maintain optimal performance. A working pattern: use `/clear`, then read core project files (README.md, CLAUDE.md, tasks.md, .env). Maintaining these files enables consistent architecture, clear development guidelines, and focused debugging. This process is called *context priming*.
+Context window management is critical in AI-assisted development because of two dangerous phenomena: **context rot** and **catastrophic forgetting**.
+
+**Context Rot** occurs as the context window fills with information. Critical project details—your architecture decisions, constraints, and standards—get pushed out or buried under layers of newer but less important information. The AI assistant gradually "forgets" what matters most about your project.
+
+**Catastrophic Forgetting** happens when context becomes polluted with irrelevant information, outdated details from previous tasks, or contradictory instructions. The AI begins making mistakes, contradicting earlier decisions, or producing lower quality code because it's operating on degraded information.
+
+**The Solution**: Regular use of the `/clear` command combined with *context priming*. Clear context, then deliberately reload core project files (README.md, CLAUDE.md, tasks.md, .env). This pattern ensures the AI always starts with fresh, accurate information about your project's architecture, guidelines, and current state. It's the difference between an AI that maintains consistent quality throughout development and one that gradually degrades into confusion.
 
 ## Workflow
 
