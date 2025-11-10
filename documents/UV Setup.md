@@ -1,4 +1,4 @@
-2025-10-14 - UV Setup
+# UV Setup
 
 You generally **don't** "initiate a uv environment with imports." A `uv` virtual environment is a clean, isolated Python environment. You first **create** and **activate** the environment, and *then* you **install** the necessary packages (imports) into it.
 
