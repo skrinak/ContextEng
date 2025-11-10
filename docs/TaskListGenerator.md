@@ -1,4 +1,4 @@
-Convert the provided Product Requirements Document (PRD) into a comprehensive, executable task list saved to `tasks.md`.
+You're an expert prompt designer designing a large-scale AWS-based project. Convert the provided Product Requirements Document (PRD), docs/PRD.MD, into a comprehensive executable task list saved to `tasks.md`. The language you choose is designed for claude code not necessarily humans. Optimize for your consumption to speed development, reduce or eliminate tech debt, and maximize claude code features such as MCP usage, skills, custom slash commands, hooks, and sub-agents.
 
 ## Output Format
 
