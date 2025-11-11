@@ -70,7 +70,7 @@ When all specified tasks are completed but more work is needed, you have two app
 ### Documentation
 - **[docs/PRD_DevelopmentPrompt.md](docs/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
 - **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists
-- **[docs/UV Setup.md](docs/UV Setup.md)** - Python UV package manager setup guide
+- **[docs/UV Setup.md]("docs/UV Setup.md")** - Python UV package manager setup guide
 - **[docs/WORKFLOW_NARRATIVE.md](docs/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
 
 ### Diagrams
@@ -143,14 +143,24 @@ Effective context engineering follows four core strategies:
 
 Model Context Protocol enables Claude Code to connect to external data sources, tools, and services through standardized servers. MCP servers extend Claude's capabilities beyond built-in tools, allowing integration with databases, cloud services, and specialized APIs.
 
-### Common MCP Servers
+**WARNING** - MCP servers degrade AI agent efficiency. Add them when needed, remove them immediately when done. Unused or irrelevant MCP servers added either to your coding client or agents themselves hog context memory, encouraging context rot and catastrophic forgetting.
 
-- **Filesystem**: Access local files and directories outside the project
-- **Git**: Enhanced git operations and repository management
-- **Database**: Direct database queries (PostgreSQL, SQLite, etc.)
-- **AWS**: CloudWatch, S3, DynamoDB integration
-- **Web Search**: Internet search capabilities
-- **Browser**: Web page fetching and interaction
+### Common MCP Servers
+- **[AWS](https://github.com/awslabs/mcp)**: Of course
+
+But also:
+- **[Apify](https://docs.apify.com/platform/integrations/mcp)**: Run Actors from Apify Store and access web scraping/automation results
+- **[Browser](https://browsermcp.io)**: Local browser automation for testing and task execution
+- **[Database](https://github.com/modelcontextprotocol/servers)**: Direct database queries (PostgreSQL, SQLite, etc.)
+- **[Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)**: Access local files and directories outside the project
+- **[Git](https://github.com/modelcontextprotocol/servers/tree/main/src/git)**: Enhanced git operations and repository management
+- **[GitHub](https://github.com/modelcontextprotocol/servers)**: Repository management, issues, and pull request operations
+- **[Puppeteer](https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer)**: Web page automation and interaction
+- **[Ref](https://ref.tools/mcp)**: Token-efficient documentation search for APIs, libraries, and frameworks
+- **[Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)**: Structured step-by-step reasoning with revision and branching support
+- **[Stripe](https://docs.stripe.com/mcp)**: Payment processing, customer management, and Stripe API integration
+- **[Supabase](https://supabase.com/docs/guides/getting-started/mcp)**: Project creation, database queries, and schema management
+- **[Web Search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search)**: Internet search capabilities
 
 ### Best Practices
 
