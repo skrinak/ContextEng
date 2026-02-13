@@ -11,3 +11,28 @@ Now you're ready to develop code. The development phase follows a disciplined ap
 The clearing and refreshing cycle follows a general pattern but requires judgment. It's recommended to clear and refresh after completing each major phase of work, as this prevents context pollution and ensures your AI agent maintains focus on current objectives. However, there are situations where clearing and reloading should occur within a phase. If you encounter complex problems, hit rate limits, or notice the context exceeding 80% capacity, an mid-phase refresh becomes necessary. This flexibility in context management, combined with strategic use of commands like /clear, /context, /compact, and /resume, provides significant performance improvements throughout the development process.
 
 The cycle continues until all tasks reach completion. Each iteration strengthens the codebase while maintaining alignment with your original requirements. Finally, with all tasks marked as completed, you move to comprehensive verification, testing, and deployment, ensuring the implemented solution matches the vision captured in your initial PRD.
+
+## Best Practices
+ALWAYS: put yourself in the mindset of the agent. Agents are not search engines, they are vicious loops.
+
+Agents understand English, but there's a fundamental problem. Agents aggressively pursue their goals. They are bloodthirsty. Humans are inherently imprecise in defining their goals. Give yourself time. Create a PRD and walk away. Give it a day, a nice rest. Go back and edit. Writing is rewriting. The better your PRD the better your code.
+
+Developing applications is an organic process. It involves overtime. The software development cycle is a loop. Honor change. Create mechanisms for continued development of the PRD and task list. Use the mechanisms that come with Claude:
+
+1. Claude.md
+- Best for: principles, constraints, prohibitions, architecture rules
+- You're using it well — "NO creating tech debt" is the right level of abstraction
+- Keep it high-level. You can't anticipate every specific mistake Claude might make
+
+2. Memory files (~/.claude/projects/.../memory/MEMORY.md)
+- Best for: lessons learned from specific mistakes
+- Claude check these automatically and they persist across conversations
+- Think of CLAUDE.md as the constitution, memory as case law
+
+3. In-conversation correction 
+- Best for: catching Claude in the act. When Claude mess up, tell Claude directly — Claude will record it to memory so it sticks across sessions
+
+What actually helps most:
+1. Call it out when Claude cuts a corner
+2. Don't try to make CLAUDE.md more specific to compensate for its mistakes
+3. If you see a pattern of mistakes (not a one-off), that's worth a CLAUDE.md rule
