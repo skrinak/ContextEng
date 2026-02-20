@@ -11,7 +11,6 @@ Never do these things:
 - Never place .md files in the root folder. All documentation goes in docs/.
 - Never commit code unless the user explicitly asks.
 - Never add code comments unless the user explicitly asks.
-- Never omit the disclaimer "Educational only, not advice" from any feature.
 - Never call python or pip directly. Use `uv run` for execution, `uv pip` or `uv add` for package management. uv is a prerequisite.
 
 ## Before every task
