@@ -98,9 +98,3 @@ PUT  /refresh/{symbol}
 ## AWS operations
 
 Run uv initialization before any AWS commands. See docs/UV Setup.md.
-
-Two AWS accounts:
-- Frontend S3 deployment: account XXXXXXXXXX, use `--profile my_profile`
-- Infrastructure (Lambda/DynamoDB/API Gateway): account XXXXXXXXXX, default profile
-
-Commands: [specify]
