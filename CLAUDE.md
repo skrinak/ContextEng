@@ -2,48 +2,31 @@
 
 ## 🚫 CRITICAL CONSTRAINTS
 
-### Absolute Prohibitions
 1. **NO proxy servers or FastAPI** - Architecture is Frontend → API Gateway (REST) → Lambda only
-2. **NO mock data** - Ever. Use real APIs. If debugging, delete immediately after
-3. **NO WebSocket mixing** - REST-only interface (dedicated WebSocket infrastructure if needed)
+2. **NO hardcoded mock data** - Never inline fake data in source code. Test/mock data is fine if loaded from a data source (fixtures, seed files, test APIs).
+3. **NO WebSocket in REST endpoints** - REST API stays REST-only. If real-time features are needed, build dedicated WebSocket infrastructure separately.
 4. **NO deployment outside us-west-2** - Region locked
-5. **NO claiming success without verification** - Test and verify actual behavior, check actual data exists
-6. **NO code deletion without dependency analysis** - Check helper functions, imports, cross-references first
-7. **NO assuming API response structure** - Verify actual structure vs expectations
-8. **NO documentation in root folder** - All .md files go to docs/
-9. **NO creating tech debt** - Fix lint issues now. Fix errors now. No shortcuts
-10. **NO committing code without explicit request** - Wait for user instruction
-11. **NO adding comments unless requested** - Keep code clean
-12. **NO skipping disclaimers** - Every feature needs "Educational only, not advice"
-
-### Verification Protocol (MANDATORY)
-Before stating "working", "functional", "success", or "complete":
-1. Run actual tests
-2. Check actual data exists in database/system
-3. Verify end-to-end functionality
-
-Making code changes ≠ working system. Never trust API success messages alone.
+5. **NO documentation in root folder** - All .md files go to docs/
+6. **NO committing code without explicit request** - Wait for user instruction
+7. **NO adding comments unless requested** - Keep code clean
+8. **NO skipping disclaimers** - Every feature needs "Educational only, not advice"
+9. **NO calling python or pip directly** - Use `uv run` for execution and `uv pip` or `uv add` for package management. uv must be installed as a prerequisite.
 
 ## ✅ MANDATORY ACTIONS
 
 ### Every Task
 1. **Use tasks.md exclusively** - Track all work, update status immediately (never tasks.txt or variants)
-2. **Search before creating** - Use Grep/Glob to find existing implementations first
-3. **Read files directly** - No permission needed, check neighboring files for patterns
-4. **Fix root causes** - Not symptoms
-5. **Follow existing patterns** - Match codebase conventions
-6. **Run lint/typecheck before completion**:
+2. **Run lint/typecheck before completion**:
    - **Web**: `npm run lint` and `npm run typecheck`
    - **Backend (Python)**: Check package.json or pyproject.toml for linting commands (pylint, ruff, mypy)
    - **Infrastructure (CloudFormation)**: `cfn-lint` or `aws cloudformation validate-template`
    - **Infrastructure (Terraform)**: `terraform validate`, `terraform fmt -check`, `tflint`
-   - **iOS/macOS**: SwiftLint (if configured)
-   - **Android**: Android Lint and ktlint (if configured)
-   - **Win11**: Platform-specific linting tools (if configured)
 
 ### Before Code Changes
+- **Read before writing** — Before modifying a function or module, read every file that imports or calls it. Do not skip this step to save time.
+- **Match existing patterns** — If the codebase solves a similar problem already, use that approach. Do not introduce new patterns, libraries, or abstractions when an existing one works.
 - Analyze dependencies (helper functions, imports, type definitions)
-- Verify API response structure (console.log or debugger)
+- Verify API response structure before relying on it
 - Test after any code removal (even small deletions can cascade)
 
 ### Code Standards
@@ -51,7 +34,6 @@ Making code changes ≠ working system. Never trust API success messages alone.
 - **Frontend**: TypeScript with strict typing
 - **Security**: Client-side encryption for sensitive data, all API keys in .gitignore
 - **Infrastructure**: CloudFormation/CDK only (backend/infrastructure/templates/)
-- **Prefer editing existing files** over creating new ones
 
 ## 🏗️ ARCHITECTURE
 
