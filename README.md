@@ -1,16 +1,18 @@
 # ContextEng
 
-Claude Code templates and configurations for AWS-based projects.
+Claude Code templates and an **AgentCore-first** reference architecture for AWS agentic projects. If your product has an agent/LLM loop, the template puts it on the Amazon Bedrock AgentCore Runtime from day one — not in a Lambda behind API Gateway — with the CRUD path (API Gateway → Lambda → DynamoDB) as the thin supporting plane. See [`docs/AGENTCORE_FIRST.md`](docs/AGENTCORE_FIRST.md).
 
 ## Getting Started
 
 1. Copy template files to your project, or git clone this repo
    * If cloning, delete the `.git` folder to start fresh
 2. Customize `CLAUDE.md` with your project details
-   * Replace placeholders: YOUR_APP, DATA_SOURCE_1, etc.
-   * Set your architecture, standards, and preferences
-3. Create PRD.md and tasks.md using included tools
-4. Let Claude Code build your alpha by iterating through tasks!
+   * Replace placeholders: YOUR_APP, region, table names, etc.
+   * Keep the architecture **AgentCore-first**: agent loop on the AgentCore Runtime, CRUD on API Gateway → Lambda. Read [`docs/AGENTCORE_FIRST.md`](docs/AGENTCORE_FIRST.md) before designing the backend.
+   * Set your standards and preferences
+3. Fill in `env.example` → `.env` (agent path: Identity Pool, Runtime ARN, Memory ID, Gateway URL; CRUD path: API Gateway, Cognito, DynamoDB)
+4. Create PRD.md and tasks.md using included tools
+5. Let Claude Code build your alpha by iterating through tasks!
 
 ## Purpose
 
@@ -59,7 +61,7 @@ When all specified tasks are completed but more work is needed, you have two app
 ## What's Included
 
 ### Core Templates
-- **[CLAUDE.md](CLAUDE.md)** - Project instructions, architecture, and directives for Claude Code
+- **[CLAUDE.md](CLAUDE.md)** - Project instructions, **AgentCore-first** architecture, and directives for Claude Code
 - **[README.md](README.md)** - Repository documentation and workflow guide
 - **[env.example](env.example)** - Environment variable template
 
@@ -68,6 +70,8 @@ When all specified tasks are completed but more work is needed, you have two app
 - **[.claude/settings.local.json](.claude/settings.local.json)** - Local settings override (gitignored)
 
 ### Documentation
+- **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend.
+- **[docs/FEDERATED_SSO.md](docs/FEDERATED_SSO.md)** - Federated sign-in (Google, GitHub, enterprise SAML/OIDC), forced MFA, and identity linking — and where AgentCore Identity is *not* the answer (human SSO is Cognito's job, not the workload-auth layer).
 - **[docs/PRD_DevelopmentPrompt.md](docs/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
 - **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists
 - **[docs/UV Setup.md]("docs/UV Setup.md")** - Python UV package manager setup guide
@@ -254,6 +258,8 @@ Hooks are shell commands that execute automatically in response to Claude Code e
 **Why this approach**: Customization is powerful but adds complexity. Start minimal and add only what provides clear value. Your team will thank you for keeping things simple and maintainable.
 
 ## AWS Integration
+
+**Agent path → [Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/) (first).** For any project with an agent/LLM loop, the loop belongs in the AgentCore Runtime from day one — invoked directly from the browser via Cognito Identity Pool SigV4 and streamed over SSE — *not* in a Lambda behind API Gateway (the 29-second sync timeout forces a polling workaround AgentCore exists to delete). Runtime · Memory · Gateway · Identity · Policy · Observability · Evaluator each replace a chunk of infrastructure you'd otherwise hand-build. The CRUD path (Frontend → API Gateway → Lambda → DynamoDB) is the thin supporting plane. Full rationale, the buy-vs-build retirement ledger, and the migration playbook: **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)**.
 
 **[Amazon Q Developer](https://aws.amazon.com/q/developer/)** - AI coding assistant for AWS with 37-60% code acceptance rates. Supports Python, Java, JavaScript, TypeScript, C#, Go, Rust, PHP, Ruby, Kotlin, C, C++, shell scripting, SQL, Scala, JSON, YAML, HCL.
 
