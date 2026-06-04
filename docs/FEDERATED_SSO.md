@@ -1,7 +1,7 @@
 # Federated SSO: Google, GitHub, and enterprise (and where AgentCore Identity is *not* the answer)
 
-Consolidated lessons from designing federated sign-in for a production agentic app
-([xact.ai](https://xact.ai)): social login (Google, GitHub), enterprise SSO
+Consolidated lessons from designing federated sign-in for a production agentic app:
+social login (Google, GitHub), enterprise SSO
 (Okta/Azure AD/SAML/OIDC), forced MFA, and identity linking. Companion to
 [`AGENTCORE_FIRST.md`](AGENTCORE_FIRST.md).
 
@@ -100,25 +100,35 @@ Design notes that bite if you skip them:
 
 The rule that keeps personal and enterprise identities from contaminating each other:
 
-- **Personal accounts auto-link by verified email.** First Google/GitHub sign-in of an
-  email that already has a password account → `AdminLinkProviderForUser` in
-  `post_confirmation`, so the user lands on their existing data. Same `accountKind` +
-  same verified email is the link condition.
-- **Enterprise accounts NEVER link.** An `enterprise` identity is keyed to its org/tenant
-  and stays separate from any personal account with the same email. Strict separation —
-  the linking codepath refuses to run for `enterprise`.
+- **Do NOT link with `AdminLinkProviderForUser` — anchor by email instead.** *(Corrected in
+  the build — this is the one decision the design got wrong.)* The instinct is to merge a
+  federated identity into the existing password account with `AdminLinkProviderForUser` in
+  `post_confirmation`. **That is impossible when `email` is required:** Cognito re-writes
+  mapped attributes on every linked sign-in and `email` is immutable, so the call fails with
+  `email: Attribute cannot be updated` — and you can't change attribute mutability after pool
+  creation. What ships instead: federated accounts stay **separate** Cognito users;
+  `pre_token` resolves the caller to the one canonical Users row **by email** (via an
+  `email-index` GSI) and injects `custom:appUserId`; every handler reads identity through
+  `get_user_id()`, which prefers that claim over `sub`. A Google/GitHub login lands on the
+  user's real data with **no linking at all**. Supporting trigger work: `pre_signup` only
+  sets `autoVerifyEmail` for external providers; `post_confirmation` skips creating a row
+  when the email already has one (a duplicate poisons the email lookup).
+- **Enterprise accounts NEVER share a row.** An `enterprise` identity is keyed to its
+  org/tenant; even with the same email it resolves to a separate Users row scoped to that
+  tenant. Strict separation is the default.
 
 ### Two non-obvious invariants (both cost a debugging cycle if missed)
 
 1. **Cognito's `identities` claim is a JSON *string*, not an array.** Every consumer must
    `json.loads` it. Put a `_split_identity` helper in `shared/auth_utils.py` and use it
    everywhere; never index the raw claim.
-2. **`sub` ≠ your canonical `userId` momentarily after the first federated sign-in of an
-   existing email.** Cognito issues a *fresh* `sub` for the new federated identity
-   *before* `AdminLinkProviderForUser` runs. To keep backend handlers correct in that gap,
-   have `pre_token` write `custom:xactUserId` (looked up via an `email-index` GSI), and
-   make `get_user_id()` read `custom:xactUserId` with `sub` as fallback. Without this,
-   the user transiently looks like a brand-new account.
+2. **`sub` is *never* your canonical `userId` for a federated user — permanently.** Cognito
+   issues a fresh `sub` per provider identity, and with the no-linking design above it stays
+   that way. `custom:appUserId` — written by `pre_token` from the `email-index` lookup, read
+   by `get_user_id()` with `sub` as fallback — is the *permanent* bridge, not a transient
+   one. **Both** the backend and the SPA's token decode must prefer it, or a federated login
+   looks like a brand-new empty account. (This is the exact symptom that surfaced first:
+   "I logged in with Google but my projects are gone.")
 
 ---
 
@@ -144,14 +154,48 @@ The rule that keeps personal and enterprise identities from contaminating each o
 
 - **Cognito custom domain cert lives in us-east-1** regardless of the User Pool's region.
   Any bridge HTTP API cert lives in the pool's region. Two certs, two regions.
-- **Custom Cognito attributes (`custom:*`) are immutable after creation** — you can't
-  change type or delete them. Decide `accountKind`/`tenantId`/`xactUserId` up front.
-- **Apple's `client_secret` is a JWT that expires every 6 months** — if you do include
-  Apple, you owe a scheduled rotator. (One more reason to scope it out unless you need it.)
-- **The same secret name surviving a rename ≠ the secret being used.** Audit what code
-  actually reads each IdP secret; dead OAuth secrets accumulate. (See the
-  `contextbuilder/github-token` post-mortem in the xact.ai PRD — a "live secret" that no
-  code had read in months.)
+- **CloudFormation puts a custom attribute on a *new* pool fine, but cannot add one to an
+  *existing* pool — and a failed rollback bricks the stack.** Adding `custom:mfaFederated`
+  to a live pool *succeeded*, but when another resource in the same changeset failed, the
+  rollback tried to *delete* the new attribute → Cognito refuses (`Existing schema
+  attributes cannot be modified or deleted`) → `UPDATE_ROLLBACK_FAILED`. Recovery:
+  `continue-update-rollback --resources-to-skip <UserPool>`. **Lesson:** declare every custom
+  attribute (`accountKind`/`tenantId`/`appUserId`/…) at pool *create* time; to add one to an
+  existing pool, do it out-of-band (`aws cognito-idp add-custom-attributes`) and leave it out
+  of the CDK pool schema. They're also immutable once created (no rename, no delete) — name
+  them deliberately.
+- **Conditional custom domains are a deploy footgun.** If the Cognito custom domain and the
+  bridge domain are gated on a cert-ARN context var and you deploy without it, CDK *deletes*
+  the domain and its Route 53 record (this took GitHub sign-in down for a few minutes). Pin
+  the cert ARNs in `cdk.json` context, not just in a CLI flag someone can forget.
+- **Deploy the bridge stack before the pool's GitHub IdP.** Cognito validates the OIDC
+  discovery URL at `CreateIdentityProvider` time, so `auth-bridge.<domain>` must be live and
+  reachable first.
+- **Secrets Manager partial-ARN pitfall.** A secret whose name ends in `-` + 6 chars (e.g.
+  `…/bridge-client`) is mistaken for a versioned ARN and truncated. Reference it by full ARN
+  (`Secret.fromSecretCompleteArn`), not by name.
+- **Adding ~4 auth Lambdas can blow the CloudFormation 500-resource-per-stack limit.** Mount
+  related routes behind one `{proxy+}` dispatcher Lambda per cluster, not one Lambda per
+  route.
+- **Apple's `client_secret` is a JWT that expires every 6 months** — if you do include Apple,
+  you owe a scheduled rotator. (One more reason to scope it out unless you need it.)
+- **A secret name surviving a rename ≠ the secret being used.** Audit what code actually
+  reads each IdP secret; dead OAuth secrets accumulate.
+
+### MFA enforcement (the lock-out-shaped footgun)
+
+- **The `amr` claim is a JSON array; Cognito attribute-mapping copies scalars only.** To
+  carry a federated IdP's MFA signal into `pre_token`, the bridge must emit a *scalar* mirror
+  (e.g. `amr_mfa: "true"`) and map THAT to a `custom:` attribute — mapping `amr:["mfa"]`
+  directly does not work.
+- **TOTP self-service uses the ACCESS token, not the id token.** `associate_software_token`
+  / `verify_software_token` / `set_user_mfa_preference` authorize with the user's Cognito
+  *access* token; the id token your API authorizer carries can't drive them. Post the access
+  token to the enrollment endpoints from the SPA.
+- **Backfill the grace deadline BEFORE you flip the gate, or you lock everyone out.** Set
+  `mfaGraceUntil` on every existing user first; keep enforcement behind a feature flag that
+  defaults OFF; the lock-out-capable flip is the *last* deploy step, never bundled with the
+  build. Backup codes hash fine with stdlib PBKDF2 — no native bcrypt dependency needed.
 
 ---
 
@@ -166,6 +210,6 @@ The rule that keeps personal and enterprise identities from contaminating each o
 
 ---
 
-*Source: the xact.ai federated-login design (Google + GitHub + enterprise SSO, MFA, linking).
+*Source: a production federated-login design (Google + GitHub + enterprise SSO, MFA, linking).
 Generalized here so future ContextEng projects inherit the architecture — especially the
 Cognito-vs-AgentCore-Identity boundary — instead of relearning it the hard way.*

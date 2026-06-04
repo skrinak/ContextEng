@@ -1,13 +1,13 @@
 # AgentCore-first: architecture, retirement ledger, and migration playbook
 
 Consolidated lessons from building and migrating a production multi-agent app
-([xact.ai](https://xact.ai)) onto Amazon Bedrock AgentCore. This is the reusable
+onto Amazon Bedrock AgentCore. This is the reusable
 companion to [`CLAUDE.md`](../CLAUDE.md): read it before designing the backend of
 any ContextEng project that has an agent/LLM loop.
 
 **The one-line takeaway:** if your product runs an agent loop, build it on the
 AgentCore Runtime from t=0. Do **not** build it as a Lambda behind API Gateway
-and migrate later. The migration is doable (xact.ai did it in 30 commits over 11
+and migrate later. The migration is doable (one such migration took 30 commits over 11
 working days, ~13K LOC of churn), but every line of it was deleting scaffolding
 you should never write in the first place.
 
@@ -130,7 +130,7 @@ shrink, and it shouldn't.
 
 ## 3. The constraint rewrite — why CLAUDE.md rules age
 
-The single most load-bearing change in the xact.ai migration was three edits to
+The single most load-bearing change in the migration was three edits to
 `CLAUDE.md`, because the original wording classified the entire target
 architecture as a rule violation.
 
@@ -166,8 +166,8 @@ that way as you extend it.
 
 For each AgentCore primitive: the concrete code (and, more importantly, the
 concrete *category of bug*) you don't write if you start with the platform
-assumed. Use this to write an honest adoption memo. LOC figures are from the
-xact.ai codebase — your numbers will differ, but the *categories* generalize.
+assumed. Use this to write an honest adoption memo. LOC figures are from one such
+production codebase — your numbers will differ, but the *categories* generalize.
 
 ### Runtime → ~1,400 LOC + a whole bug category
 Retires the 29s-timeout workaround in full: the self-invoke async pattern (~260
@@ -311,7 +311,7 @@ goes — and where it surprises you.
 - **Gateway authorizer is immutable post-create** — changing it recreates the Gateway
   and re-attaches all targets. Don't ship `authorizerType: NONE` to anything external.
 - **CodeZip silently drops a directory** whose name collides with a top-level package
-  in the dependency tree (e.g. a dir named `agentcore/`). Rename it (`xact_memory/`).
+  in the dependency tree (e.g. a dir named `agentcore/`). Rename it (`app_memory/`).
 - **Evaluator quirks:** `description` max 200 chars; `instructions` treats `{…}` as
   placeholder syntax with an AWS allowlist — output schemas must be line-formatted text,
   not JSON examples.
@@ -337,6 +337,6 @@ goes — and where it surprises you.
 
 ---
 
-*Source: the xact.ai Lambda-coordinator → AgentCore Runtime migration (2026). The
+*Source: a production Lambda-coordinator → AgentCore Runtime migration (2026). The
 product-specific after-action lived in that repo and was consolidated here so future
 ContextEng projects inherit the lessons instead of relearning them.*

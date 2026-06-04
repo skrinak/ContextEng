@@ -16,7 +16,6 @@ Never do these things:
 - Never add a FastAPI or Express **proxy layer**. CRUD path is Frontend → API Gateway (REST) → Lambda. The agent path calls AWS-managed serverless agent services (AgentCore Runtime) directly from the frontend via Cognito Identity Pool SigV4 — that is *not* a proxy layer. Two compute paths, no custom proxy fleet. (This rule is written around the principle — "no custom proxy layers in front of managed services" — not the literal "everything goes through API Gateway." A rule written around a literal ages badly; see `docs/AGENTCORE_FIRST.md` §"The constraint rewrite.")
 - Never ship Strands (or any agent SDK) as a Lambda Layer. It ships inside the Runtime container's own `pyproject.toml`. SDK bumps are a one-line edit + redeploy, no layer rebuild.
 - Never LLM-drive routing or orchestration. Deterministic Python decides *when* to call the model; the LLM adds wisdom inside clearly-bounded helpers. The orchestrator is plumbing, not an agent.
-- Never add WebSocket to REST endpoints. If push semantics are needed, use the Runtime's chunked-transfer SSE stream, or build dedicated push infrastructure separately. Push is protocol-neutral; REST stays REST.
 - Never hardcode mock data in source code. Test/mock data is acceptable only when loaded from a data source (fixtures, seed files, test APIs).
 - Never deploy outside your designated region.
 - Never place .md files in the root folder. All documentation goes in docs/.
@@ -63,7 +62,7 @@ Browser (React / TypeScript)
 
 No API Gateway hop on the agent path — the browser invokes the Runtime directly with credentials vended by the Cognito Identity Pool authenticated role.
 
-**Why AgentCore comes first.** Building the agent loop as a Lambda behind API Gateway hits the 29-second sync timeout and forces a self-invoke + `turnStatus` polling state machine (~700 LOC of plumbing across backend and frontend, plus a permanent class of async-vs-state races). AgentCore Runtime sessions run up to 8 hours and stream progress, deleting that entire category. Design for the Runtime from t=0; do not build the Lambda path first and migrate. (xact.ai migrated; it cost 30 commits over 11 working days and ~13K LOC of churn. See `docs/AGENTCORE_FIRST.md`.)
+**Why AgentCore comes first.** Building the agent loop as a Lambda behind API Gateway hits the 29-second sync timeout and forces a self-invoke + `turnStatus` polling state machine (~700 LOC of plumbing across backend and frontend, plus a permanent class of async-vs-state races). AgentCore Runtime sessions run up to 8 hours and stream progress, deleting that entire category. Design for the Runtime from t=0; do not build the Lambda path first and migrate. (One such migration cost 30 commits over 11 working days and ~13K LOC of churn. See `docs/AGENTCORE_FIRST.md`.)
 
 **AgentCore primitives** — adopt the ones your product needs; each is infrastructure you don't write, deploy, monitor, or debug:
 
