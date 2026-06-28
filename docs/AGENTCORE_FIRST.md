@@ -42,15 +42,108 @@ workaround, and its bug category, never exists.
 
 That is the shape of the entire value proposition: **AgentCore's primitives let
 you delete infrastructure scaffolding.** Argue adoption from the retirement
-ledger (§5), not from a feature list.
+ledger (§6), not from a feature list.
 
 ---
 
-## 2. The target architecture
+## 2. Deterministic-first: tokenomics is the real gate
 
-Two compute paths from the browser. The **agent path is primary**; the CRUD path
-is a thin supporting plane. They never call each other — they share state through
-DynamoDB and AgentCore Memory.
+AgentCore-first is **not agent-everything.** The most expensive mistake after
+"build the agent on Lambda" is "route work through the model that plain code should
+have computed." The model is the slowest, costliest, least reproducible component
+in your stack — reach for it **last**, not first. AgentCore is where the agent loop
+*lives*; it is not where every feature *starts*.
+
+**Why tokenomics is the gate, not a nicety.** Token cost is the single biggest
+reason agentic prototypes never reach production:
+
+- Anthropic's own measurement: agents use ~4× the tokens of a chat turn, and
+  **multi-agent systems use ~15× more tokens than chat** — and **token usage by
+  itself explains ~80% of the variance** in system performance. Multi-agent
+  architectures are viable only when "the value of the task is high enough to pay
+  for the increased performance."
+  ([Anthropic — multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system))
+- Cost compounds super-linearly: the full history (prompts, tool calls, tool
+  outputs) is re-sent every turn, so a 4-turn loop bills ~10× the first turn's
+  tokens, not 4×; real agent loops routinely cost **5–10× the naïve estimate.**
+- Gartner projects **>40% of agentic AI projects will be canceled by end of 2027**,
+  with escalating cost named a primary driver. What kills agents in production is
+  the bill, not model quality.
+
+**The discipline (Anthropic's "[Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)," distilled):**
+"find the simplest solution possible, and only increase complexity when needed."
+Most problems are *workflows* — LLMs and tools orchestrated through **predefined
+code paths** — not *agents* that dynamically direct their own control flow.
+"Optimizing single LLM calls with retrieval and in-context examples is usually
+enough." Reserve a true agent loop for tasks you genuinely cannot hardcode but can
+still verify.
+
+This is exactly ContextEng's orchestration doctrine (`CLAUDE.md`): **deterministic
+Python decides *when* to call the model; the model adds wisdom only inside bounded
+helpers.** A cache hit, a DynamoDB lookup, a regex, a SQL query, or a Cedar policy
+returns a deterministic answer in milliseconds at near-zero marginal cost and 100%
+reproducibility. Paying frontier per-token rates to *generate* an answer you could
+have *computed* is the core anti-pattern. **Compute the answer when you can;
+generate it only when you must.**
+
+### The two paths live in harmony — that's why there are two
+
+The CRUD path (Frontend → API Gateway → Lambda → DynamoDB) is **not** the legacy
+plane the agent path replaces. It is the **deterministic-first plane** — often the
+fastest, cheapest, most reliable way to ship a result — and API Gateway is
+frequently the quickest route to a known, deterministic answer. The agent path is
+the *expensive exception* reserved for open-ended judgment. The §3 architecture
+draws two paths **precisely because most work belongs on the cheap one.** When a
+requirement arrives, the order of preference is:
+
+1. **Can plain code compute it?** (lookup, rule, arithmetic, validation, join) →
+   CRUD path, no model call.
+2. **Does it need judgment in one bounded spot?** → a single structured /
+   function-calling model call inside deterministic code (router, classifier,
+   extractor, judge), still orchestrated by Python.
+3. **Is the path genuinely un-hardcodable but verifiable?** → a real agent loop on
+   the Runtime — now you pay the 15× and it's worth it.
+
+"AgentCore from t=0" means *when you reach rung 3, it already runs on AgentCore.*
+It does **not** mean starting every feature at rung 3.
+
+### Make the agent path affordable once you reach it
+
+When the work genuinely needs the model, these are table stakes for production
+economics — and most map to AgentCore primitives you're already adopting:
+
+- **Model cascade / routing.** Cheapest capable model first (Haiku-tier), escalate
+  to Sonnet/Opus only on low confidence (FrugalGPT-style cascades report up to
+  ~98% cost cuts at matched accuracy). Frontier input is ~5× small-model input, and
+  output ~5× input across tiers — so verbose generation, not prompt size, usually
+  dominates. Cap `max_tokens`; prompt for terseness.
+- **Prompt caching** (`cachePoint`): ~90% off cached-prefix reads, break-even at two
+  requests (5-min TTL). A timestamp or UUID in the system prompt silently
+  invalidates the whole cache — keep the cached prefix byte-stable.
+- **Memory + retrieval over long context.** Retrieve the few relevant facts
+  (AgentCore Memory) instead of re-sending a growing transcript every turn.
+- **Bounded loops.** Hard max-iteration stopping conditions; reflection/retry loops
+  are the quietest budget sink.
+- **Batch API** (50% off) for anything not latency-sensitive; **semantic caching**
+  of results for repeat-shaped queries.
+- **Measure cost-per-resolved-task, not cost-per-token.** Token price is the wrong
+  number to optimize in isolation; the unit of business value is the resolved task.
+
+> The retirement ledger (§6) and tokenomics point the same way: adopt AgentCore
+> because it deletes infrastructure *and* because its primitives (Memory, prompt
+> caching, Policy, model routing) are where cost control actually lives. But the
+> cheapest token is the one you never spend — **deterministic-first, first.**
+
+---
+
+## 3. The target architecture
+
+Two compute paths from the browser. The **agent path is primary** — meaning it is
+the architecturally distinctive plane this whole doc is about, *not* that most
+requests flow through it. By volume, the deterministic CRUD path should carry the
+majority of work (§2); the agent path is the expensive exception you reach for only
+when the model genuinely adds wisdom. They never call each other — they share state
+through DynamoDB and AgentCore Memory.
 
 ```
 Browser (React / TypeScript)
@@ -66,7 +159,7 @@ characteristics — model them as two paths, never as one arrow.
 
 > **The principle, not the literal.** "No proxy layer" means *no custom proxy
 > fleet in front of managed services*. A direct browser→Runtime SigV4 call is not
-> a proxy. A direct `s3.upload()` or `cognito.signIn()` is not a proxy. See §4 for
+> a proxy. A direct `s3.upload()` or `cognito.signIn()` is not a proxy. See §5 for
 > why writing the rule as a literal ("everything goes through API Gateway") ages
 > badly and how to write it around the principle instead.
 
@@ -100,7 +193,7 @@ frontend/web/src/
 
 ---
 
-## 3. The decision that comes before everything: **Harness vs. Runtime**
+## 4. The decision that comes before everything: **Harness vs. Runtime**
 
 AgentCore now offers two ways to run an agent loop. Choosing between them is the
 first architectural decision, and it is a genuine fork — pick deliberately.
@@ -134,11 +227,11 @@ code` later — start managed, drop to Runtime when you outgrow the config surfa
 > Harness is the no-code front of the same engine. There's a dedicated
 > `harness-vs-runtime` page in the devguide; read it before committing.
 
-If you choose Runtime, everything in §3.1 applies. If you choose Harness, most of
+If you choose Runtime, everything in §4.1 applies. If you choose Harness, most of
 it is handled for you — you instead invest in the config, the skills you attach,
 the Gateway tool targets, and the Policy boundary.
 
-### 3.1 Build into the Runtime from t=0
+### 4.1 Build into the Runtime from t=0
 
 The SDK already does more than the old guidance assumed. The entrypoint contract
 is genuinely three lines — `BedrockAgentCoreApp()` + `@app.entrypoint` + `app.run()`
@@ -180,17 +273,17 @@ What you *do* own, and should build in from t=0:
 5. **Evaluator wired into the same deploy** (preview), so a prompt change can't
    ship without a regression check.
 
-### 3.2 What stays in product code (AgentCore has no opinion about these — correctly)
+### 4.2 What stays in product code (AgentCore has no opinion about these — correctly)
 
 The orchestration doctrine (surgical Python deciding *when* to call the model, the
 model adding wisdom inside bounded helpers), your domain state object (coverage,
 ledger, completed/skipped work), your task/role/step definitions if you have them,
 your prompt disciplines, and the **in-loop** auditor that gates progress (distinct
 from the post-hoc Evaluator). **This is the IP.** It doesn't shrink, and it
-shouldn't. Everything in §5 is infrastructure you rent; everything here is the
+shouldn't. Everything in §6 is infrastructure you rent; everything here is the
 product you build.
 
-### 3.3 Greenfield-only wins (a migration can't take these — you can skip them from t=0)
+### 4.3 Greenfield-only wins (a migration can't take these — you can skip them from t=0)
 
 - **No dialogue table.** Memory is read+write source of truth from day one — no
   DynamoDB dialogue table, no dual-write phase, no eventual cutover.
@@ -201,7 +294,7 @@ product you build.
 
 ---
 
-## 4. The constraint rewrite — why CLAUDE.md rules age
+## 5. The constraint rewrite — why CLAUDE.md rules age
 
 The single most load-bearing lesson from migrating a real app was that the
 original `CLAUDE.md` wording classified the entire target architecture as a rule
@@ -231,7 +324,7 @@ that way as you extend it.
 
 ---
 
-## 5. The primitive ledger — buy-vs-build catalog
+## 6. The primitive ledger — buy-vs-build catalog
 
 For each AgentCore primitive: what it is, its status, the developer surface you
 actually touch, and — most importantly — the concrete *category of bug* you don't
@@ -255,7 +348,7 @@ invoke with `InvokeHarness`, and AgentCore runs the loop, versioning, endpoints,
 and rollback. Mid-session model switching, attachable AWS Skills, A/B via
 Evaluations. **Retires:** writing the loop, model-swap plumbing, version/endpoint
 management. **Trade-off:** you give up deterministic control of *when* the model
-is called — see §3 before adopting.
+is called — see §4 before adopting.
 
 ### Memory — GA · ~3,500 LOC avoidable
 Managed short-term (turn-by-turn within a session) + long-term (cross-session
@@ -398,7 +491,7 @@ your agents transact; otherwise skip. Confirm current status before designing on
 
 ---
 
-## 6. Tooling & deployment — the CLI changed
+## 7. Tooling & deployment — the CLI changed
 
 There are now **two** toolchains. Know which one you're on; the verbs and the
 config artifact differ.
@@ -410,7 +503,7 @@ config artifact differ.
 | Config artifact | **`agentcore.json`** (+ auto-managed `cdk/`) | `.bedrock_agentcore.yaml` (hidden, gitignored) |
 | Under the hood | AWS **CDK** synth/deploy | CodeBuild ARM64 container build |
 
-`CLAUDE.md` and the §2 layout standardize on `agentcore.json` + `agentcore deploy`
+`CLAUDE.md` and the §3 layout standardize on `agentcore.json` + `agentcore deploy`
 — i.e. the **new CLI**. The new flow:
 
 ```bash
@@ -453,9 +546,9 @@ generated**, not hand-written; it wraps the entrypoint with
 
 ---
 
-## 7. Migration playbook (existing REST/Lambda app)
+## 8. Migration playbook (existing REST/Lambda app)
 
-Greenfield is strongly preferred (§3.3). If you must migrate an existing
+Greenfield is strongly preferred (§4.3). If you must migrate an existing
 Lambda-coordinator codebase, here's how the cutover actually goes.
 
 - **Plan in *call surfaces*, not Lambdas or routes.** The unit of migration is the
@@ -510,23 +603,23 @@ Lambda-coordinator codebase, here's how the cutover actually goes.
 
 ---
 
-## 8. How this reads into the ContextEng PRD → tasks pipeline
+## 9. How this reads into the ContextEng PRD → tasks pipeline
 
 This doc is the architecture spine of the ContextEng process. It feeds the two
 generators directly:
 
 1. **PRD ([`PRD_DevelopmentPrompt.md`](PRD_DevelopmentPrompt.md) → `PRD.md`).**
    A state-of-the-art PRD must, in its Architecture section, **(a)** declare the
-   two compute paths (§2), **(b)** make the **Harness-vs-Runtime** decision
-   explicitly (§3) with its rationale, and **(c)** include a *primitive-adoption
-   ledger* — for each AgentCore primitive in §5, "adopt / defer / N-A" with the
+   two compute paths (§3), **(b)** make the **Harness-vs-Runtime** decision
+   explicitly (§4) with its rationale, and **(c)** include a *primitive-adoption
+   ledger* — for each AgentCore primitive in §6, "adopt / defer / N-A" with the
    buy-vs-build reason. A PRD that says "Lambda behind API Gateway runs the agent"
    is, by this doc, wrong on arrival.
 2. **Tasks ([`TaskListGenerator.md`](TaskListGenerator.md) → `tasks.md`).** The
    generator turns that PRD into AgentCore-shaped tasks: stand up the Runtime
    entrypoint + streaming envelope first; attach Memory / Gateway / Identity /
    Policy as discrete tasks; wire Observability and the Evaluator into the deploy;
-   build the frontend SigV4 streaming client with the §6 transport details. The
+   build the frontend SigV4 streaming client with the §7 transport details. The
    generator already bans the anti-pattern this doc exists to prevent — *"NEVER
    create tasks that require proxy servers; use direct AWS integrations."*
 
@@ -534,7 +627,7 @@ Write the adoption memo from the **ledger, not the feature list**: "Memory is GA
 is a feature; "we don't build dual-write coordination" is the operative value.
 Count **bug categories**, not just lines — the 29s dance was a few hundred LOC, but
 its absence retires an entire class of races that would otherwise live in your
-tracker forever. Draw the **product/infrastructure line** first (§3.2 vs §5): that
+tracker forever. Draw the **product/infrastructure line** first (§4.2 vs §6): that
 line is the actual trade you're making.
 
 ---
