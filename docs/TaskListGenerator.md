@@ -1,4 +1,6 @@
-You're an expert prompt designer designing a large-scale AWS-based project. Convert the provided Product Requirements Document (PRD), docs/PRD.MD, into a comprehensive executable task list saved to `tasks.md`. The language you choose is designed for claude code not necessarily humans. Optimize for your consumption to speed development, reduce or eliminate tech debt, and maximize claude code features such as MCP usage, skills, custom slash commands, hooks, and sub-agents.
+You're an expert prompt designer designing a large-scale AWS-based, **AgentCore-first** project. Convert the provided Product Requirements Document (PRD), docs/PRD.MD, into a comprehensive executable task list saved to `tasks.md`. The language you choose is designed for claude code not necessarily humans. Optimize for your consumption to speed development, reduce or eliminate tech debt, and maximize claude code features such as MCP usage, skills, custom slash commands, hooks, and sub-agents.
+
+**Before generating tasks, read [`AGENTCORE_FIRST.md`](AGENTCORE_FIRST.md) and [`CLAUDE.md`](../CLAUDE.md).** The agent path is primary. If the PRD describes an agent/LLM loop, the earliest implementation tasks MUST stand up the AgentCore Runtime (or Harness) path — entrypoint + streaming envelope first — and the AgentCore primitives the PRD's adoption ledger marked "adopt" each get their own discrete task sequence (Memory, Gateway, Identity, Policy, Observability, Evaluator). Never generate a task that runs the agent loop as a Lambda behind API Gateway.
 
 ## Output Format
 
@@ -100,6 +102,13 @@ Implementation (from PRD):
 2. Environment setup if new services/tools required
 3. Infrastructure if AWS/cloud resources needed
 4. Data migration if schema changes required
+
+Agent Path (when the PRD has an agent/LLM loop — sequence these BEFORE feature work):
+1. Scaffold the Runtime (or Harness) via the new CLI: `agentcore create --framework <…> --model-provider Bedrock`; confirm `agentcore.json` (new CLI) is the config artifact. Per `AGENTCORE_FIRST.md` §6.
+2. Stand up the streaming envelope on a trivial `ping` op first (`*_started` → `heartbeat` → `*_complete`); prove the `getReader()` client loop, ≥33-char `runtimeSessionId`, and long read timeouts. Per §6.
+3. One task per AgentCore primitive marked "adopt" in the PRD ledger: attach Memory (native framework `session_manager`, no DynamoDB dialogue table), Gateway targets (OpenAPI/Smithy/Lambda — never hand-rolled HTTP clients), Identity credential providers (outbound only), Policy (Cedar at the Gateway boundary), Observability (OTEL default-on), Evaluator (wired into the deploy).
+4. One task per agent op/runner function, each using the uniform streaming envelope.
+5. Frontend SigV4 streaming client task(s): `InvokeAgentRuntime`, bytes payload, `getReader()` loop, RTK Query `queryFn` bridge. Per §6.
 
 Post-Implementation (ALWAYS):
 1. Automated testing
