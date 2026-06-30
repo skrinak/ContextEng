@@ -20,6 +20,18 @@
 4. Claude seats the panel: it dispatches **one sub-agent per reviewer** (Explore for search/verification-heavy seats, general-purpose for reasoning seats), each charged to stay *in character*, cite `file:line`, and return its section + ranked summary. The **Host runs on the main thread** — frames scope, verifies the doc's claims against reality, then synthesizes the cross-cutting debate and the prioritized call-to-action.
 5. **Output is exactly one self-contained file** at `{{OUTPUT_PATH}}` (default `docs/review/<date> - Code Review.md`): a single walkthrough transcript that holds *everything* — host overview, the full claims-verification table, every reviewer's in-voice section with its `file:line` evidence, the cross-cutting debate, and the final ranked call-to-action. No companion report, evidence appendix, or separate fix-plan file. Read the **Call to action** and the **one-line takeaway from the room** first.
 
+**Sample usage** — a focused security-and-code spot-check, passing two custom parameters (`{{PANEL}}` and `{{DEPTH}}`) and accepting every other default:
+
+```
+claude -p "$(cat code-reviewer.md)" \
+  REPO_PATH=/Users/kris/Development/ContextEng \
+  PRODUCT_CONTEXT="AgentCore-first SaaS template; pre-alpha; internal eng audience; reputation at stake on the reference architecture." \
+  PANEL="Tom, Aisha" \
+  DEPTH=deep
+```
+
+This seats only Tom and Aisha, runs a line-level (`deep`) pass, and writes the transcript to the default `docs/review/<today> - Code Review.md`.
+
 **Tips**
 - The personas are the point. Don't flatten them into a generic findings list — their disagreements and cross-references are where the real insight surfaces (the cross-cutting debate in §7 is not decoration; it's where Lena's SPOF and Raj's tracing turn out to be one project).
 - Subset the panel with `{{PANEL}}` for a focused pass (e.g. just Tom + Aisha for a security-and-code spot-check).
