@@ -123,6 +123,8 @@ machine-readable — the single highest-leverage convention in the whole system.
 Paired records (a design and its execution ledger; a review and its fix plan) additionally carry
 `> **Pairs-with:** <path>`, so that finding one always finds the other.
 
+These four states and the one-way gate between them are drawn in [§6's board](#the-freeze-rule--status-not-directory).
+
 ---
 
 ## 4. Why a code review goes in `decisions/`
@@ -214,6 +216,8 @@ work ships. Defaulting to `decisions/` means the failure mode is a record that s
 visible and cheap — rather than a stale record impersonating documentation (§4).
 
 ### The freeze rule — status, not directory
+
+![Frozen is a status, not a folder](images/taxonomy-freeze-rule.whiteboard.jpg)
 
 > A record with a **terminal** status (`Shipped`, `Superseded-by`) is frozen: append a status-header
 > line, never rewrite the body. A record marked `Proposed` or `In-progress` is **live** — edit it

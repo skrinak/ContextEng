@@ -1,0 +1,52 @@
+TITLE, top center, large hand-printed Title Case: "Frozen Is A Status, Not A Folder"
+SUBTITLE beneath, smaller: "one line at the top of a record decides who may edit it"
+
+Across the middle of the board, draw four hand-drawn rounded cards in a
+left-to-right row, joined by bold black arrows. This row carries no heading of
+its own — do not letter the words "main track" anywhere on the board. Each card
+has a small line-art icon in its upper-left corner, a bold CAPITALS label, and a
+tiny lowercase gloss beneath:
+- card 1, BLUE outline, a pencil icon, label "PROPOSED", gloss "written, not
+  agreed"
+- card 2, BLUE outline, a small turning-gears icon, label "IN-PROGRESS", gloss
+  "being executed now"
+- card 3, ORANGE outline, a sealed-box icon, label "SHIPPED (date)", gloss "now
+  describes history"
+- card 4, ORANGE outline, an arrow-pointing-to-document icon, label
+  "SUPERSEDED-BY", gloss "the pointer is mandatory"
+
+THE FREEZE GATE: between card 2 and card 3, a bold ORANGE vertical dashed line
+running the height of the track, with a large closed-padlock icon sitting on it.
+Beside the padlock, ORANGE CAPITALS reading "THE FREEZE", and under it a tiny
+orange lowercase gloss "terminal — one way".
+
+ZONE BRACKETS: beneath the track, two hand-drawn brackets spanning their cards:
+- a BLUE bracket under cards 1 and 2, labeled in blue CAPITALS "LIVE", tiny
+  lowercase gloss "edit freely"
+- an ORANGE bracket under cards 3 and 4, labeled in orange CAPITALS "FROZEN",
+  tiny lowercase gloss "append a line, never rewrite the body"
+
+RIGHT PANEL: a small hand-drawn rounded panel titled in black CAPITALS "STILL
+ALLOWED WHEN FROZEN", holding two short lines each with a small black tick:
+- "append a status line"
+- "repair a moved link"
+Under them one tiny black lowercase caption: "navigation, not the decision".
+
+ESCAPE ARROW: from under the FROZEN bracket, a BLUE solid arrow curves downward
+to a small BLUE rounded box labeled "docs/", with a blue lowercase label riding
+on the arrow reading "needs body edits? it was never a record".
+
+SYNTAX TAG, upper right corner: a small hand-drawn tag, GREEN outline, showing
+two short hand-printed lines exactly as written:
+"Status: Shipped (2026-07-28)"
+"Pairs-with: the-fix-plan.md"
+with a tiny green lowercase gloss beneath: "CI fails without this line".
+
+BOTTOM BAND: a wide hand-drawn panel with a black outline, containing one bold
+hand-printed black line centered: "a rule tied to LOCATION eventually forbids
+something legitimate", and beneath it a smaller lowercase line: "tie it to the
+property you actually care about".
+
+ACCENT MEANINGS: blue = living (edit freely); orange = frozen (a record of a
+moment); green = machine-checked (CI enforces the header). Black for everything
+else.

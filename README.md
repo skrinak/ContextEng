@@ -120,6 +120,7 @@ Hand-drawn whiteboard boards, each generated from its sibling `.content.txt` sou
 - **[docs/images/taxonomy-premise.whiteboard.jpg](docs/images/taxonomy-premise.whiteboard.jpg)** - Search already answers "what is this about"; the path has to answer "is it true now, may I change it, is something parsing it" — and what it costs when it doesn't
 - **[docs/images/taxonomy-buckets.whiteboard.jpg](docs/images/taxonomy-buckets.whiteboard.jpg)** - The six buckets with their membership tests, the fixed root, the three-question axis, and why topic folders are struck out
 - **[docs/images/taxonomy-review-placement.whiteboard.jpg](docs/images/taxonomy-review-placement.whiteboard.jpg)** - One artifact, six candidate homes, one that survives: the worked argument for filing a code review in `decisions/`
+- **[docs/images/taxonomy-freeze-rule.whiteboard.jpg](docs/images/taxonomy-freeze-rule.whiteboard.jpg)** - The status vocabulary as a lifecycle: Proposed → In-progress → the one-way freeze gate → Shipped / Superseded-by, what may still change once frozen, and the escape hatch when a "record" turns out to be documentation
 
 ### Utilities
 - **[utils/whiteboard-gen.sh](utils/whiteboard-gen.sh)** - Regenerate any workflow board from its `docs/images/*.content.txt` source (edit the CONTENT, re-run, review — the locked style preamble lives in the script)
