@@ -24,7 +24,9 @@ Context window management is critical in AI-assisted development because of two 
 
 The development workflow is designed around a fundamental principle: humans are not good at being clear about what they want. Agentic AI coding assistants are aggressive about achieving their goals. Claude Code works best when given clear requirements, structured tasks, and minimal, focused context. This approach transforms software development from ad-hoc prompting into a systematic process that produces consistent, high-quality results.
 
-![Workflow](docs/images/CompleteWorkflow.png)
+![The ContextEng Method — PRD, tasks, build loops, verify & ship](docs/images/workflow-method.whiteboard.jpg)
+
+*One color language across every board: **blue = artifacts** (PRD.md, tasks.md, CLAUDE.md, code), **orange = context discipline** (the clear/prime loops), **green = human gates** (review, approval, verification).*
 
 ### 1. Create Your PRD
 
@@ -38,6 +40,8 @@ Once your PRD is finalized and stakeholders have approved the requirements, use 
 
 **Why this matters**: Breaking work into clear, discrete tasks allows you to maintain minimal context in each session. The AI assistant can focus on one specific objective at a time, leading to better code quality and fewer errors.
 
+![From intent to tasks.md — the two prompts that front-load the thinking](docs/images/workflow-prd-to-tasks.whiteboard.jpg)
+
 ### 3. Development Phase with Context Management
 
 Now you're ready to develop code. The development phase follows a disciplined approach to context management that maximizes AI effectiveness. Once your tasks.md exists, you enter an iterative cycle:
@@ -47,6 +51,8 @@ Now you're ready to develop code. The development phase follows a disciplined ap
 - Load foundational documents: CLAUDE.md (project-specific instructions and standards), README.md (project overview), and .env (configuration details)
 - Work through tasks systematically
 - Clear and refresh when encountering complex problems, hitting rate limits, or reaching 80% context capacity
+
+![The development loop — one task at a time, always on fresh context](docs/images/workflow-dev-loop.whiteboard.jpg)
 
 **Why this works**: Continually clearing and refreshing context prevents context pollution and ensures your AI agent maintains focus on current objectives. This flexibility, combined with strategic use of commands like `/clear`, `/context`, `/compact`, and `/resume`, provides significant performance improvements. Use `/status` regularly to understand current context state.
 
@@ -90,13 +96,15 @@ The repository is classified by what each file **is**, not by file extension. Fo
 - **[docs/FSIregulation.md](docs/FSIregulation.md)** - Financial-services regulatory reference links
 
 ### Diagrams
-- **[docs/images/CompleteWorkflow.png](docs/images/CompleteWorkflow.png)** - PRD → Tasks → Development visual
-- **[docs/images/AI_Development_Workflow.png](docs/images/AI_Development_Workflow.png)** - Process visualization
+
+Three hand-drawn whiteboard boards, high level → detail, each generated from its sibling `.content.txt` source with [utils/whiteboard-gen.sh](utils/whiteboard-gen.sh) (Nano Banana Pro, `gemini-3-pro-image`; needs `GEMINI_API_KEY` or `~/.gemini_key`). One color language across all three: **blue = artifacts** · **orange = context discipline** · **green = human gates**.
+
+- **[docs/images/workflow-method.whiteboard.jpg](docs/images/workflow-method.whiteboard.jpg)** - The method at a glance: write the PRD → generate tasks → build in loops → verify & ship
+- **[docs/images/workflow-prd-to-tasks.whiteboard.jpg](docs/images/workflow-prd-to-tasks.whiteboard.jpg)** - Inception in detail: the two prompts that turn intent into PRD.md and tasks.md
+- **[docs/images/workflow-dev-loop.whiteboard.jpg](docs/images/workflow-dev-loop.whiteboard.jpg)** - The development loop in detail: /clear → prime → pick task → implement → complete, with the refresh triggers and the context toolbelt
 
 ### Utilities
-- **[utils/generate_workflow_diagram.py](utils/generate_workflow_diagram.py)** - Generate workflow diagrams
-- **[utils/workflow_diagram_highlevel.py](utils/workflow_diagram_highlevel.py)** - Generate high-level diagrams
-- **[utils/requirements.txt](utils/requirements.txt)** - Python dependencies
+- **[utils/whiteboard-gen.sh](utils/whiteboard-gen.sh)** - Regenerate any workflow board from its `docs/images/*.content.txt` source (edit the CONTENT, re-run, review — the locked style preamble lives in the script)
 
 ## Benefits
 

@@ -1,0 +1,34 @@
+TITLE, top center, large hand-printed Title Case: "The Development Loop"
+SUBTITLE beneath, smaller: "one task at a time, always on fresh context"
+
+CENTER: a large circular cycle of five hand-drawn rounded nodes, connected
+clockwise by bold ORANGE arrows. Each node has a small black line-art icon and a
+bold CAPITALS label with a tiny lowercase note beneath:
+- top node: a broom icon, "/CLEAR", note "reset the window"
+- upper-right node: an open-book icon, "PRIME", note "read CLAUDE.md · README ·
+  tasks.md · .env" — the four names drawn as tiny BLUE page glyphs
+- lower-right node: a checkbox icon, "PICK TASK", note "mark [in-progress]"
+- bottom node: a keyboard icon, "IMPLEMENT", note "code + tests · parallel when
+  independent"
+- upper-left node: a checkmark icon, "COMPLETE", note "mark [completed] · git
+  commit"
+The clockwise ORANGE arrow from COMPLETE back to /CLEAR is labeled in orange
+lowercase "next phase".
+
+INSIDE the circle: a small brain icon with the lowercase caption
+"fresh context works better".
+
+RIGHT SIDE: a dashed hand-drawn rectangle panel titled in lowercase "refresh
+early when:", containing three short lines each with a tiny icon: a gauge icon
+"context > 80%", a clock icon "rate limits", a tangle icon "stuck on a hard
+problem". An ORANGE dashed arrow from this panel to the /CLEAR node.
+
+LEFT SIDE: a small person icon with a magnifying glass, joined by a GREEN dashed
+arrow to the COMPLETE node, labeled in green lowercase "human reviews each phase".
+
+BOTTOM STRIP: four small hand-drawn command chips in a row reading "/clear",
+"/context", "/compact", "/resume", with a small black caption to the left
+reading "the context toolbelt:".
+
+ACCENT MEANINGS: orange = the context loop; blue = artifact documents; green =
+human gate. Black for everything else.

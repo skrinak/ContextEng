@@ -1,0 +1,33 @@
+TITLE, top center, large hand-printed Title Case: "The ContextEng Method"
+SUBTITLE beneath, smaller: "context-engineered development, from intent to shipped code"
+
+MAIN ROW: four hand-drawn rounded rectangles left to right, evenly spaced. Each has
+a small black line-art icon in its upper-left corner and a bold CAPITALS label:
+- card 1: a pencil-on-page icon, label "1 — WRITE THE PRD", tiny lowercase note
+  under it "days of iteration, not hours"
+- card 2: a checklist icon, label "2 — GENERATE TASKS", note "hierarchical ·
+  dependencies · parallel marks"
+- card 3: a circular-arrows loop icon, label "3 — BUILD IN LOOPS", note
+  "one task at a time, fresh context"
+- card 4: a checkered finish-flag icon, label "4 — VERIFY & SHIP", note
+  "tests, review, deploy"
+
+Between the cards, bold BLUE hand-drawn arrows, each with a small document/page
+icon sitting on it and a blue lowercase label:
+- card 1 → card 2 labeled "PRD.md"
+- card 2 → card 3 labeled "tasks.md"
+- card 3 → card 4 labeled "working code"
+
+Above card 1: a small person icon labeled lowercase "stakeholders", joined to
+card 1 by a GREEN dashed double-headed arrow labeled in green "review & approve".
+Above card 3: an ORANGE circular loop arrow drawn over the card, labeled in
+orange lowercase "/clear → prime → work".
+Above card 4: a small person icon with a checkmark, joined to card 4 by a GREEN
+dashed arrow labeled in green "human verifies".
+
+BOTTOM STRIP: three small BLUE document glyphs in a row, labeled beneath in
+lowercase "PRD.md", "tasks.md", "CLAUDE.md", with a small black caption to the
+left reading "the artifacts ARE the context:".
+
+ACCENT MEANINGS: blue = artifacts flowing forward; orange = context discipline
+(the clear/prime loop); green = human gates. Black for everything else.

@@ -1,0 +1,37 @@
+TITLE, top center, large hand-printed Title Case: "From Intent to tasks.md"
+SUBTITLE beneath, smaller: "two prompts front-load the thinking"
+
+TOP LEFT: a small lightbulb icon inside a hand-drawn circle, labeled lowercase
+"project concept".
+
+UPPER ROW: a large hand-drawn rounded rectangle with a speech-bubble icon in its
+upper-left corner, bold CAPITALS label "PRD DEVELOPMENT PROMPT", and two tiny
+lowercase notes inside: "guided dialogue" and "write · walk away · rewrite".
+A bold BLUE arrow from the lightbulb circle into this card, labeled blue
+lowercase "begin".
+An ORANGE circular loop arrow drawn over this card, labeled in orange lowercase
+"iterate for days".
+To the right of the card: a small person icon labeled lowercase "stakeholders",
+joined to the card by a GREEN dashed double-headed arrow labeled in green
+"perspectives & approval".
+A bold BLUE arrow out of the card's right edge to a BLUE document glyph labeled
+"PRD.md", with a small green checkmark beside it and the green lowercase note
+"human-approved".
+
+LOWER ROW: a bold BLUE arrow from the PRD.md glyph down into a second large
+rounded rectangle with a gear icon, bold CAPITALS label "TASK LIST GENERATOR".
+Inside the card, four tiny lowercase steps connected by small black arrows in a
+row: "analyze" → "decompose" → "map dependencies" → "add verification".
+A bold BLUE arrow out of this card's right edge to a BLUE document glyph labeled
+"tasks.md".
+
+RIGHT OF tasks.md: a small hand-drawn file outline showing three checkbox lines
+in tiny marker writing: "[ ] 1.1", "[ ] 1.2  ∥ parallel", "[ ] 2.1  needs 1.1",
+with the lowercase caption beneath "hierarchy · dependencies · parallel marks".
+
+BOTTOM STRIP: a single dashed rectangle callout with a small server icon and the
+short marker text "agent loop in the PRD? → AgentCore Runtime from t=0", and a
+tiny lowercase note "never a Lambda behind API Gateway — AGENTCORE_FIRST.md".
+
+ACCENT MEANINGS: blue = artifacts and their forward flow; orange = the rewrite
+loop; green = human gates. Black for everything else.
