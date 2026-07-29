@@ -1,0 +1,42 @@
+TITLE, top center, large hand-printed Title Case: "Six Buckets, One Question Each"
+SUBTITLE beneath, smaller: "classify by how a reader must treat it — never by what it is about"
+
+TOP STRIP: three small document glyphs in a row, each with a tiny black label
+beneath: "README.md", "CLAUDE.md", "tasks.md". A hand-drawn bracket sits under
+the three, labeled in black CAPITALS "THE ROOT" with a tiny lowercase gloss
+"loaded every session, unconditionally — nothing else lives here".
+
+MAIN GRID: six hand-drawn rounded rectangles in two rows of three, evenly
+spaced. Each has a small line-art icon in its upper-left corner, a bold CAPITALS
+folder name, and a short lowercase membership test in quotes beneath it:
+- card 1, BLUE, open-book icon, label "docs/", test "describes the system as it
+  is"
+- card 2, GREEN, gear-and-brackets icon, label "specs/", test "a machine parses
+  this"
+- card 3, BLUE, numbered-checklist icon, label "runbooks/", test "a procedure you
+  run again"
+- card 4, ORANGE, rubber-stamp icon, label "decisions/", test "a record of a
+  moment"
+- card 5, BLUE, telescope icon, label "vision/", test "the product we intend"
+- card 6, GREEN, small robot-head icon, label ".claude/", test "the model reads
+  this, not humans"
+
+Under card 1 only, a tiny black lowercase note: "if the system changes and this
+doesn't — that's a bug". Under card 4 only, a tiny black lowercase note: "would
+you edit the body? then it isn't one".
+
+LEFT MARGIN: a narrow vertical hand-drawn panel titled in black CAPITALS "THE
+AXIS", holding three small stacked chips with icons and short labels:
+- a person icon, "AUDIENCE"
+- a clock icon, "LIFECYCLE"
+- a chain-link icon, "BINDINGNESS"
+Beneath the panel, a tiny black lowercase caption: "three questions, in order".
+
+BOTTOM STRIP: three small hand-drawn folder glyphs in a row, each drawn with a
+bold black X struck through it, labeled beneath in black lowercase "security/",
+"qa/", "evals/". To their right, a black lowercase caption reading "topic folders
+— one concern, four lifecycles, no rule for the next new thing".
+
+ACCENT MEANINGS: blue = living (must change when the system changes); orange =
+frozen (a record, never rewritten); green = machine-bound (the path is API).
+Black for everything else.

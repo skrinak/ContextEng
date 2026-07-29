@@ -107,11 +107,19 @@ answer to "is this still true, and may I change it?" The taxonomy ships as an en
 
 ### Diagrams
 
-Three hand-drawn whiteboard boards, high level → detail, each generated from its sibling `.content.txt` source with [utils/whiteboard-gen.sh](utils/whiteboard-gen.sh) (Nano Banana Pro, `gemini-3-pro-image`; needs `GEMINI_API_KEY` or `~/.gemini_key`). One color language across all three: **blue = artifacts** · **orange = context discipline** · **green = human gates**.
+Hand-drawn whiteboard boards, each generated from its sibling `.content.txt` source with [utils/whiteboard-gen.sh](utils/whiteboard-gen.sh) (Nano Banana Pro, `gemini-3-pro-image`; needs `GEMINI_API_KEY` or `~/.gemini_key`). Two sets, each with its own internally consistent color language — the accents mean different things in each set because the subjects differ, so read the legend on the board.
+
+**The workflow set** — high level → detail. **blue = artifacts** · **orange = context discipline** · **green = human gates**.
 
 - **[docs/images/workflow-method.whiteboard.jpg](docs/images/workflow-method.whiteboard.jpg)** - The method at a glance: write the PRD → generate tasks → build in loops → verify & ship
 - **[docs/images/workflow-prd-to-tasks.whiteboard.jpg](docs/images/workflow-prd-to-tasks.whiteboard.jpg)** - Inception in detail: the two prompts that turn intent into PRD.md and tasks.md
 - **[docs/images/workflow-dev-loop.whiteboard.jpg](docs/images/workflow-dev-loop.whiteboard.jpg)** - The development loop in detail: /clear → prime → pick task → implement → complete, with the refresh triggers and the context toolbelt
+
+**The taxonomy set** — companions to [docs/REPOSITORY_TAXONOMY.md](docs/REPOSITORY_TAXONOMY.md), and usable standalone. Here the accents *are* the classification axis: **blue = living** (must change when the system changes) · **orange = frozen** (a record of a moment, never rewritten) · **green = machine-bound** (the path is API).
+
+- **[docs/images/taxonomy-premise.whiteboard.jpg](docs/images/taxonomy-premise.whiteboard.jpg)** - Search already answers "what is this about"; the path has to answer "is it true now, may I change it, is something parsing it" — and what it costs when it doesn't
+- **[docs/images/taxonomy-buckets.whiteboard.jpg](docs/images/taxonomy-buckets.whiteboard.jpg)** - The six buckets with their membership tests, the fixed root, the three-question axis, and why topic folders are struck out
+- **[docs/images/taxonomy-review-placement.whiteboard.jpg](docs/images/taxonomy-review-placement.whiteboard.jpg)** - One artifact, six candidate homes, one that survives: the worked argument for filing a code review in `decisions/`
 
 ### Utilities
 - **[utils/whiteboard-gen.sh](utils/whiteboard-gen.sh)** - Regenerate any workflow board from its `docs/images/*.content.txt` source (edit the CONTENT, re-run, review — the locked style preamble lives in the script)

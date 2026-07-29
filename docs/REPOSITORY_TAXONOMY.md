@@ -10,6 +10,8 @@
 
 ---
 
+![Search finds it. The tree tells you how to treat it.](images/taxonomy-premise.whiteboard.jpg)
+
 ## 1. The premise: a directory tree is a context-selection index
 
 The traditional job of a source tree is *retrieval* — help a human find a file. Search solved that
@@ -71,6 +73,8 @@ Three axes, and the buckets fall out. Note what is **not** on the list:
 
 ## 3. The buckets
 
+![Six buckets, one question each](images/taxonomy-buckets.whiteboard.jpg)
+
 The product-repository shape. Six buckets plus a fixed root.
 
 | Bucket | Membership test — the question that decides | Lifecycle | Typical contents |
@@ -122,6 +126,8 @@ Paired records (a design and its execution ledger; a review and its fix plan) ad
 ---
 
 ## 4. Why a code review goes in `decisions/`
+
+![Where does a code review go? One artifact, six candidate homes, one that survives](images/taxonomy-review-placement.whiteboard.jpg)
 
 This is the question that most sharply separates classification-by-treatment from
 classification-by-topic, so it is worth working all the way through rather than asserting.

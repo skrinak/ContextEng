@@ -1,0 +1,38 @@
+TITLE, top center, large hand-printed Title Case: "Search Finds It. The Tree Tells You How To Treat It."
+SUBTITLE beneath, smaller: "why a directory tree still matters when the reader is a model"
+
+LEFT PANEL (about one third): a hand-drawn rounded rectangle titled in black
+CAPITALS "WHAT SEARCH ALREADY SOLVES". Inside it, a large magnifying-glass
+line-art icon over a small stack of document glyphs, and beneath, one black
+lowercase line: "what is this file about?" with a small tick beside it. A tiny
+caption under the panel reads "grep · fuzzy-open · semantic search".
+
+RIGHT PANEL (about two thirds): a hand-drawn rounded rectangle titled in black
+CAPITALS "WHAT THE PATH MUST CARRY". Inside, three stacked chips, each with a
+line-art icon on the left, a bold short label, and a tiny lowercase gloss:
+- BLUE chip, small clock icon, label "IS THIS TRUE NOW?", gloss "living, or a
+  record of a moment"
+- ORANGE chip, small padlock icon, label "MAY I CHANGE IT?", gloss "frozen once
+  it ships"
+- GREEN chip, small gear-and-brackets icon, label "IS SOMETHING PARSING IT?",
+  gloss "the path is API"
+
+Between the two panels, a bold black arrow pointing right with the small black
+lowercase label "content can't answer these".
+
+BOTTOM STRIP, drawn as a short left-to-right failure chain of three small cards
+joined by ORANGE solid arrows:
+- card 1: a document glyph with a small dust/cobweb mark, ORANGE label
+  "SUPERSEDED DESIGN", tiny gloss "detailed · coherent · wrong"
+- card 2: a small robot-head icon, black label "AGENT READS IT", tiny gloss "no
+  tribal knowledge"
+- card 3: a page-with-exclamation icon, ORANGE label "CONFIDENTLY WRONG", tiny
+  gloss "and it cites the source"
+Under the strip, one black lowercase caption centered: "the coherence is what
+makes it expensive".
+
+TOP-RIGHT CORNER NOTE: a small black hand-drawn tag reading "the path is free —
+it is in every listing before a byte is read".
+
+ACCENT MEANINGS: blue = living (true now); orange = frozen or stale (a record of
+a moment); green = machine-bound (the path is API). Black for everything else.

@@ -1,0 +1,36 @@
+TITLE, top center, large hand-printed Title Case: "Where Does A Code Review Go?"
+SUBTITLE beneath, smaller: "one artifact, six candidate homes, one that survives"
+
+TOP CENTER: a single hand-drawn rounded card with a clipboard-and-magnifier
+line-art icon, bold CAPITALS label "THE CODE REVIEW", and three tiny lowercase
+lines stacked inside it: "point-in-time", "observational, not descriptive",
+"never maintained".
+
+FAN-OUT: from the bottom of that card, six hand-drawn arrows spread downward to
+six smaller boxes arranged in a wide arc. Five arrows are thin BLACK dashed
+arrows ending in boxes marked with a bold black X in the corner; one arrow is a
+bold ORANGE solid arrow ending in a box marked with a bold orange tick. Each box
+has a short CAPITALS label and a tiny lowercase reason beneath:
+- BLUE box, X, label "docs/", reason "stale the day the first fix lands"
+- black box, X, label "reviews/", reason "then postmortems/ audits/ spikes/ ..."
+- black box, X, label "runbooks/", reason "you never run it again"
+- black box, X, label "specs/", reason "nothing parses it"
+- black box, X, label "root", reason "not read every session"
+- black box, X, label "tracker only", reason "leaves the tree"
+- ORANGE box, tick, label "decisions/", reason "a frozen record of a moment"
+
+Beside the rejected "docs/" box, a small ORANGE hand-drawn callout bubble with a
+warning triangle icon reading in short lines: "one misfiled record devalues the
+whole bucket".
+
+BOTTOM BAND: a wide hand-drawn panel, ORANGE outline, containing one bold black
+hand-printed line in the middle: "we looked  ·  this is what we found  ·  this is
+what we'll do", with a tiny lowercase caption beneath it: "decision-shaped — so
+it lives with the decisions".
+
+BOTTOM-RIGHT CORNER NOTE: a small black hand-drawn tag reading "optimize for the
+cheap mistake".
+
+ACCENT MEANINGS: orange = the frozen home that wins, and the warning about
+misfiling; blue = a living bucket, shown because being living is exactly why it
+loses. Black for everything else, including all rejection marks.
