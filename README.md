@@ -84,9 +84,8 @@ The repository is classified by what each file **is**, not by file extension. Fo
 
 ### Prompts
 - **[prompts/PRD_DevelopmentPrompt.md](prompts/PRD_DevelopmentPrompt.md)** - Interactive prompt for creating Product Requirements Documents
-- **[prompts/TaskListGenerator.md](prompts/TaskListGenerator.md)** - Transform PRDs into structured task lists (its Output Format section doubles as the parsing contract downstream tools validate against)
-- **[prompts/Code-Reviewer.md](prompts/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel
-- [docs/TaskListGenerator.md](docs/TaskListGenerator.md) is a **deliberate one-line stub**: the raw URL is hardcoded across downstream repos and must keep resolving. Do not delete.
+- **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists (its Output Format section doubles as the parsing contract downstream tools validate against). **Deliberately the one prompt outside `prompts/`:** its raw URL is public API — hardcoded across downstream repos and baked into already-seeded customer repositories — and automation that curls it gets a 200 no matter what sits there, so a pointer at that address would fail silently. The payload stays at this path; [prompts/TaskListGenerator.md](prompts/TaskListGenerator.md) is the pointer. Do not invert this without auditing every consumer of the raw URL.
+- **[prompts/Code-Reviewer.md](prompts/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel. [docs/Code Reviewer.md](docs/Code%20Reviewer.md) is a stub for the pre-2026-07 URL (note the space became a hyphen in the rename).
 
 ### Documentation
 - **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend. (Stays in `docs/` — it is relative-linked from `CLAUDE.md` and both prompts.)

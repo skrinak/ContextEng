@@ -4,8 +4,9 @@
 #
 # The STYLE preamble below is LOCKED — it encodes the look we settled on
 # (glass board, black marker, hand-drawn icons, disciplined accents). You only
-# supply the CONTENT (what to draw). See docs/arch/whiteboard-generation.md for
-# how to author good CONTENT.
+# supply the CONTENT (what to draw). See the CONTENT-GUIDE.md that ships beside
+# this script in the consuming repo's whiteboard-generation skill for how to
+# author good CONTENT (xact.ai: .claude/skills/whiteboard-generation/).
 #
 # Usage:
 #   export GEMINI_API_KEY=...            # or have ~/.gemini_key present

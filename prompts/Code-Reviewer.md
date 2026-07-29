@@ -210,6 +210,23 @@ their own section). If `{{OUTPUT_PATH}}` already exists from a prior run, overwr
 re-review you want to keep alongside the old, write a single new dated file) — never split the output
 across two files. Structure the one file as a walkthrough transcript:
 
+- **Status header — the first lines after the H1, before any prose.** A repo on the root taxonomy
+  lints every record in `decisions/` for this, and `{{OUTPUT_PATH}}` defaults into that bucket, so a
+  transcript without it turns CI red on a file this prompt just told the author to create. Emit, as
+  blockquote lines:
+
+  ```markdown
+  # Code Review — <subject>
+
+  > **Status:** Shipped (<YYYY-MM-DD>) — as-found record. <one clause on whether fixes were applied>
+  > **Pairs-with:** `<YYYY-MM-DD> - Code Review Fix Plan.md`
+  ```
+
+  `Status` is `Shipped (<date>)` the moment the transcript is written — a review *is* complete when it
+  is written, regardless of whether anything has been fixed yet; say which in the trailing clause
+  rather than downgrading the status. Include `Pairs-with` only when a companion fix plan actually
+  exists (the plan is authored separately by a human or a follow-up run — this prompt still emits
+  exactly one file). Keep both on their own line; the lint matches `^>\s*\*\*Status:\*\*`.
 - **Header** — format note, session date/stage, artifacts under review, and an "In the room" table (Seat | Reviewer | Lens).
 - **§0 Host overview (Priya)** — what the system is, the problem, expected outcomes, the shape in one breath, ground rules, "Floor's open."
 - **Claims verification (Priya owns)** — a table `| Claim | Source | Verdict ✅/❌/⚠️ | Evidence (file:line + real count) |`, plus a short drift list with risk labels. (If re-reviewing, add a resolution column tracking prior asks: ✅ done / ◑ partial / ○ open.) With `{{GTM_CONTEXT}}`, the `Source` column distinguishes reference-doc claims from **GTM/customer-facing claims**, and the drift list marks each as *overclaim* (liability in a security review) or *underclaim* (value left on the table).
