@@ -1,6 +1,6 @@
 # Moved
 
-The peer code-review prompt lives at [`../prompts/Code-Reviewer.md`](../prompts/Code-Reviewer.md).
+The peer code-review prompt lives at [`../specs/Code-Reviewer.md`](../specs/Code-Reviewer.md).
 
 Note the filename also changed: the space became a hyphen (`Code Reviewer.md` → `Code-Reviewer.md`),
 so a URL that percent-encoded the space (`Code%20Reviewer.md`) will not find it under its new name

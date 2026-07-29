@@ -1,0 +1,29 @@
+# The taxonomy guard. Every path reference must resolve — in markdown links AND
+# in source comments — every decisions/ record must carry a `> **Status:**`
+# header, and root markdown must stay the three sanctioned files.
+#
+# NO `paths:` FILTER — deliberately. A filter that fires only on `**/*.md` misses
+# the commit that renames an image directory or moves a spec: no markdown is
+# touched, the job never runs, the breakage lands on main, and it surfaces later
+# attached to an unrelated PR where it reads as that PR's fault. A filter that
+# must enumerate every linkable asset type is itself a recurring bug. The job
+# takes seconds — run it on everything.
+#
+# Rationale: https://github.com/skrinak/ContextEng/blob/main/docs/REPOSITORY_TAXONOMY.md
+name: docs-links
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The checker is stdlib-only by design, so this job stays credential- and
+      # dependency-free. Only the fixture suite needs pytest.
+      - name: Check references + decisions/ status headers + root taxonomy
+        run: python3 utils/check_doc_links.py
+      - name: Install pytest (fixture suite only)
+        run: python3 -m pip install --quiet pytest
+      - name: Guard the checker itself
+        run: python3 -m pytest utils/tests/test_check_doc_links.py -q

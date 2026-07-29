@@ -2,7 +2,7 @@
 
 The TaskListGenerator prompt lives at [`../docs/TaskListGenerator.md`](../docs/TaskListGenerator.md).
 
-It is the one prompt in this repo that does **not** live under `prompts/`, and that is deliberate.
+It is the one prompt in this repo that does **not** live under `specs/`, and that is deliberate.
 Its raw URL —
 
 ```

@@ -608,7 +608,7 @@ Lambda-coordinator codebase, here's how the cutover actually goes.
 This doc is the architecture spine of the ContextEng process. It feeds the two
 generators directly:
 
-1. **PRD ([`PRD_DevelopmentPrompt.md`](../prompts/PRD_DevelopmentPrompt.md) → `PRD.md`).**
+1. **PRD ([`PRD_DevelopmentPrompt.md`](../specs/PRD_DevelopmentPrompt.md) → `PRD.md`).**
    A state-of-the-art PRD must, in its Architecture section, **(a)** declare the
    two compute paths (§3), **(b)** make the **Harness-vs-Runtime** decision
    explicitly (§4) with its rationale, and **(c)** include a *primitive-adoption

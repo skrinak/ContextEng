@@ -45,13 +45,13 @@ The development workflow is designed around a fundamental principle: humans are 
 
 ### 1. Create Your PRD
 
-The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](prompts/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
+The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](specs/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
 
 **Why this matters**: This initial phase should not be rushed. Iterating with the prompt for several days is recommended because this foundation determines your project's success. A clear PRD gives the AI assistant the context it needs to make intelligent decisions throughout development. During this time, speak with stakeholders to capture diverse perspectives and integrate your knowledge of both traditional and agentic AI software development.
 
 ### 2. Generate Task List
 
-Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](prompts/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
+Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](specs/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
 
 **Why this matters**: Breaking work into clear, discrete tasks allows you to maintain minimal context in each session. The AI assistant can focus on one specific objective at a time, leading to better code quality and fewer errors.
 
@@ -81,26 +81,27 @@ When all specified tasks are completed but more work is needed, you have two app
 
 ## What's Included
 
-The repository is classified by what each file **is**, not by file extension. Four buckets:
+This repository follows the taxonomy it publishes. Files are classified by **how a reader must
+treat them** — never by topic — and the archetype is
+[skrinak/groundwork](https://github.com/skrinak/groundwork).
 
 | Bucket | Membership test |
 |---|---|
-| root templates + `.claude/` | Fetched or seeded verbatim into another repo — **the path is public API; do not move or rename these** |
-| `prompts/` | Text you point a model at, parameterized for reuse; never describes this repo |
-| `docs/` | Methodology and governance a human (or model) reads for understanding |
-| `utils/` | Executable tooling |
+| root + `.claude/` | Loaded unconditionally, or seeded verbatim into another repo — **the path is public API** |
+| [`docs/`](docs/) | The method **as it is**; if the method changes and the file doesn't, that's a bug |
+| [`specs/`](specs/) | A machine fetches and parses this — **the path is API** (the prompts live here) |
+| [`runbooks/`](runbooks/) | A procedure an operator will execute again |
+| [`decisions/`](decisions/) | One-time records; frozen once terminal |
+| [`utils/`](utils/) | Executable tooling, incl. the reference guard |
 
-(`templates/` is reserved by name for future seeded-content directories — e.g. a media-generation template pack.)
+Every directory carries a `README.md` with its membership test verbatim. `make check-links` enforces
+all of it in CI. There is no `vision/` — nothing here is aspirational positioning, and an empty
+directory is a claim that isn't true yet.
 
-**Four buckets here, six in a product repo** — see **[docs/REPOSITORY_TAXONOMY.md](docs/REPOSITORY_TAXONOMY.md)**.
-That difference is the method working, not an inconsistency: you classify by *what a repository is*, and
-this one is a prompt library rather than a product. The document explains the axis that produced both
-shapes — audience × lifecycle × bindingness — argues the case against topic folders, defines every term,
-and works through why a code review belongs in `decisions/` and nowhere else. Its premise: **in a repo that
-coding agents read, the directory tree stops being filing and becomes a context-selection index** — the path
-is the one piece of metadata present in every search result and tool output for free, so it should carry the
-answer to "is this still true, and may I change it?" The taxonomy ships as an enforceable constraint in
-[CLAUDE.md](CLAUDE.md), so every repo seeded from this one inherits it.
+**ContextEng did not always follow its own rule.** It claimed an exception as a "prompt library," and
+that exception hid a defect for a year: `CLAUDE.md` linked its own docs relatively, so every seeded
+repo inherited dead links — invisible from in here, where the paths resolve. See
+[`decisions/2026-07-29 - Conform ContextEng to the groundwork archetype.md`](decisions/2026-07-29%20-%20Conform%20ContextEng%20to%20the%20groundwork%20archetype.md).
 
 ### Seeded template surface (paths are public API — consumed at runtime by downstream tooling)
 - **[CLAUDE.md](CLAUDE.md)** - Project instructions, **AgentCore-first** architecture, and directives for Claude Code
@@ -108,15 +109,15 @@ answer to "is this still true, and may I change it?" The taxonomy ships as an en
 - **[.claude/settings.json](.claude/settings.json)** - Claude Code permissions/config seeded into bootstrapped repos. (Skills, slash commands, and hooks under `.claude/` are *conventions for the repos you build with this method* — see "Claude Code Customization" below — this repo itself ships only `settings.json`.)
 
 ### Prompts
-- **[prompts/PRD_DevelopmentPrompt.md](prompts/PRD_DevelopmentPrompt.md)** - Interactive prompt for creating Product Requirements Documents
-- **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists (its Output Format section doubles as the parsing contract downstream tools validate against). **Deliberately the one prompt outside `prompts/`:** its raw URL is public API — hardcoded across downstream repos and baked into already-seeded customer repositories — and automation that curls it gets a 200 no matter what sits there, so a pointer at that address would fail silently. The payload stays at this path; [prompts/TaskListGenerator.md](prompts/TaskListGenerator.md) is the pointer. Do not invert this without auditing every consumer of the raw URL.
-- **[prompts/Code-Reviewer.md](prompts/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel. [docs/Code Reviewer.md](docs/Code%20Reviewer.md) is a stub for the pre-2026-07 URL (note the space became a hyphen in the rename).
+- **[specs/PRD_DevelopmentPrompt.md](specs/PRD_DevelopmentPrompt.md)** - Interactive prompt for creating Product Requirements Documents
+- **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists (its Output Format section doubles as the parsing contract downstream tools validate against). **Deliberately the one prompt outside `specs/`:** its raw URL is public API — hardcoded across downstream repos and baked into already-seeded customer repositories — and automation that curls it gets a 200 no matter what sits there, so a pointer at that address would fail silently. The payload stays at this path; [specs/TaskListGenerator.md](specs/TaskListGenerator.md) is the pointer. Do not invert this without auditing every consumer of the raw URL.
+- **[specs/Code-Reviewer.md](specs/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel. [docs/Code Reviewer.md](docs/Code%20Reviewer.md) is a stub for the pre-2026-07 URL (note the space became a hyphen in the rename).
 
 ### Documentation
 - **[docs/REPOSITORY_TAXONOMY.md](docs/REPOSITORY_TAXONOMY.md)** - How to design a source tree that an AI can read. The classification axis (audience × lifecycle × bindingness), the six product buckets and their membership tests, precise definitions, the status vocabulary, why a code review goes in `decisions/` and not `docs/` or `reviews/`, why topic folders fail, the freeze rule, enforcement — and the five-year stress test to run against any taxonomy before adopting it.
 - **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend. (Stays in `docs/` — it is relative-linked from `CLAUDE.md` and both prompts.)
 - **[docs/FEDERATED_SSO.md](docs/FEDERATED_SSO.md)** - Federated sign-in (Google, GitHub, enterprise SAML/OIDC), forced MFA, and identity linking — and where AgentCore Identity is *not* the answer (human SSO is Cognito's job, not the workload-auth layer).
-- **[docs/UV Setup.md](docs/UV%20Setup.md)** - Python UV package manager setup guide
+- **[runbooks/UV Setup.md](runbooks/UV%20Setup.md)** - Python UV package manager setup guide
 - **[docs/WORKFLOW_NARRATIVE.md](docs/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
 - **[docs/FSIregulation.md](docs/FSIregulation.md)** - Financial-services regulatory reference links
 

@@ -29,8 +29,7 @@ Never do these things:
 - Never LLM-drive routing or orchestration. Deterministic Python decides *when* to call the model; the LLM adds wisdom inside clearly-bounded helpers. The orchestrator is plumbing, not an agent.
 - Never hardcode mock data in source code. Test/mock data is acceptable only when loaded from a data source (fixtures, seed files, test APIs).
 - Never deploy outside your designated region.
-- **Root markdown is exactly README.md, CLAUDE.md, and tasks.md.** Every other markdown file classifies by *how a reader must treat it*, never by what it is about — topic folders (`security/`, `qa/`, `evals/`) are banned because they shred one concern across four lifecycles and never tell you where the next new artifact type goes. The buckets: **docs/** (human-readable documentation of the system *as it is* — if the system changes and the file doesn't, that's a bug), **specs/** (machine-parsed; the path itself is API, so moving it is a breaking change), **runbooks/** (step-by-step procedures an operator will execute *again*), **decisions/** (one-time records — design docs, ledgers, reviews, postmortems, correspondence), **vision/** (the product we intend, not the system that exists), **.claude/** (model-facing assets). A new markdown file is **born in decisions/ with `> **Status:** Proposed`** unless it passes another bucket's test on day one. Full rationale, definitions, and the migration order: [`docs/REPOSITORY_TAXONOMY.md`](https://github.com/skrinak/ContextEng/blob/main/docs/REPOSITORY_TAXONOMY.md).
-- **Freezing attaches to a record's status, not to its directory.** A `decisions/` record with a **terminal** status (`Shipped`, `Superseded-by:`) is frozen — append a status-header line, never rewrite the body. One marked `Proposed` or `In-progress` is **live**; edit it freely. A directory-wide freeze would forbid maintaining the in-flight trackers that legitimately live there, so code and spec would diverge with nowhere sanctioned to record the drift. A record that needs body edits *after* going terminal is misfiled — it is documentation; move it to `docs/`. Generated artifacts (scorecards, eval runs) go to `decisions/evals/` as dated files a tool owns exclusively: **never point a generator at a curated record** — it overwrites the human verdict on every run.
+- Never create, move, or edit a file without applying **[The tree](#the-tree--how-to-place-read-and-change-files)** below. It is not a filing preference; it is how this repository tells you what is true, what is binding, and what you may change.
 - Never commit code unless the user explicitly asks.
 - Never add code comments unless the user explicitly asks.
 - Never call python or pip directly. Use `uv run` for execution, `uv pip` or `uv add` for package management. uv is a prerequisite.
@@ -133,6 +132,92 @@ The SDK owns the HTTP server on `:8080`, SSE framing, the `/ping` health route, 
 - **Regulated (FSI) workloads:** regimes in [`docs/FSIregulation.md`](https://github.com/skrinak/ContextEng/blob/main/docs/FSIregulation.md). AWS/AgentCore attestations make compliance evidence cheaper to produce, but "eligible" ≠ "compliant" — data classification and configuration remain yours. EU financial-entity scope triggers DORA concentration-risk / exit-strategy obligations: keeping domain/orchestration code portable with AWS calls isolated behind an interface (`domain/`, per [AGENTCORE_FIRST.md §4.2](https://github.com/skrinak/ContextEng/blob/main/docs/AGENTCORE_FIRST.md)) *is* your exit-strategy evidence — not a reason to self-host.
 - **Data:** name resources on the product brand from t=0 (a rename later forces full resource recreation). No data caching unless explicitly designed.
 
+## The tree — how to place, read, and change files
+
+The directory a file sits in is **metadata you must act on**. It tells you whether the contents are
+true now, whether you may edit them, and whether something parses the path. You cannot recover any of
+that from the file's prose: a superseded design doc and current architecture read identically.
+Reference implementation: [skrinak/groundwork](https://github.com/skrinak/groundwork). Rationale:
+[REPOSITORY_TAXONOMY.md](https://github.com/skrinak/ContextEng/blob/main/docs/REPOSITORY_TAXONOMY.md).
+
+### Placing a file — run in order, stop at the first match
+
+1. Does a machine parse it (test fixture, CI job, code generator, another repo)? → **`specs/`**. The path is now API.
+2. Will an operator execute it again, step by step? → **`runbooks/`**
+3. Does it describe the system **as it is**, such that leaving it unchanged after a system change would be a bug? → **`docs/`**
+4. Does it describe intent rather than reality? → **`vision/`**
+5. Is it consumed by you or the harness rather than read by a human for understanding? → **`.claude/`**
+6. Otherwise → **`decisions/`**, named `YYYY-MM-DD - Title.md`, with `> **Status:** Proposed`
+
+Root markdown is **closed**: `README.md`, `CLAUDE.md`, `tasks.md`. Never add a fourth — root is what
+gets loaded unconditionally every session, so anything there costs tokens on every task forever. Never
+create a topic folder (`security/`, `qa/`, `evals/`, `notes/`): one concern spans four lifecycles, and
+a topic bucket gives you no rule for the next artifact type.
+
+If two rules seem to fit, the **earlier** one wins — a parsed contract is a spec even if it also
+documents, and a procedure is a runbook even if it also explains.
+
+### Before you edit — what each bucket permits
+
+| Bucket | You may | You must not |
+|---|---|---|
+| `docs/` | Edit freely. **You are obliged to update it in the same change** that alters what it describes | Let it drift. A stale file here poisons the one bucket that is supposed to be trustworthy |
+| `specs/` | Edit content as the contract evolves | Move or rename before auditing every consumer, including other repos and raw URLs |
+| `runbooks/` | Edit freely; add gotchas as you hit them | Leave a step that no longer matches reality |
+| `decisions/` | Edit the body **only** while status is `Proposed` or `In-progress` | Rewrite the body once status is `Shipped` or `Superseded-by:` — **append a status line instead** |
+| `vision/` | Edit freely | Cite it as evidence of how the system behaves today |
+| `.claude/` | Edit skills, commands, hooks | Commit `settings.local.json`; overwrite a `SKILL.md` (its frontmatter is what registers the skill) |
+| root trio | Keep current | Add a fourth file |
+
+**Repairing a link inside a frozen record is always allowed** — that is navigation, not the decision.
+Otherwise every file move strands the historical record.
+
+**A terminal record that needs body edits is misfiled.** It is documentation. Move it to `docs/` rather
+than editing it in place.
+
+### When sources disagree, trust in this order
+
+1. **The code** — ground truth, always
+2. **`specs/`** — for anything a machine parses; the contract wins over prose about the contract
+3. **`docs/`** — for how the system behaves
+4. **`decisions/`** — for *why*, and only as of that record's status date. A `Shipped (2026-01)` record describes January, not today
+5. **`vision/`** — intent only. Never evidence of current behavior
+
+Never resolve a contradiction by editing a frozen record. Fix `docs/`, and if the divergence is
+important, write a **new** record that supersedes the old one and add `Superseded-by:` to the original.
+
+### After `/clear`, read in this order
+
+`README.md` (what this is) → `CLAUDE.md` (how to work here) → `tasks.md` (what is in flight) →
+`docs/PRD.md` (what it consists of) → then, deliberately, the one record explaining the area you are
+about to touch. Do not bulk-read `decisions/`; it is history, and most of it is not about your task.
+
+### Writing a record
+
+```markdown
+# 2026-07-28 - What Was Decided
+
+> **Status:** Proposed
+> **Pairs-with:** 2026-07-28 - Its Execution Ledger.md
+```
+
+The status line must be the first line after the H1 — CI fails without it. Statuses: `Proposed` ·
+`In-progress` · `Shipped (YYYY-MM-DD)` · `Superseded-by: <path>`. Write records in the past tense and
+include a **Consequences** section; that is the part a future reader returns for.
+
+### Generated output
+
+Anything a script writes goes to **`decisions/evals/`** as `YYYY-MM-DD-<slug>.md` with a
+`> **Generated artifact**` header and the producing command. Never point a generator at a curated
+record — every run silently deletes the human reasoning, which is the only part anyone needed.
+
+### Before moving anything
+
+`grep` the whole repo for the old path — **including non-markdown source**, where most references
+actually live — then check raw URLs other repos may fetch. A stub that returns HTTP 200 does not
+preserve a machine-facing contract: the consumer gets a pointer with a success code and no way to
+detect the substitution. Run the reference guard (`make check-links`) before and after.
+
 ## Project structure
 
 AgentCore-first layout. Agent code is in `backend/runtime/`; `backend/lambda/` is CRUD-only.
@@ -160,13 +245,21 @@ YOUR_APP/
 │   │       ├── api-stack.ts      # API Gateway + slim CRUD lambdas
 │   │       └── auth-stack.ts     # Cognito User Pool + Identity Pool + RuntimeInvoke grant
 │   └── lambda/                  # CRUD ONLY — no agent code lives here
-├── docs/                        # All documentation (incl. AGENTCORE_FIRST.md)
+├── docs/                        # The system AS IT IS — living; arch/ narratives + diagrams
+├── specs/                       # Machine-parsed — the path is API
+├── runbooks/                    # Procedures an operator runs again
+├── decisions/                   # One-time records; frozen once terminal. evals/ = generated
+├── vision/                      # The product intended, not the system that exists
+├── .claude/                     # Skills, commands, hooks — model-facing
 ├── frontend/
 │   └── web/                     # React TypeScript app
 │       └── src/services/        # runtimeClient.ts, useDialogueStream.ts, invokeRuntimeOnce.ts
-├── tasks.md                     # Task tracking
-└── utils/                       # Scripts and tools
+├── README.md · CLAUDE.md · tasks.md   # the closed root trio
+└── utils/                       # Scripts and tools, incl. the reference guard
 ```
+
+Every directory carries a `README.md` stating what belongs in it. **Read the one next to the file you
+are about to create** — it holds the membership test verbatim, so you never have to come back here.
 
 ## Infrastructure reference
 
@@ -182,7 +275,7 @@ Fill in per project:
 
 ## Tooling & deployment
 
-Standardize on the **new CLI** `@aws/agentcore` (npm, Node 20+) with config artifact `agentcore.json`. The legacy `bedrock-agentcore-starter-toolkit` (pip; `configure`/`launch`; hidden `.bedrock_agentcore.yaml`) prints a deprecation banner — new projects don't use it. Run uv initialization before any AWS commands (see `docs/UV Setup.md`).
+Standardize on the **new CLI** `@aws/agentcore` (npm, Node 20+) with config artifact `agentcore.json`. The legacy `bedrock-agentcore-starter-toolkit` (pip; `configure`/`launch`; hidden `.bedrock_agentcore.yaml`) prints a deprecation banner — new projects don't use it. Run uv initialization before any AWS commands (see `runbooks/UV Setup.md`).
 
 ```bash
 agentcore create --name MyAgent --framework Strands --model-provider Bedrock --build CodeZip

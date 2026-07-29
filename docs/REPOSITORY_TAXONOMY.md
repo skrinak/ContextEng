@@ -376,24 +376,56 @@ Run any candidate taxonomy against this before adopting it:
 
 ## 10. Applying it to your repository
 
-**Do not copy the six buckets.** Copy the axis. Classification follows what a repository *is*.
+Start from the archetype: **[skrinak/groundwork](https://github.com/skrinak/groundwork)** is a GitHub
+template carrying this taxonomy, a usage README in every directory, and the guard from §8 green on
+commit zero.
 
-This repository is the demonstration. **ContextEng is a prompt-and-template library, not a product**,
-so its shape is four buckets, not six:
+```bash
+gh repo create my-product --template skrinak/groundwork --private --clone
+```
 
-| ContextEng bucket | Membership test |
-|---|---|
-| root + `.claude/` | Fetched or seeded verbatim into another repo — **the path is public API** |
-| `prompts/` | Text you point a model at, parameterized for reuse; never describes this repo |
-| `docs/` | Methodology and governance a human or model reads for understanding |
-| `utils/` | Executable tooling |
+### A retracted exception, and what it taught
 
-There is no `decisions/` here, because this repository does not accumulate one-time records — it
-accumulates reusable text. There is no `runbooks/`, because there is nothing to operate. Adding
-either "for consistency" would create empty directories that teach a reader nothing, which is the
-cargo-cult failure this document exists to prevent.
+An earlier revision of this section argued the opposite: *don't copy the buckets, copy the axis* —
+and used this repository as the worked example. ContextEng was a prompt library rather than a
+product, so four buckets were "the method working, not an inconsistency."
 
-The axis is what transfers, and it produced both shapes:
+That was wrong, and it failed within a week in a way worth recording.
+
+**A repo that exempts itself from its own rules cannot check itself.** `CLAUDE.md` is fetched and
+seeded verbatim into every project built with this method, and it linked its own `docs/`
+*relatively*. Those links resolved here and were dead in **every seeded repository, for about a
+year**. The defect was invisible from inside ContextEng — here the paths resolve — and surfaced only
+when a separate scaffold ran the guard against a copy. What a repository cannot check, it gets wrong.
+
+**And the exception had never been audited.** Applied honestly, the placement procedure immediately
+found a step-by-step operator procedure sitting in the documentation bucket since the day it was
+written. The four-bucket shape was not a considered classification. It was the absence of one.
+
+ContextEng now conforms: `runbooks/` for procedures, `specs/` for the prompts (machine-fetched text
+whose paths are API), `decisions/` for its own records, a README in every directory, and the guard
+in CI. Record: `decisions/2026-07-29 - Conform ContextEng to the groundwork archetype.md`.
+
+> **The durable lesson is not "always use six buckets."** It is that *"my repository is special"* is
+> the cheapest sentence in software and almost always wrong. Adopt the archetype. Deviate only where
+> a **mechanical constraint** forces it, and write the constraint down where the next reader will hit
+> it.
+
+### The one deviation that survived, because it is mechanical
+
+`docs/TaskListGenerator.md` holds a spec, in the documentation bucket. Its raw URL is hardcoded in
+nine files of one downstream repo alone and baked into seeded customer repositories nobody can reach.
+Automation curling it receives HTTP 200 whatever sits there, so a pointer at that address **fails
+silently**. Public API outranks tidiness — and the deviation is recorded in `specs/README.md`, at the
+exact spot someone would otherwise try to "fix" it.
+
+That is what a legitimate exception looks like: forced by a consumer you cannot change, and
+documented where it will be tripped over. Compare it to the retracted one, which was justified by
+self-description alone.
+
+### If you are adapting rather than adopting
+
+The axis still transfers. Work it honestly:
 
 1. **Enumerate what you actually have.** Every non-code file. Do not design in the abstract; the surprises are in the inventory.
 2. **For each, answer the three questions** (§2): audience, lifecycle, bindingness.
@@ -415,4 +447,4 @@ reality is mostly source comments.
 
 - [`CLAUDE.md`](../CLAUDE.md) — carries the taxonomy as an enforceable constraint for repositories seeded from this one
 - [`docs/AGENTCORE_FIRST.md`](AGENTCORE_FIRST.md) — the same "decide it deliberately at t=0" posture, applied to the agent runtime
-- [`prompts/Code-Reviewer.md`](../prompts/Code-Reviewer.md) — emits its transcript into `decisions/` with a status header, per §4
+- [`specs/Code-Reviewer.md`](../specs/Code-Reviewer.md) — emits its transcript into `decisions/` with a status header, per §4
