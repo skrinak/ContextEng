@@ -28,13 +28,13 @@ The development workflow is designed around a fundamental principle: humans are 
 
 ### 1. Create Your PRD
 
-The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](docs/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
+The process begins with writing a well-articulated Product Requirements Document ("PRD.md"). A [PRD development prompt](prompts/PRD_DevelopmentPrompt.md) is provided to guide you through creating comprehensive requirements optimized for AI models.
 
 **Why this matters**: This initial phase should not be rushed. Iterating with the prompt for several days is recommended because this foundation determines your project's success. A clear PRD gives the AI assistant the context it needs to make intelligent decisions throughout development. During this time, speak with stakeholders to capture diverse perspectives and integrate your knowledge of both traditional and agentic AI software development.
 
 ### 2. Generate Task List
 
-Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](docs/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
+Once your PRD is finalized and stakeholders have approved the requirements, use the [Task List Generator](prompts/TaskListGenerator.md) to create a comprehensive task list. This generator transforms your PRD into a structured, hierarchical roadmap that identifies dependencies and highlights opportunities for parallel execution through sub-agents.
 
 **Why this matters**: Breaking work into clear, discrete tasks allows you to maintain minimal context in each session. The AI assistant can focus on one specific objective at a time, leading to better code quality and fewer errors.
 
@@ -60,22 +60,34 @@ When all specified tasks are completed but more work is needed, you have two app
 
 ## What's Included
 
-### Core Templates
-- **[CLAUDE.md](CLAUDE.md)** - Project instructions, **AgentCore-first** architecture, and directives for Claude Code
-- **[README.md](README.md)** - Repository documentation and workflow guide
-- **[env.example](env.example)** - Environment variable template
+The repository is classified by what each file **is**, not by file extension. Four buckets:
 
-### Configuration
-- **[.claude/settings.json](.claude/settings.json)** - Claude Code configuration for MCP servers and hooks
-- **[.claude/settings.local.json](.claude/settings.local.json)** - Local settings override (gitignored)
+| Bucket | Membership test |
+|---|---|
+| root templates + `.claude/` | Fetched or seeded verbatim into another repo — **the path is public API; do not move or rename these** |
+| `prompts/` | Text you point a model at, parameterized for reuse; never describes this repo |
+| `docs/` | Methodology and governance a human (or model) reads for understanding |
+| `utils/` | Executable tooling |
+
+(`templates/` is reserved by name for future seeded-content directories — e.g. a media-generation template pack.)
+
+### Seeded template surface (paths are public API — consumed at runtime by downstream tooling)
+- **[CLAUDE.md](CLAUDE.md)** - Project instructions, **AgentCore-first** architecture, and directives for Claude Code
+- **[env.example](env.example)** - Environment variable template
+- **[.claude/settings.json](.claude/settings.json)** - Claude Code permissions/config seeded into bootstrapped repos. (Skills, slash commands, and hooks under `.claude/` are *conventions for the repos you build with this method* — see "Claude Code Customization" below — this repo itself ships only `settings.json`.)
+
+### Prompts
+- **[prompts/PRD_DevelopmentPrompt.md](prompts/PRD_DevelopmentPrompt.md)** - Interactive prompt for creating Product Requirements Documents
+- **[prompts/TaskListGenerator.md](prompts/TaskListGenerator.md)** - Transform PRDs into structured task lists (its Output Format section doubles as the parsing contract downstream tools validate against)
+- **[prompts/Code-Reviewer.md](prompts/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel
+- [docs/TaskListGenerator.md](docs/TaskListGenerator.md) is a **deliberate one-line stub**: the raw URL is hardcoded across downstream repos and must keep resolving. Do not delete.
 
 ### Documentation
-- **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend.
+- **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend. (Stays in `docs/` — it is relative-linked from `CLAUDE.md` and both prompts.)
 - **[docs/FEDERATED_SSO.md](docs/FEDERATED_SSO.md)** - Federated sign-in (Google, GitHub, enterprise SAML/OIDC), forced MFA, and identity linking — and where AgentCore Identity is *not* the answer (human SSO is Cognito's job, not the workload-auth layer).
-- **[docs/PRD_DevelopmentPrompt.md](docs/PRD_DevelopmentPrompt.md)** - Guide for creating Product Requirements Documents
-- **[docs/TaskListGenerator.md](docs/TaskListGenerator.md)** - Transform PRDs into structured task lists
-- **[docs/UV Setup.md]("docs/UV Setup.md")** - Python UV package manager setup guide
+- **[docs/UV Setup.md](docs/UV%20Setup.md)** - Python UV package manager setup guide
 - **[docs/WORKFLOW_NARRATIVE.md](docs/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
+- **[docs/FSIregulation.md](docs/FSIregulation.md)** - Financial-services regulatory reference links
 
 ### Diagrams
 - **[docs/images/CompleteWorkflow.png](docs/images/CompleteWorkflow.png)** - PRD → Tasks → Development visual
