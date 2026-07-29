@@ -1,0 +1,45 @@
+# --- OS / editor ---
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# --- Secrets / local env (keep examples) ---
+.env
+.env.*
+!.env.example
+!*.env.example
+
+# --- Scratch files ---
+# Historically a credential-leak vector: a scratch file is where someone pastes a
+# secret "just for a second" while wiring an OAuth app. Un-anchored deliberately —
+# the habit migrates between directories, so these match at any depth.
+tmp.md
+tmp.*.md
+**/tmp.md
+**/tmp.html
+2do.md
+**/2do.md
+
+# --- Node ---
+node_modules/
+dist/
+build/
+*.log
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# --- CDK ---
+cdk.out/
+.cdk.staging/
+cdk-outputs.json
+
+# --- Claude local overrides ---
+.claude/settings.local.json
