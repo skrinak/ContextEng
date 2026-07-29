@@ -77,6 +77,16 @@ The repository is classified by what each file **is**, not by file extension. Fo
 
 (`templates/` is reserved by name for future seeded-content directories — e.g. a media-generation template pack.)
 
+**Four buckets here, six in a product repo** — see **[docs/REPOSITORY_TAXONOMY.md](docs/REPOSITORY_TAXONOMY.md)**.
+That difference is the method working, not an inconsistency: you classify by *what a repository is*, and
+this one is a prompt library rather than a product. The document explains the axis that produced both
+shapes — audience × lifecycle × bindingness — argues the case against topic folders, defines every term,
+and works through why a code review belongs in `decisions/` and nowhere else. Its premise: **in a repo that
+coding agents read, the directory tree stops being filing and becomes a context-selection index** — the path
+is the one piece of metadata present in every search result and tool output for free, so it should carry the
+answer to "is this still true, and may I change it?" The taxonomy ships as an enforceable constraint in
+[CLAUDE.md](CLAUDE.md), so every repo seeded from this one inherits it.
+
 ### Seeded template surface (paths are public API — consumed at runtime by downstream tooling)
 - **[CLAUDE.md](CLAUDE.md)** - Project instructions, **AgentCore-first** architecture, and directives for Claude Code
 - **[env.example](env.example)** - Environment variable template
@@ -88,6 +98,7 @@ The repository is classified by what each file **is**, not by file extension. Fo
 - **[prompts/Code-Reviewer.md](prompts/Code-Reviewer.md)** - The parameterized peer-walkthrough review panel. [docs/Code Reviewer.md](docs/Code%20Reviewer.md) is a stub for the pre-2026-07 URL (note the space became a hyphen in the rename).
 
 ### Documentation
+- **[docs/REPOSITORY_TAXONOMY.md](docs/REPOSITORY_TAXONOMY.md)** - How to design a source tree that an AI can read. The classification axis (audience × lifecycle × bindingness), the six product buckets and their membership tests, precise definitions, the status vocabulary, why a code review goes in `decisions/` and not `docs/` or `reviews/`, why topic folders fail, the freeze rule, enforcement — and the five-year stress test to run against any taxonomy before adopting it.
 - **[docs/AGENTCORE_FIRST.md](docs/AGENTCORE_FIRST.md)** - Architecture, buy-vs-build retirement ledger, and migration playbook. If your product has an agent/LLM loop, read this before designing the backend. (Stays in `docs/` — it is relative-linked from `CLAUDE.md` and both prompts.)
 - **[docs/FEDERATED_SSO.md](docs/FEDERATED_SSO.md)** - Federated sign-in (Google, GitHub, enterprise SAML/OIDC), forced MFA, and identity linking — and where AgentCore Identity is *not* the answer (human SSO is Cognito's job, not the workload-auth layer).
 - **[docs/UV Setup.md](docs/UV%20Setup.md)** - Python UV package manager setup guide
