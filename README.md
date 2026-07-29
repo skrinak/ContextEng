@@ -2,6 +2,21 @@
 
 Claude Code templates and an **AgentCore-first** reference architecture for AWS agentic projects. If your product has an agent/LLM loop, the template puts it on the Amazon Bedrock AgentCore Runtime from day one — not in a Lambda behind API Gateway — with the CRUD path (API Gateway → Lambda → DynamoDB) as the thin supporting plane. See [`docs/AGENTCORE_FIRST.md`](docs/AGENTCORE_FIRST.md).
 
+> ### 🏗 Starting a new project? Use **[groundwork](https://github.com/skrinak/groundwork)**
+>
+> This repository is the **method** — prompts, architecture guidance, and the reasoning behind the
+> structure. [`skrinak/groundwork`](https://github.com/skrinak/groundwork) is the **scaffold**: a
+> GitHub template that gives you the taxonomy, a usage README in every directory, `CLAUDE.md`, and a
+> reference guard that is green on commit zero.
+>
+> ```bash
+> gh repo create my-product --template skrinak/groundwork --private --clone
+> ```
+>
+> Clone *this* repo to read and adapt the method. Use *that* template to start a product. They are
+> split because a teaching repo succeeds by accumulating and a scaffold succeeds by staying empty —
+> merged, the scaffold always loses.
+
 ## Getting Started
 
 1. Copy template files to your project, or git clone this repo
