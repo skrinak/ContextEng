@@ -13,13 +13,10 @@
     "bash": {
       "allow_commands": [
         "aws",
-        "conda",
-        "source",
+        "uv",
         "npm",
         "node",
-        "python",
         "python3",
-        "pip",
         "pytest",
         "git",
         "ls",
@@ -34,13 +31,12 @@
         "whereis"
       ],
       "allow_patterns": [
-        "source /Users/kris/anaconda3/etc/profile.d/conda.sh*",
-        "conda activate*",
         "aws*",
+        "uv*",
         "npm*",
         "git*",
         "node*",
-        "python*",
+        "python3*",
         "pytest*"
       ]
     }
