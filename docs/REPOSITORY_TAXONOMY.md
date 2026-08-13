@@ -75,7 +75,11 @@ Three axes, and the buckets fall out. Note what is **not** on the list:
 
 ![Six buckets, one question each](images/taxonomy-buckets.whiteboard.jpg)
 
-The product-repository shape. Six buckets plus a fixed root.
+The product-repository shape. Six **durable** buckets plus a fixed root — and one **transient**
+bucket that carries no obligation at all.
+
+> The board above predates `scratch/` and shows the six durable buckets only. The seventh is the
+> zero point of the same scale, not a seventh kind of thing.
 
 | Bucket | Membership test — the question that decides | Lifecycle | Typical contents |
 |---|---|---|---|
@@ -86,6 +90,7 @@ The product-repository shape. Six buckets plus a fixed root.
 | **`decisions/`** | "This records a moment. If you'd edit the body to reflect today's system, it doesn't belong here." | **Frozen once terminal** | Design docs, task ledgers, reviews, postmortems, correspondence, spikes, audits |
 | **`vision/`** | "This describes the product we **intend**, not the system that exists." | Living | PR-FAQs, positioning, founding notes, strategy |
 | **`.claude/`** | "Consumed by the model or the harness, not read by humans for understanding." | Consumable | Skills, slash commands, hooks, settings |
+| **`scratch/`** | "Could I delete this right now and lose nothing?" | **None** — contents ignored, never tracked | Session exports, raw tool output, generated diffs, debug screenshots |
 
 **Why the root is exactly three.** Root is the only location an agent reads without being told to,
 so it is the scarcest real estate in the repository and the only place where an unclassified file
@@ -107,6 +112,7 @@ picks one meaning and holds it.
 | **Vision** | Intent. Deliberately *not* the system; expected to be aspirational. | Documentation, which would be a bug if it were aspirational. |
 | **Terminal status** | `Shipped` or `Superseded-by` — the record has reached its final state and is frozen. | `Proposed` / `In-progress`, which are live and editable. |
 | **Generated artifact** | Machine-written data (a benchmark scorecard, an eval run). Never hand-edited; re-running writes a *new* dated file. | A record, which is hand-written and carries a status. |
+| **Transient** | Output of a tool or a session that duplicates information already filed elsewhere. Deletable by anyone, at any time, without notice. | A generated artifact, which someone re-reads and which therefore earns a dated filename and a provenance header. |
 
 ### The status vocabulary
 
@@ -214,6 +220,32 @@ Not "unless it might later become documentation." On day one. Most documents tha
 documentation are actually records of a decision being made, and they stop changing the moment the
 work ships. Defaulting to `decisions/` means the failure mode is a record that should be promoted —
 visible and cheap — rather than a stale record impersonating documentation (§4).
+
+### Ignoring a file is not filing it
+
+> Transient output goes in `scratch/`, whose test is *"could I delete this right now and lose
+> nothing?"* — the **narrowest** bucket in the tree, never a default.
+
+`.gitignore` protects the **repository**. It does nothing for the **tree**, and the tree is the whole
+premise (§1): a path must answer *is this true now?* before a byte is read. An untracked transcript
+sitting in `docs/` is still in `ls`, still in glob, still in an agent's file search — and it still
+makes `docs/`'s claim about itself, because git-tracking is invisible in a directory listing.
+
+This is why the answer is a **location** and not a filename convention. Name-based scratch patterns
+(`tmp.md`, `2do.md`) can only enumerate, and the enumeration is the bug — the same objection §8 makes
+to CI path filters. The case that established the rule was a 265KB session export named
+`dev_setup.md`: it matched no pattern and landed at the closed root.
+
+**The birth rule's asymmetry inverts here.** Defaulting to `decisions/` is safe because misfiling
+*into* it is cheap and obvious. Misfiling into `scratch/` is punished by silent destruction, so
+passing its test requires an affirmative *"nothing is lost"* — not merely an absence of ideas about
+where else a file might go. Contents are ignored; the `README.md` stating the test is tracked, so the
+directory is a true claim rather than an empty one.
+
+**Mine, then discard.** Scratch is ore, not metal. When a session produces something durable, file it
+in the same session — the ledger to `tasks.md`, the procedure to `runbooks/`, the reasoning to
+`decisions/` — and delete the original. A second copy nobody updates becomes a second source of truth
+that quietly disagrees with the first.
 
 ### The freeze rule — status, not directory
 

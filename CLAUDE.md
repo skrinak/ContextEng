@@ -142,6 +142,9 @@ Reference implementation: [skrinak/groundwork](https://github.com/skrinak/ground
 
 ### Placing a file — run in order, stop at the first match
 
+0. Was it emitted by a tool or a session rather than authored, **and** does everything durable in it
+   already live elsewhere? → **`scratch/`** (ignored, never tracked). The narrowest test in the list —
+   answer it honestly or you will lose something.
 1. Does a machine parse it (test fixture, CI job, code generator, another repo)? → **`specs/`**. The path is now API.
 2. Will an operator execute it again, step by step? → **`runbooks/`**
 3. Does it describe the system **as it is**, such that leaving it unchanged after a system change would be a bug? → **`docs/`**
@@ -153,6 +156,11 @@ Root markdown is **closed**: `README.md`, `CLAUDE.md`, `tasks.md`. Never add a f
 gets loaded unconditionally every session, so anything there costs tokens on every task forever. Never
 create a topic folder (`security/`, `qa/`, `evals/`, `notes/`): one concern spans four lifecycles, and
 a topic bucket gives you no rule for the next artifact type.
+
+**Ignoring a file is not filing it.** `.gitignore` protects the remote; the tree is what a reader and
+a model actually see. An untracked transcript in `docs/` is still in `ls`, still in glob, still in a
+file search, and it still makes `docs/`'s claim about itself. Transient output goes in `scratch/` — a
+treatment class, not a topic, and the zero point of the same obligation scale the other buckets grade.
 
 If two rules seem to fit, the **earlier** one wins — a parsed contract is a spec even if it also
 documents, and a procedure is a runbook even if it also explains.
@@ -167,6 +175,7 @@ documents, and a procedure is a runbook even if it also explains.
 | `decisions/` | Edit the body **only** while status is `Proposed` or `In-progress` | Rewrite the body once status is `Shipped` or `Superseded-by:` — **append a status line instead** |
 | `vision/` | Edit freely | Cite it as evidence of how the system behaves today |
 | `.claude/` | Edit skills, commands, hooks | Commit `settings.local.json`; overwrite a `SKILL.md` (its frontmatter is what registers the skill) |
+| `scratch/` | Put anything transient here; delete the contents at any time without asking | Store the only copy of anything, or a credential — `.gitignore` protects the remote, not your disk |
 | root trio | Keep current | Add a fourth file |
 
 **Repairing a link inside a frozen record is always allowed** — that is navigation, not the decision.
@@ -251,6 +260,7 @@ YOUR_APP/
 ├── decisions/                   # One-time records; frozen once terminal. evals/ = generated
 ├── vision/                      # The product intended, not the system that exists
 ├── .claude/                     # Skills, commands, hooks — model-facing
+├── scratch/                     # Transient: session exports, tool output — ignored, never tracked
 ├── frontend/
 │   └── web/                     # React TypeScript app
 │       └── src/services/        # runtimeClient.ts, useDialogueStream.ts, invokeRuntimeOnce.ts
