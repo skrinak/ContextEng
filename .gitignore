@@ -10,9 +10,24 @@
 !.env.example
 !*.env.example
 
-# --- Scratch files ---
+# --- Transient files: scratch/ ---
+# The bucket for anything passing "could I delete this right now and lose
+# nothing?" — session exports, tool output, generated diffs, debug screenshots.
+# Contents are never tracked; the README always is, so the membership test ships
+# in a fresh clone and the directory is a true claim rather than an empty one.
+# Rules: scratch/README.md
+scratch/*
+!scratch/README.md
+
+# --- Scratch files, by name: the backstop ---
+# Superseded as the primary mechanism by scratch/ above, and kept because the
+# habit migrates and someone will always scratch in place. Name patterns can only
+# enumerate, and the enumeration is the bug — the 265KB session export that
+# established the rule was called `dev_setup.md` and matched nothing below.
+#
 # Historically a credential-leak vector: a scratch file is where someone pastes a
-# secret "just for a second" while wiring an OAuth app. Un-anchored deliberately —
+# secret "just for a second" while wiring an OAuth app. Note that ignoring a file
+# protects the remote — never your disk or your backups. Un-anchored deliberately —
 # the habit migrates between directories, so these match at any depth.
 tmp.md
 tmp.*.md
