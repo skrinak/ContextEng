@@ -19,7 +19,7 @@ Tracking `decisions/2026-07-29 - Conform ContextEng to the groundwork archetype.
 - [x] `prompts/` → `specs/` `[completed]` — machine-fetched text whose paths are API; the guard caught all 10 stale references
 - [x] Bucket READMEs in every directory `[completed]` — membership test verbatim, pointing at the archetype for the canonical text
 - [x] `CLAUDE.md` gains "The tree" as a first-class section `[completed]` — placement procedure, per-bucket permissions, source precedence, post-`/clear` reading order
-- [ ] Re-vendor `CLAUDE.md` into groundwork and confirm `contract-sync` green `[pending]`
+- [x] Re-vendor `CLAUDE.md` into groundwork and confirm `contract-sync` green `[completed]` — verified 2026-09-03: CLAUDE.md/settings.json/env.example byte-identical, last 10 daily runs green
 
 ## Open
 
