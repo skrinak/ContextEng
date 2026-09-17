@@ -21,6 +21,18 @@ Tracking `decisions/2026-07-29 - Conform ContextEng to the groundwork archetype.
 - [x] `CLAUDE.md` gains "The tree" as a first-class section `[completed]` — placement procedure, per-bucket permissions, source precedence, post-`/clear` reading order
 - [x] Re-vendor `CLAUDE.md` into groundwork and confirm `contract-sync` green `[completed]` — verified 2026-09-03: CLAUDE.md/settings.json/env.example byte-identical, last 10 daily runs green
 
+## Replace FSIregulation.md with a validated corpus (2026-09-17)
+
+Tracking `decisions/2026-09-17 - Replacing FSIregulation.md with a validated corpus.md`.
+
+- [x] Survey the replacement, its taxonomy placement and its inbound references `[completed]` — found two demonstrable defects in the current file (duplicate citation URL, authority/host mismatch) and one legislative-status error
+- [ ] **User-owned:** decide where generated machine-consumable JSON lives — `specs/fsi/dist/` recommended, `decisions/evals/` is the stated home for script output but assumes dated one-off records `[pending]`
+- [ ] Toolchain, schemas and validator with a fixture per failure mode. No corpus data until the detectors exist `[pending]`
+- [ ] Seed corpus, Layer 1, seven auditability instruments `[pending]`
+- [ ] Rendering, export, link verification, coverage report. `docs/FSIregulation.md` becomes generated at the same address `[pending]`
+- [ ] Obligations for the seven, every source fetched and every duration quoted `[pending]`
+- [ ] Re-vendor `CLAUDE.md` after its FSI bullet repoints, confirm `contract-sync` green `[pending]`
+
 ## Open
 
 - [ ] `vision/` — not created. Nothing here is aspirational positioning yet, and an empty directory is a claim that isn't true `[pending]`
