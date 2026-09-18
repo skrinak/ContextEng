@@ -1,0 +1,22 @@
+id: ctl-indefinite-and-legal-hold
+title: Legal holds for indefinite retention and anticipated investigations
+kind: technical
+satisfies: [us-sec-17a-4.d, us-sox-802.1519]
+implementation: >-
+  Place an Object Lock legal hold on life-of-enterprise records (charter documents, minute books, registration forms), because a legal hold has no expiry date. Keep a documented legal-hold procedure. When a federal investigation or proceeding is reasonably anticipated, it places holds on the relevant records and suspends lifecycle expiration for them, so routine deletion cannot become the destruction that 18 U.S.C. 1519 criminalises.
+evidence:
+  - Legal-hold register listing each matter, its scope, the date the hold was placed, and who authorised it
+  - S3 object metadata showing ObjectLockLegalHoldStatus ON for held objects
+  - CloudTrail events for PutObjectLegalHold, showing who placed and removed each hold
+limits: >-
+  The technical hold only works if the procedure is triggered in time. Knowing when a matter is contemplated is a legal judgement, not something the platform decides.
+aws:
+  - service: Amazon S3 Object Lock legal hold
+    configuration: Legal hold ON for life-of-enterprise classes and for records in scope of an active matter
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

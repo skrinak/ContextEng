@@ -1,0 +1,19 @@
+id: ctl-regulatory-undertakings
+title: Executive and third-party undertakings for electronic records
+kind: organizational
+satisfies: [us-sec-17a-4.f3v, us-sec-17a-4.i]
+implementation: >-
+  File the 17a-4(f)(3)(v) undertaking with the designated examining authority, signed by a designated executive officer (who may appoint designated officers and specialists) or by a designated third party. For records held in a cloud provider's storage, either obtain the provider's full 17a-4(i)(1)(i) undertaking, or establish and document independent access. Independent access means the firm can reach, examine and furnish the records without the provider's intervention, which makes the shorter 17a-4(i)(1)(ii) undertaking available.
+evidence:
+  - Filed undertakings, with the date and recipient of each filing
+  - Written appointments of designated officers and specialists
+  - An independent-access test showing the firm retrieving and producing records using only its own credentials
+limits: >-
+  No AWS configuration satisfies this control. It is a filing and a governance act that the firm must perform.
+aws: []
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

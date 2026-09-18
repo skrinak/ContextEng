@@ -1,0 +1,4 @@
+description: An obligation with no quoted source
+expect: schema
+delete:
+  - {collection: obligations, index: 0, path: [source, quote]}

@@ -1,0 +1,11 @@
+description: The named authority and the host disagree (MSRB rules on finra.org)
+expect: authority-host
+append:
+  holdings:
+    - title: MSRB Rules
+      url: https://www.finra.org/rules-guidance/rulebooks/municipal-securities-rulemaking-board-rules
+      authority: msrb
+      jurisdiction: US
+      topic: capital-markets
+      kind: portal
+      link: {status: ok, checked: "2026-01-01"}

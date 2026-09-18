@@ -1,0 +1,4 @@
+description: An obligation quoted from a host that is not the authority or an official publisher
+expect: authority-host
+set:
+  - {collection: obligations, index: 0, path: [source, url], value: "https://www.example-law-blog.com/fixture-rule"}

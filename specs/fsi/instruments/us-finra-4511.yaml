@@ -1,0 +1,20 @@
+id: us-finra-4511
+title: FINRA Rule 4511 — General Requirements (books and records)
+short: FINRA 4511
+authority: finra
+jurisdiction: US
+type: sro-rule
+citation: FINRA Rule 4511
+url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511
+status: in_force
+status_as_of: "2026-09-18"
+topics: [capital-markets, recordkeeping]
+cloud_relevance: high
+applies_to: FINRA member firms
+summary: Requires members to make and preserve books and records, sets a default retention period where no other rule specifies one, and requires the Rule 17a-4 format and media.
+confidence: high
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim.
+review_due: "2027-03-18"

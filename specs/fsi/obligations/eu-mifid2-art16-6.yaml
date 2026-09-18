@@ -1,0 +1,71 @@
+- id: eu-mifid2-art16-6.records
+  instrument: eu-mifid2-art16-6
+  title: Keep records of all services, activities and transactions sufficient for supervision
+  kind: creation
+  applies_to: Investment firms
+  requirement: Keep records of every service, activity and transaction that are sufficient for the competent authority to supervise, enforce, and confirm compliance with obligations to clients and to market integrity. The Article itself sets no retention period.
+  note: Article 16(6) has no duration. The periods that apply to these records come from Article 16(7) for communications and MiFIR Article 25(1) for orders and transactions.
+  see_also: [eu-mifid2-art16-6.dr72, eu-mifid2-art16-6.recordings, eu-mifid2-art16-6.mifir25]
+  source:
+    citation: Directive 2014/65/EU, Article 16(6)
+    url: https://eur-lex.europa.eu/eli/dir/2014/65/oj
+    quote: >-
+      6. An investment firm shall arrange for records to be kept of all services, activities and transactions undertaken by it which shall be sufficient to enable the competent authority to fulfil its supervisory tasks and to perform the enforcement actions under this Directive, Regulation (EU) No 600/2014, Directive 2014/57/EU and Regulation (EU) No 596/2014, and in particular to ascertain that the investment firm has complied with all obligations including those with respect to clients or potential clients and to the integrity of the market.
+    retrieved: "2026-09-18"
+    text_as_of: OJ L 173, 12.6.2014 (original text)
+  confidence: medium
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared.}
+  review_due: "2027-03-18"
+
+- id: eu-mifid2-art16-6.dr72
+  instrument: eu-mifid2-art16-6
+  title: Storage medium must reveal every correction and prevent manipulation
+  kind: form
+  applies_to: Investment firms
+  requirement: Keep records on a medium that the authority can readily access to reconstitute each key stage of a transaction, where corrections and the prior contents are easily ascertainable, and which cannot otherwise be manipulated or altered.
+  source:
+    citation: Commission Delegated Regulation (EU) 2017/565, Article 72(1)(a)-(c)
+    url: https://eur-lex.europa.eu/eli/reg_del/2017/565/oj
+    quote: >-
+      (a) the competent authority is able to access them readily and to reconstitute each key stage of the processing of each transaction; (b) it is possible for any corrections or other amendments, and the contents of the records prior to such corrections or amendments, to be easily ascertained; (c) it is not possible for the records otherwise to be manipulated or altered;
+    retrieved: "2026-09-18"
+    text_as_of: OJ L 87, 31.3.2017 (original text)
+  confidence: medium
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared.}
+  review_due: "2027-03-18"
+
+- id: eu-mifid2-art16-6.recordings
+  instrument: eu-mifid2-art16-6
+  title: Recorded calls and electronic communications kept five years, up to seven on request
+  kind: retention
+  applies_to: Investment firms dealing on own account or providing client order services
+  requirement: Keep recordings of relevant telephone conversations and electronic communications for five years, or up to seven years where the competent authority requests it, and provide them to the client on request.
+  retention: {period: P5Y, extended_period: P7Y, trigger: "The Article states the period without naming its start."}
+  source:
+    citation: Directive 2014/65/EU, Article 16(7)
+    url: https://eur-lex.europa.eu/eli/dir/2014/65/oj
+    quote: >-
+      The records kept in accordance with this paragraph shall be provided to the client involved upon request and shall be kept for a period of five years and, where requested by the competent authority, for a period of up to seven years.
+    retrieved: "2026-09-18"
+    text_as_of: OJ L 173, 12.6.2014 (original text)
+  confidence: medium
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared.}
+  review_due: "2027-03-18"
+
+- id: eu-mifid2-art16-6.mifir25
+  instrument: eu-mifid2-art16-6
+  title: Order and transaction data kept five years
+  kind: retention
+  applies_to: Investment firms
+  requirement: Keep the relevant data on every order and transaction in financial instruments, whether on own account or for a client, at the competent authority's disposal for five years.
+  retention: {period: P5Y, trigger: "The Article states the period without naming its start."}
+  source:
+    citation: Regulation (EU) No 600/2014 (MiFIR), Article 25(1)
+    url: https://eur-lex.europa.eu/eli/reg/2014/600/oj
+    quote: >-
+      1. Investment firms shall keep at the disposal of the competent authority, for five years, the relevant data relating to all orders and all transactions in financial instruments which they have carried out, whether on own account or on behalf of a client.
+    retrieved: "2026-09-18"
+    text_as_of: OJ L 173, 12.6.2014 (original text)
+  confidence: medium
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared.}
+  review_due: "2027-03-18"

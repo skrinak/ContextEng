@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skrinak/ContextEng/specs/fsi/schema/registry.schema.json",
+  "title": "Jurisdictions, authorities and vendors the corpus may cite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["jurisdictions", "authorities", "vendors"],
+  "properties": {
+    "jurisdictions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "publisher_hosts"],
+        "properties": {
+          "name": {"type": "string"},
+          "publisher_hosts": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "authorities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "jurisdiction", "hosts"],
+        "properties": {
+          "name": {"type": "string"},
+          "jurisdiction": {"type": "string"},
+          "hosts": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "vendors": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "hosts"],
+        "properties": {
+          "name": {"type": "string"},
+          "hosts": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

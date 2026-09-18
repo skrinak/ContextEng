@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skrinak/ContextEng/specs/fsi/schema/common.schema.json",
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9.-]*[a-z0-9]$"},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "url": {"type": "string", "pattern": "^https://[^\\s]+$"},
+    "duration": {"type": "string", "pattern": "^P(?=[0-9])([0-9]+Y)?([0-9]+M)?([0-9]+D)?$"},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "status": {"enum": ["in_force", "enacted", "proposed", "not_enacted", "withdrawn", "repealed", "superseded", "guidance", "unverified"]},
+    "topic": {"enum": ["banking", "capital-markets", "insurance", "payments-consumer", "digital-assets", "stablecoins", "operational-resilience", "cybersecurity", "data-protection", "healthcare", "aml", "whistleblower", "recordkeeping"]},
+    "verified": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "by", "method"],
+      "properties": {
+        "date": {"$ref": "#/$defs/date"},
+        "by": {"type": "string", "minLength": 1},
+        "method": {"type": "string", "minLength": 1}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation", "url", "quote", "retrieved"],
+      "properties": {
+        "citation": {"type": "string", "minLength": 1},
+        "url": {"$ref": "#/$defs/url"},
+        "quote": {"type": "string", "minLength": 20},
+        "retrieved": {"$ref": "#/$defs/date"},
+        "text_as_of": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

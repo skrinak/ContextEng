@@ -1,0 +1,2879 @@
+{
+  "schema_version": 1,
+  "generated_by": "utils/fsi_render.py",
+  "verified_through": "2026-09-18",
+  "registry": {
+    "jurisdictions": {
+      "US": {
+        "name": "United States (federal)",
+        "publisher_hosts": [
+          "ecfr.gov",
+          "govinfo.gov",
+          "federalregister.gov",
+          "uscode.house.gov",
+          "congress.gov"
+        ]
+      },
+      "US-NY": {
+        "name": "New York State",
+        "publisher_hosts": [
+          "govt.westlaw.com"
+        ]
+      },
+      "EU": {
+        "name": "European Union",
+        "publisher_hosts": [
+          "eur-lex.europa.eu",
+          "publications.europa.eu"
+        ]
+      },
+      "INTL": {
+        "name": "International standard-setters",
+        "publisher_hosts": []
+      }
+    },
+    "authorities": {
+      "us-congress": {
+        "name": "U.S. Congress",
+        "jurisdiction": "US",
+        "hosts": [
+          "congress.gov"
+        ]
+      },
+      "sec": {
+        "name": "Securities and Exchange Commission",
+        "jurisdiction": "US",
+        "hosts": [
+          "sec.gov"
+        ]
+      },
+      "finra": {
+        "name": "Financial Industry Regulatory Authority",
+        "jurisdiction": "US",
+        "hosts": [
+          "finra.org"
+        ]
+      },
+      "msrb": {
+        "name": "Municipal Securities Rulemaking Board",
+        "jurisdiction": "US",
+        "hosts": [
+          "msrb.org"
+        ]
+      },
+      "cftc": {
+        "name": "Commodity Futures Trading Commission",
+        "jurisdiction": "US",
+        "hosts": [
+          "cftc.gov"
+        ]
+      },
+      "frb": {
+        "name": "Federal Reserve Board",
+        "jurisdiction": "US",
+        "hosts": [
+          "federalreserve.gov",
+          "federalreserveconsumerhelp.gov"
+        ]
+      },
+      "occ": {
+        "name": "Office of the Comptroller of the Currency",
+        "jurisdiction": "US",
+        "hosts": [
+          "occ.gov",
+          "occ.treas.gov"
+        ]
+      },
+      "fdic": {
+        "name": "Federal Deposit Insurance Corporation",
+        "jurisdiction": "US",
+        "hosts": [
+          "fdic.gov"
+        ]
+      },
+      "cfpb": {
+        "name": "Consumer Financial Protection Bureau",
+        "jurisdiction": "US",
+        "hosts": [
+          "consumerfinance.gov"
+        ]
+      },
+      "irs": {
+        "name": "Internal Revenue Service",
+        "jurisdiction": "US",
+        "hosts": [
+          "irs.gov"
+        ]
+      },
+      "treasury": {
+        "name": "U.S. Department of the Treasury",
+        "jurisdiction": "US",
+        "hosts": [
+          "home.treasury.gov",
+          "ofac.treasury.gov"
+        ]
+      },
+      "fincen": {
+        "name": "Financial Crimes Enforcement Network",
+        "jurisdiction": "US",
+        "hosts": [
+          "fincen.gov"
+        ]
+      },
+      "pcaob": {
+        "name": "Public Company Accounting Oversight Board",
+        "jurisdiction": "US",
+        "hosts": [
+          "pcaobus.org"
+        ]
+      },
+      "osha": {
+        "name": "Occupational Safety and Health Administration",
+        "jurisdiction": "US",
+        "hosts": [
+          "osha.gov",
+          "whistleblowers.gov",
+          "dol.gov"
+        ]
+      },
+      "hhs": {
+        "name": "U.S. Department of Health and Human Services",
+        "jurisdiction": "US",
+        "hosts": [
+          "hhs.gov"
+        ]
+      },
+      "nist": {
+        "name": "National Institute of Standards and Technology",
+        "jurisdiction": "US",
+        "hosts": [
+          "nist.gov"
+        ]
+      },
+      "naic": {
+        "name": "National Association of Insurance Commissioners",
+        "jurisdiction": "US",
+        "hosts": [
+          "naic.org"
+        ]
+      },
+      "nydfs": {
+        "name": "New York State Department of Financial Services",
+        "jurisdiction": "US-NY",
+        "hosts": [
+          "dfs.ny.gov"
+        ]
+      },
+      "eu-legislature": {
+        "name": "European Parliament, Council and Commission",
+        "jurisdiction": "EU",
+        "hosts": [
+          "consilium.europa.eu"
+        ]
+      },
+      "eba": {
+        "name": "European Banking Authority",
+        "jurisdiction": "EU",
+        "hosts": [
+          "eba.europa.eu"
+        ]
+      },
+      "ecb": {
+        "name": "European Central Bank",
+        "jurisdiction": "EU",
+        "hosts": [
+          "ecb.europa.eu",
+          "bankingsupervision.europa.eu"
+        ]
+      },
+      "esma": {
+        "name": "European Securities and Markets Authority",
+        "jurisdiction": "EU",
+        "hosts": [
+          "esma.europa.eu"
+        ]
+      },
+      "eiopa": {
+        "name": "European Insurance and Occupational Pensions Authority",
+        "jurisdiction": "EU",
+        "hosts": [
+          "eiopa.europa.eu"
+        ]
+      }
+    },
+    "vendors": {
+      "aws": {
+        "name": "Amazon Web Services",
+        "hosts": [
+          "docs.aws.amazon.com",
+          "aws.amazon.com"
+        ]
+      }
+    }
+  },
+  "instruments": [
+    {
+      "id": "eu-mifid2-art16-6",
+      "title": "MiFID II Article 16(6) — Record-keeping by investment firms",
+      "short": "MiFID II Art 16(6)",
+      "authority": "eu-legislature",
+      "jurisdiction": "EU",
+      "type": "directive",
+      "citation": "Directive 2014/65/EU, Article 16(6)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+      "status": "in_force",
+      "status_as_of": "2026-09-18",
+      "status_note": "Status taken from the Official Journal text; the consolidated version was not compared, because EUR-Lex refuses automated retrieval.",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "Investment firms authorised under MiFID II",
+      "summary": "Article 16(6) requires records sufficient for supervision but states no retention period. The periods come from Article 16(7) for recorded communications and MiFIR Article 25(1) for order and transaction data. Commission Delegated Regulation 2017/565 Article 72 sets the storage-medium conditions.",
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the Official Journal texts of Directive 2014/65/EU, Regulation 600/2014 and Delegated Regulation 2017/565 from publications.europa.eu. Consolidated versions not compared, hence medium confidence."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "eu-mifid2-art16-6.dr72",
+        "eu-mifid2-art16-6.mifir25",
+        "eu-mifid2-art16-6.recordings",
+        "eu-mifid2-art16-6.records"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31",
+      "title": "CFTC Regulation 1.31 — Regulatory records; retention and production",
+      "short": "CFTC 1.31",
+      "authority": "cftc",
+      "jurisdiction": "US",
+      "type": "regulation",
+      "citation": "17 CFR 1.31",
+      "url": "https://www.ecfr.gov/current/title-17/section-1.31",
+      "status": "in_force",
+      "status_as_of": "2026-09-16",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "Any person required by the Commodity Exchange Act or CFTC regulations to keep regulatory records",
+      "summary": "Retention periods, form and manner of retention (authenticity, reliability, system inventory) and inspection and production duties for CFTC regulatory records.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-cftc-1-31.b1",
+        "us-cftc-1-31.b2",
+        "us-cftc-1-31.b3",
+        "us-cftc-1-31.b4",
+        "us-cftc-1-31.c2",
+        "us-cftc-1-31.d3"
+      ]
+    },
+    {
+      "id": "us-finra-4511",
+      "title": "FINRA Rule 4511 — General Requirements (books and records)",
+      "short": "FINRA 4511",
+      "authority": "finra",
+      "jurisdiction": "US",
+      "type": "sro-rule",
+      "citation": "FINRA Rule 4511",
+      "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511",
+      "status": "in_force",
+      "status_as_of": "2026-09-18",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "FINRA member firms",
+      "summary": "Requires members to make and preserve books and records, sets a default retention period where no other rule specifies one, and requires the Rule 17a-4 format and media.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-finra-4511.a",
+        "us-finra-4511.b",
+        "us-finra-4511.c"
+      ]
+    },
+    {
+      "id": "us-sec-17a-3",
+      "title": "SEC Rule 17a-3 — Records to be made by certain exchange members, brokers and dealers",
+      "short": "SEC 17a-3",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "type": "regulation",
+      "citation": "17 CFR 240.17a-3",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.17a-3",
+      "status": "in_force",
+      "status_as_of": "2026-09-16",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "Exchange members, brokers and dealers registered under section 15 of the Exchange Act",
+      "summary": "Defines which books and records a broker-dealer must create and keep current. It sets no retention periods; those are in Rule 17a-4.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-sec-17a-3.a",
+        "us-sec-17a-3.a6"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4",
+      "title": "SEC Rule 17a-4 — Records to be preserved by certain exchange members, brokers and dealers",
+      "short": "SEC 17a-4",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "type": "regulation",
+      "citation": "17 CFR 240.17a-4",
+      "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4",
+      "status": "in_force",
+      "status_as_of": "2026-09-16",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "Exchange members, brokers and dealers subject to Rule 17a-3",
+      "summary": "Retention periods, electronic recordkeeping system requirements (audit-trail or non-rewriteable, non-erasable storage), third-party recordkeeper undertakings and production duties for broker-dealer records.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-sec-17a-4.a",
+        "us-sec-17a-4.b",
+        "us-sec-17a-4.c",
+        "us-sec-17a-4.d",
+        "us-sec-17a-4.f2i",
+        "us-sec-17a-4.f2ii",
+        "us-sec-17a-4.f2v",
+        "us-sec-17a-4.f3iv",
+        "us-sec-17a-4.f3v",
+        "us-sec-17a-4.i",
+        "us-sec-17a-4.j"
+      ]
+    },
+    {
+      "id": "us-sec-204-2",
+      "title": "SEC Rule 204-2 — Books and records to be maintained by investment advisers",
+      "short": "SEC 204-2",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "type": "regulation",
+      "citation": "17 CFR 275.204-2",
+      "url": "https://www.ecfr.gov/current/title-17/section-275.204-2",
+      "status": "in_force",
+      "status_as_of": "2026-09-16",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "high",
+      "applies_to": "Investment advisers registered or required to be registered under section 203 of the Advisers Act",
+      "summary": "Which books and records an investment adviser must keep, how long, and the conditions for keeping them on micrographic or electronic storage media.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-sec-204-2.e1",
+        "us-sec-204-2.e2",
+        "us-sec-204-2.g2",
+        "us-sec-204-2.g2iii",
+        "us-sec-204-2.g3"
+      ]
+    },
+    {
+      "id": "us-sox-802",
+      "title": "Sarbanes-Oxley Act of 2002, Section 802 — Criminal penalties for altering documents",
+      "short": "SOX 802",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "type": "statute",
+      "citation": "Pub. L. 107-204, title VIII, §802 (18 U.S.C. 1519, 1520)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-107publ204/html/PLAW-107publ204.htm",
+      "status": "in_force",
+      "status_as_of": "2026-09-18",
+      "topics": [
+        "capital-markets",
+        "recordkeeping"
+      ],
+      "cloud_relevance": "medium",
+      "applies_to": "Anyone, for 18 U.S.C. 1519. Accountants auditing issuers, for 18 U.S.C. 1520 and SEC Rule 2-06.",
+      "summary": "Makes destroying or altering records to obstruct a federal matter a crime, and requires auditors to retain audit workpapers. SEC Rule 2-06 implements the workpaper retention.",
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim."
+      },
+      "review_due": "2027-03-18",
+      "obligations": [
+        "us-sox-802.1519",
+        "us-sox-802.1520",
+        "us-sox-802.rule2-06"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "id": "eu-mifid2-art16-6.dr72",
+      "instrument": "eu-mifid2-art16-6",
+      "title": "Storage medium must reveal every correction and prevent manipulation",
+      "kind": "form",
+      "applies_to": "Investment firms",
+      "requirement": "Keep records on a medium that the authority can readily access to reconstitute each key stage of a transaction, where corrections and the prior contents are easily ascertainable, and which cannot otherwise be manipulated or altered.",
+      "source": {
+        "citation": "Commission Delegated Regulation (EU) 2017/565, Article 72(1)(a)-(c)",
+        "url": "https://eur-lex.europa.eu/eli/reg_del/2017/565/oj",
+        "quote": "(a) the competent authority is able to access them readily and to reconstitute each key stage of the processing of each transaction; (b) it is possible for any corrections or other amendments, and the contents of the records prior to such corrections or amendments, to be easily ascertained; (c) it is not possible for the records otherwise to be manipulated or altered;",
+        "retrieved": "2026-09-18",
+        "text_as_of": "OJ L 87, 31.3.2017 (original text)"
+      },
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared."
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-audit-trail",
+        "ctl-worm-storage"
+      ]
+    },
+    {
+      "id": "eu-mifid2-art16-6.mifir25",
+      "instrument": "eu-mifid2-art16-6",
+      "title": "Order and transaction data kept five years",
+      "kind": "retention",
+      "applies_to": "Investment firms",
+      "requirement": "Keep the relevant data on every order and transaction in financial instruments, whether on own account or for a client, at the competent authority's disposal for five years.",
+      "retention": {
+        "period": "P5Y",
+        "trigger": "The Article states the period without naming its start.",
+        "period_months": 60
+      },
+      "source": {
+        "citation": "Regulation (EU) No 600/2014 (MiFIR), Article 25(1)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2014/600/oj",
+        "quote": "1. Investment firms shall keep at the disposal of the competent authority, for five years, the relevant data relating to all orders and all transactions in financial instruments which they have carried out, whether on own account or on behalf of a client.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "OJ L 173, 12.6.2014 (original text)"
+      },
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared."
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "eu-mifid2-art16-6.recordings",
+      "instrument": "eu-mifid2-art16-6",
+      "title": "Recorded calls and electronic communications kept five years, up to seven on request",
+      "kind": "retention",
+      "applies_to": "Investment firms dealing on own account or providing client order services",
+      "requirement": "Keep recordings of relevant telephone conversations and electronic communications for five years, or up to seven years where the competent authority requests it, and provide them to the client on request.",
+      "retention": {
+        "period": "P5Y",
+        "extended_period": "P7Y",
+        "trigger": "The Article states the period without naming its start.",
+        "period_months": 60
+      },
+      "source": {
+        "citation": "Directive 2014/65/EU, Article 16(7)",
+        "url": "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+        "quote": "The records kept in accordance with this paragraph shall be provided to the client involved upon request and shall be kept for a period of five years and, where requested by the competent authority, for a period of up to seven years.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "OJ L 173, 12.6.2014 (original text)"
+      },
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared."
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-communications-capture",
+        "ctl-regulator-production",
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "eu-mifid2-art16-6.records",
+      "instrument": "eu-mifid2-art16-6",
+      "title": "Keep records of all services, activities and transactions sufficient for supervision",
+      "kind": "creation",
+      "applies_to": "Investment firms",
+      "requirement": "Keep records of every service, activity and transaction that are sufficient for the competent authority to supervise, enforce, and confirm compliance with obligations to clients and to market integrity. The Article itself sets no retention period.",
+      "note": "Article 16(6) has no duration. The periods that apply to these records come from Article 16(7) for communications and MiFIR Article 25(1) for orders and transactions.",
+      "see_also": [
+        "eu-mifid2-art16-6.dr72",
+        "eu-mifid2-art16-6.recordings",
+        "eu-mifid2-art16-6.mifir25"
+      ],
+      "source": {
+        "citation": "Directive 2014/65/EU, Article 16(6)",
+        "url": "https://eur-lex.europa.eu/eli/dir/2014/65/oj",
+        "quote": "6. An investment firm shall arrange for records to be kept of all services, activities and transactions undertaken by it which shall be sufficient to enable the competent authority to fulfil its supervisory tasks and to perform the enforcement actions under this Directive, Regulation (EU) No 600/2014, Directive 2014/57/EU and Regulation (EU) No 596/2014, and in particular to ascertain that the investment firm has complied with all obligations including those with respect to clients or potential clients and to the integrity of the market.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "OJ L 173, 12.6.2014 (original text)"
+      },
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the Official Journal text from publications.europa.eu. The consolidated version was not compared."
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.b1",
+      "instrument": "us-cftc-1-31",
+      "title": "Swap records kept five years after the transaction ends",
+      "kind": "retention",
+      "applies_to": "CFTC records entities holding records of swaps or related cash or forward transactions",
+      "requirement": "Keep regulatory records of each swap or related cash or forward transaction from creation until the transaction terminates, matures, expires, or is transferred, assigned or novated, and for at least five years after that.",
+      "retention": {
+        "period": "P5Y",
+        "trigger": "Termination, maturity, expiration, transfer, assignment or novation date of the transaction",
+        "period_months": 60
+      },
+      "source": {
+        "citation": "17 CFR 1.31(b)(1)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(1)",
+        "quote": "(1) A records entity shall keep regulatory records of any swap or related cash or forward transaction (as defined in § 23.200(i) of this chapter), other than regulatory records required by § 23.202(a)(1) and (b)(1)-(3) of this chapter, from the date the regulatory record was created until the termination, maturity, expiration, transfer, assignment, or novation date of the transaction and for a period of not less than five years after such date.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.b2",
+      "instrument": "us-cftc-1-31",
+      "title": "Oral communications kept one year",
+      "kind": "retention",
+      "applies_to": "CFTC records entities required to retain oral communications",
+      "requirement": "Keep regulatory records of oral communications for at least one year from the date of the communication.",
+      "retention": {
+        "period": "P1Y",
+        "trigger": "Date of the communication",
+        "period_months": 12
+      },
+      "source": {
+        "citation": "17 CFR 1.31(b)(2)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(2)",
+        "quote": "(2) A records entity that is required to retain oral communications, shall keep regulatory records of oral communications for a period of not less than one year from the date of such communication.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-communications-capture",
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.b3",
+      "instrument": "us-cftc-1-31",
+      "title": "All other regulatory records kept five years from creation",
+      "kind": "retention",
+      "applies_to": "CFTC records entities",
+      "requirement": "Keep every other regulatory record for at least five years from the date it was created.",
+      "retention": {
+        "period": "P5Y",
+        "trigger": "Date the record was created",
+        "period_months": 60
+      },
+      "source": {
+        "citation": "17 CFR 1.31(b)(3)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(3)",
+        "quote": "(3) A records entity shall keep each regulatory record other than the records described in paragraphs (b)(1) or (b)(2) of this section for a period of not less than five years from the date on which the record was created.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.b4",
+      "instrument": "us-cftc-1-31",
+      "title": "Electronic records readily accessible for the whole retention period",
+      "kind": "retention",
+      "applies_to": "CFTC records entities",
+      "requirement": "Keep paper-only regulatory records readily accessible for at least two years, and electronic regulatory records readily accessible for the whole required period.",
+      "retention": {
+        "accessible_period": "P2Y",
+        "trigger": "Paper-only records are readily accessible for the stated window; electronic records stay readily accessible for their full retention period."
+      },
+      "source": {
+        "citation": "17 CFR 1.31(b)(4)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(4)",
+        "quote": "(4) A records entity shall keep regulatory records exclusively created and maintained on paper readily accessible for no less than two years. A records entity shall keep electronic regulatory records readily accessible for the duration of the required record keeping period.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.c2",
+      "instrument": "us-cftc-1-31",
+      "title": "Systems and controls for authentic, reliable, available electronic records, plus a system inventory",
+      "kind": "form",
+      "applies_to": "CFTC records entities maintaining electronic regulatory records",
+      "requirement": "Establish systems that preserve the security, signature and data of electronic records, ensure they can be produced and stay available through a disruption, and keep an up-to-date inventory of every system needed to access or produce them.",
+      "source": {
+        "citation": "17 CFR 1.31(c)(2)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(c)(2)",
+        "quote": "(2) Electronic regulatory records. Each records entity maintaining electronic regulatory records shall establish appropriate systems and controls that ensure the authenticity and reliability of electronic regulatory records, including, without limitation: [...] (ii) Systems that ensure the records entity is able to produce electronic regulatory records in accordance with this section, and ensure the availability of such regulatory records in the event of an emergency or other disruption of the records entity's electronic record retention systems; and (iii) The creation and maintenance of an up-to-date inventory that identifies and describes each system that maintains information necessary for accessing or producing electronic regulatory records.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-access-restriction",
+        "ctl-audit-trail",
+        "ctl-integrity-verification",
+        "ctl-records-register",
+        "ctl-redundant-copy",
+        "ctl-worm-storage"
+      ]
+    },
+    {
+      "id": "us-cftc-1-31.d3",
+      "instrument": "us-cftc-1-31",
+      "title": "Produce electronic records promptly in the form and medium requested",
+      "kind": "production",
+      "applies_to": "CFTC records entities",
+      "requirement": "Produce electronic regulatory records promptly, in the reasonable form and medium a Commission representative specifies.",
+      "source": {
+        "citation": "17 CFR 1.31(d)(3)",
+        "url": "https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(d)(3)",
+        "quote": "(ii) A records entity must produce such regulatory records in the form and medium requested promptly, upon request, unless otherwise directed by the Commission representative.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-regulator-production"
+      ]
+    },
+    {
+      "id": "us-finra-4511.a",
+      "instrument": "us-finra-4511",
+      "title": "Make and preserve books and records required by FINRA and Exchange Act rules",
+      "kind": "creation",
+      "applies_to": "FINRA member firms",
+      "requirement": "Make and preserve the books and records required by FINRA rules, the Exchange Act and the applicable Exchange Act rules.",
+      "see_also": [
+        "us-sec-17a-3.a"
+      ],
+      "source": {
+        "citation": "FINRA Rule 4511(a)",
+        "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511",
+        "quote": "(a) Members shall make and preserve books and records as required under the FINRA rules, the Exchange Act and the applicable Exchange Act rules.",
+        "retrieved": "2026-09-18"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the rule text published on finra.org"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register"
+      ]
+    },
+    {
+      "id": "us-finra-4511.b",
+      "instrument": "us-finra-4511",
+      "title": "Six-year default retention where no other period is specified",
+      "kind": "retention",
+      "applies_to": "FINRA member firms",
+      "requirement": "Preserve FINRA books and records that have no period specified in FINRA rules or applicable Exchange Act rules for at least six years.",
+      "retention": {
+        "period": "P6Y",
+        "trigger": "The rule states the period without naming its start.",
+        "period_months": 72
+      },
+      "source": {
+        "citation": "FINRA Rule 4511(b)",
+        "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511",
+        "quote": "(b) Members shall preserve for a period of at least six years those FINRA books and records for which there is no specified period under the FINRA rules or applicable Exchange Act rules.",
+        "retrieved": "2026-09-18"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the rule text published on finra.org"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-finra-4511.c",
+      "instrument": "us-finra-4511",
+      "title": "Preserve in a format and media that complies with SEA Rule 17a-4",
+      "kind": "form",
+      "applies_to": "FINRA member firms",
+      "requirement": "Preserve records required by FINRA rules in a format and media that complies with SEA Rule 17a-4.",
+      "see_also": [
+        "us-sec-17a-4.f2i"
+      ],
+      "source": {
+        "citation": "FINRA Rule 4511(c)",
+        "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511",
+        "quote": "(c) All books and records required to be made pursuant to the FINRA rules shall be preserved in a format and media that complies with SEA Rule 17a-4.",
+        "retrieved": "2026-09-18"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the rule text published on finra.org"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-worm-storage"
+      ]
+    },
+    {
+      "id": "us-sec-17a-3.a",
+      "instrument": "us-sec-17a-3",
+      "title": "Make and keep current the required books and records",
+      "kind": "creation",
+      "applies_to": "Exchange members, brokers and dealers",
+      "requirement": "Create each book and record listed in paragraph (a) of the rule and keep it current. Retention periods are set by the preservation rule; see the linked obligations.",
+      "see_also": [
+        "us-sec-17a-4.a",
+        "us-sec-17a-4.b"
+      ],
+      "source": {
+        "citation": "17 CFR 240.17a-3(a)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-3#p-240.17a-3(a)",
+        "quote": "Every member of a national securities exchange who transacts a business in securities directly with others than members of a national securities exchange, every broker or dealer who transacts a business in securities through the medium of any such member, and every broker or dealer registered pursuant to section 15 of the Act (15 U.S.C. 78o) must make and keep current the following books and records relating to its business:",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register"
+      ]
+    },
+    {
+      "id": "us-sec-17a-3.a6",
+      "instrument": "us-sec-17a-3",
+      "title": "Order memoranda with time of receipt, entry and execution",
+      "kind": "creation",
+      "applies_to": "Exchange members, brokers and dealers",
+      "requirement": "Keep a memorandum of every brokerage order or instruction, whether executed or not, showing its terms, the account, when it was received and entered, the execution price, who handled it, and where feasible when it was executed or cancelled.",
+      "see_also": [
+        "us-sec-17a-4.b"
+      ],
+      "source": {
+        "citation": "17 CFR 240.17a-3(a)(6)(i)(A)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-3#p-240.17a-3(a)(6)(i)(A)",
+        "quote": "The memorandum must show the terms and conditions of the order or instructions and of any modification or cancellation thereof, the account for which entered, the time the order was received, the time of entry, the price at which executed, the identity of each associated person, if any, responsible for the account, the identity of any other person who entered or accepted the order on behalf of the customer, or, if a customer entered the order on an electronic system, a notation of that entry; and, to the extent feasible, the time of execution or cancellation.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.a",
+      "instrument": "us-sec-17a-4",
+      "title": "Six-year retention for blotters, ledgers and core records",
+      "kind": "retention",
+      "applies_to": "Members, brokers and dealers subject to Rule 17a-3",
+      "requirement": "Preserve the records made under Rule 17a-3(a)(1)-(3), (5), (21) and (22) for at least 6 years, the first two years in an easily accessible place.",
+      "retention": {
+        "period": "P6Y",
+        "accessible_period": "P2Y",
+        "trigger": "The rule states the period without naming its start; firms conventionally run it from the record's creation.",
+        "period_months": 72
+      },
+      "source": {
+        "citation": "17 CFR 240.17a-4(a)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(a)",
+        "quote": "(a) Every member, broker or dealer subject to § 240.17a-3 must preserve for a period of not less than 6 years, the first two years in an easily accessible place, all records required to be made pursuant to § 240.17a-3(a)(1) through (3), (5), and (21) and (22), and analogous records created pursuant to § 240.17a-3(e).",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.b",
+      "instrument": "us-sec-17a-4",
+      "title": "Three-year retention for other records, including business communications",
+      "kind": "retention",
+      "applies_to": "Members, brokers and dealers subject to Rule 17a-3",
+      "requirement": "Preserve the paragraph (b) records for at least three years, the first two in an easily accessible place. They include bank records, trial balances, written agreements, and originals or copies of all business communications sent and received.",
+      "retention": {
+        "period": "P3Y",
+        "accessible_period": "P2Y",
+        "trigger": "The rule states the period without naming its start; firms conventionally run it from the record's creation.",
+        "period_months": 36
+      },
+      "source": {
+        "citation": "17 CFR 240.17a-4(b), (b)(4)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(b)",
+        "quote": "(b) Every member, broker or dealer subject to § 240.17a-3 must preserve for a period of not less than three years, the first two years in an easily accessible place: [...] (4) Originals of all communications received and copies of all communications sent (and any approvals thereof) by the member, broker or dealer (including inter-office memoranda and communications) relating to its business as such",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-communications-capture",
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.c",
+      "instrument": "us-sec-17a-4",
+      "title": "Account-opening records kept six years after the account closes",
+      "kind": "retention",
+      "applies_to": "Members, brokers and dealers subject to Rule 17a-3",
+      "requirement": "Preserve account cards or records on the terms of opening and maintaining a customer account until at least six years after the account closes.",
+      "retention": {
+        "period": "P6Y",
+        "trigger": "Closing of the customer's account",
+        "period_months": 72
+      },
+      "source": {
+        "citation": "17 CFR 240.17a-4(c)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(c)",
+        "quote": "(c) Every member, broker or dealer subject to § 240.17a-3 must preserve for a period of not less than six years after the closing of any customer's account any account cards or records which relate to the terms and conditions with respect to the opening and maintenance of the account.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.d",
+      "instrument": "us-sec-17a-4",
+      "title": "Constitutional and registration records kept for the life of the enterprise",
+      "kind": "retention",
+      "applies_to": "Members, brokers and dealers subject to Rule 17a-3",
+      "requirement": "Preserve partnership articles or articles of incorporation, minute books, stock certificate books and registration forms for the life of the enterprise and any successor.",
+      "retention": {
+        "indefinite": true,
+        "trigger": "Life of the enterprise and of any successor enterprise"
+      },
+      "source": {
+        "citation": "17 CFR 240.17a-4(d)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(d)",
+        "quote": "(d) Every member, broker or dealer subject to § 240.17a-3 must preserve during the life of the enterprise and of any successor enterprise all partnership articles or, in the case of a corporation, all articles of incorporation or charter, minute books, and stock certificate books",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-indefinite-and-legal-hold"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.f2i",
+      "instrument": "us-sec-17a-4",
+      "title": "Electronic records need a complete audit trail or non-rewriteable, non-erasable storage",
+      "kind": "form",
+      "applies_to": "Broker-dealers keeping required records on an electronic recordkeeping system",
+      "requirement": "For the whole retention period, either keep a complete time-stamped audit trail of every modification and deletion that allows the original record to be re-created, or store the records exclusively in non-rewriteable, non-erasable (WORM) form.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(f)(2)(i)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(f)(2)(i)",
+        "quote": "(i)(A) Preserve a record for the duration of its applicable retention period in a manner that maintains a complete time-stamped audit trail that includes: [...] (4) Any other information needed to maintain an audit trail of the record in a way that maintains security, signatures, and data to ensure the authenticity and reliability of the record and will permit re-creation of the original record if it is modified or deleted; or (B) Preserve the records exclusively in a non-rewriteable, non-erasable format;",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-audit-trail",
+        "ctl-worm-storage"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.f2ii",
+      "instrument": "us-sec-17a-4",
+      "title": "Automatic verification of storage completeness and accuracy",
+      "kind": "form",
+      "applies_to": "Broker-dealers keeping required records on an electronic recordkeeping system",
+      "requirement": "The system must automatically verify that the processes for storing and retaining records electronically are complete and accurate.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(f)(2)(ii)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(f)(2)(ii)",
+        "quote": "(ii) Verify automatically the completeness and accuracy of the processes for storing and retaining records electronically;",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-integrity-verification"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.f2v",
+      "instrument": "us-sec-17a-4",
+      "title": "Backup recordkeeping system or equivalent redundancy",
+      "kind": "form",
+      "applies_to": "Broker-dealers keeping required records on an electronic recordkeeping system",
+      "requirement": "Keep a backup electronic recordkeeping system that meets the same requirements and can serve as a redundant set of records, or have other redundancy that ensures access to the records.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(f)(2)(v)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(f)(2)(v)",
+        "quote": "(v)(A) Include a backup electronic recordkeeping system that meets the other requirements of this paragraph (f) and that retains the records required to be maintained and preserved pursuant to § 240.17a-3 and in accordance with this section in a manner that will serve as a redundant set of records if the original electronic recordkeeping system is temporarily or permanently inaccessible; or (B) Have other redundancy capabilities that are designed to ensure access to the records required to be maintained and preserved pursuant to § 240.17a-3 and this section.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-redundant-copy"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.f3iv",
+      "instrument": "us-sec-17a-4",
+      "title": "Keep the information needed to locate electronic records",
+      "kind": "production",
+      "applies_to": "Broker-dealers using an electronic recordkeeping system",
+      "requirement": "Organize and keep current all information needed to access and locate records on the electronic system, and provide it promptly when regulators ask.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(f)(3)(iv)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(f)(3)(iv)",
+        "quote": "(iv) Organize, maintain, keep current, and provide promptly upon request by the staffs of the Commission, the self-regulatory organizations of which the member, broker, or dealer is a member, or any State securities regulator having jurisdiction over the member, broker, or dealer all information necessary to access and locate records preserved by means of the electronic recordkeeping system.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register",
+        "ctl-regulator-production"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.f3v",
+      "instrument": "us-sec-17a-4",
+      "title": "Designated executive officer or designated third party undertaking",
+      "kind": "undertaking",
+      "applies_to": "Broker-dealers using an electronic recordkeeping system",
+      "requirement": "Keep on file with the designated examining authority an undertaking, signed by a designated executive officer or a designated third party, to furnish and download records on request.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(f)(3)(v)(A)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(f)(3)(v)(A)",
+        "quote": "(v)(A) Have at all times filed with the designated examining authority for the member, broker, or dealer the following undertakings with respect to such records signed by either a designated executive officer or designated third party",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-regulatory-undertakings"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.i",
+      "instrument": "us-sec-17a-4",
+      "title": "Undertaking from a third-party recordkeeper, including a cloud provider",
+      "kind": "undertaking",
+      "applies_to": "Broker-dealers whose records are held by an outside service, including one that owns and operates the storage servers",
+      "requirement": "When an outside entity prepares or keeps the records, including one that owns the storage servers, it must file a written undertaking with the Commission. If the broker-dealer has independent access to the records, a shorter undertaking in which the outside entity agrees not to impede examination may be filed instead.",
+      "note": "This is the obligation most directly engaged by hosting records on a public cloud. Independent access means the firm can reach the records without any intervention by the provider.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(i)(1)(i) and (ii)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(i)",
+        "quote": "(i)(1)(i) If the records required to be maintained and preserved pursuant to the provisions of § 240.17a-3 and this section are prepared or maintained by an outside service bureau, depository, bank, or other recordkeeping service, including a recordkeeping service that owns and operates the servers or other storage devices on which the records are preserved or maintained, (none of which operate pursuant to § 240.17a-3(c)) on behalf of the member, broker, or dealer required to maintain and preserve such records, such outside entity must file with the Commission a written undertaking in a form acceptable to the Commission",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-regulatory-undertakings"
+      ]
+    },
+    {
+      "id": "us-sec-17a-4.j",
+      "instrument": "us-sec-17a-4",
+      "title": "Furnish records promptly, electronically where requested",
+      "kind": "production",
+      "applies_to": "Members, brokers and dealers subject to Rule 17a-4",
+      "requirement": "On request, promptly furnish the Commission with legible, true, complete and current copies of required records. Electronic records, with their audit trail, go in a reasonably usable electronic format if requested.",
+      "source": {
+        "citation": "17 CFR 240.17a-4(j)",
+        "url": "https://www.ecfr.gov/current/title-17/section-240.17a-4#p-240.17a-4(j)",
+        "quote": "(j) Every member, broker and dealer subject to this section must furnish promptly to a representative of the Commission legible, true, complete, and current copies of those records of the member, broker, or dealer that are required to be preserved under this section",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-regulator-production"
+      ]
+    },
+    {
+      "id": "us-sec-204-2.e1",
+      "instrument": "us-sec-204-2",
+      "title": "Five-year retention from the end of the fiscal year of the last entry",
+      "kind": "retention",
+      "applies_to": "Registered investment advisers",
+      "requirement": "Keep the required books and records in an easily accessible place for at least five years from the end of the fiscal year of the last entry, the first two years in an appropriate office of the adviser.",
+      "retention": {
+        "period": "P5Y",
+        "accessible_period": "P2Y",
+        "trigger": "End of the fiscal year during which the last entry was made on the record",
+        "period_months": 60
+      },
+      "source": {
+        "citation": "17 CFR 275.204-2(e)(1)",
+        "url": "https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(e)(1)",
+        "quote": "shall be maintained and preserved in an easily accessible place for a period of not less than five years from the end of the fiscal year during which the last entry was made on such record, the first two years in an appropriate office of the investment adviser.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sec-204-2.e2",
+      "instrument": "us-sec-204-2",
+      "title": "Organizational records kept three years past termination of the enterprise",
+      "kind": "retention",
+      "applies_to": "Registered investment advisers",
+      "requirement": "Keep partnership articles, articles of incorporation, charters, minute books and stock certificate books in the principal office until at least three years after the enterprise terminates.",
+      "retention": {
+        "period": "P3Y",
+        "trigger": "Termination of the enterprise",
+        "period_months": 36
+      },
+      "source": {
+        "citation": "17 CFR 275.204-2(e)(2)",
+        "url": "https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(e)(2)",
+        "quote": "(2) Partnership articles and any amendments thereto, articles of incorporation, charters, minute books, and stock certificate books of the investment adviser and of any predecessor, shall be maintained in the principal office of the investment adviser and preserved until at least three years after termination of the enterprise.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sec-204-2.g2",
+      "instrument": "us-sec-204-2",
+      "title": "Index electronic records and produce them promptly",
+      "kind": "production",
+      "applies_to": "Investment advisers keeping records on micrographic or electronic storage media",
+      "requirement": "Arrange and index records so any one can be located, and promptly provide on request a true copy in its stored format, a printout, and the means to access, view and print it.",
+      "source": {
+        "citation": "17 CFR 275.204-2(g)(2)(i)-(ii)",
+        "url": "https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(2)",
+        "quote": "(i) Arrange and index the records in a way that permits easy location, access, and retrieval of any particular record; (ii) Provide promptly any of the following that the Commission (by its examiners or other representatives) may request:",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-records-register",
+        "ctl-regulator-production"
+      ]
+    },
+    {
+      "id": "us-sec-204-2.g2iii",
+      "instrument": "us-sec-204-2",
+      "title": "Separately stored duplicate copy for the full retention period",
+      "kind": "form",
+      "applies_to": "Investment advisers keeping records on micrographic or electronic storage media",
+      "requirement": "Store a duplicate copy of every record separately, on any permitted medium, for as long as the original must be preserved.",
+      "source": {
+        "citation": "17 CFR 275.204-2(g)(2)(iii)",
+        "url": "https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(2)(iii)",
+        "quote": "(iii) Separately store, for the time required for preservation of the original record, a duplicate copy of the record on any medium allowed by this section.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-redundant-copy"
+      ]
+    },
+    {
+      "id": "us-sec-204-2.g3",
+      "instrument": "us-sec-204-2",
+      "title": "Safeguard electronic records and limit access",
+      "kind": "form",
+      "applies_to": "Investment advisers keeping records on electronic storage media",
+      "requirement": "Maintain procedures that reasonably safeguard records from loss, alteration or destruction, limit access to authorized personnel and the Commission, and ensure that reproductions of non-electronic originals are complete, true and legible.",
+      "source": {
+        "citation": "17 CFR 275.204-2(g)(3)",
+        "url": "https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(3)",
+        "quote": "(i) To maintain and preserve the records, so as to reasonably safeguard them from loss, alteration, or destruction; (ii) To limit access to the records to properly authorized personnel and the Commission (including its examiners and other representatives); and (iii) To reasonably ensure that any reproduction of a non-electronic original record on electronic storage media is complete, true, and legible when retrieved.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the eCFR text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-access-restriction",
+        "ctl-worm-storage"
+      ]
+    },
+    {
+      "id": "us-sox-802.1519",
+      "instrument": "us-sox-802",
+      "title": "Do not destroy, alter or falsify records to obstruct a federal matter",
+      "kind": "preservation",
+      "applies_to": "Any person",
+      "requirement": "Do not knowingly destroy, alter, conceal or falsify any record with intent to obstruct a federal investigation or bankruptcy case, including one only contemplated. The penalty is imprisonment of up to 20 years. In practice this means suspending routine deletion under a legal hold once such a matter is reasonably anticipated.",
+      "source": {
+        "citation": "18 U.S.C. 1519 (added by SOX §802(a))",
+        "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1519&num=0&edition=prelim",
+        "quote": "Whoever knowingly alters, destroys, mutilates, conceals, covers up, falsifies, or makes a false entry in any record, document, or tangible object with the intent to impede, obstruct, or influence the investigation or proper administration of any matter within the jurisdiction of any department or agency of the United States or any case filed under title 11, or in relation to or contemplation of any such matter or case, shall be fined under this title, imprisoned not more than 20 years, or both.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "U.S. Code, prelim edition as published by the Office of the Law Revision Counsel"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the official text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-indefinite-and-legal-hold"
+      ]
+    },
+    {
+      "id": "us-sox-802.1520",
+      "instrument": "us-sox-802",
+      "title": "Auditors retain audit and review workpapers five years (statutory floor)",
+      "kind": "retention",
+      "applies_to": "Accountants auditing issuers under section 10A(a) of the Exchange Act",
+      "requirement": "Keep all audit or review workpapers for five years from the end of the fiscal period in which the audit or review concluded. SEC Rule 2-06 extends this.",
+      "retention": {
+        "period": "P5Y",
+        "trigger": "End of the fiscal period in which the audit or review was concluded",
+        "period_months": 60
+      },
+      "see_also": [
+        "us-sox-802.rule2-06"
+      ],
+      "source": {
+        "citation": "18 U.S.C. 1520(a)(1)",
+        "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1520&num=0&edition=prelim",
+        "quote": "(a)(1) Any accountant who conducts an audit of an issuer of securities to which section 10A(a) of the Securities Exchange Act of 1934 (15 U.S.C. 78j–1(a)) applies, shall maintain all audit or review workpapers for a period of 5 years from the end of the fiscal period in which the audit or review was concluded.",
+        "retrieved": "2026-09-18",
+        "text_as_of": "U.S. Code, prelim edition as published by the Office of the Law Revision Counsel"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the official text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    },
+    {
+      "id": "us-sox-802.rule2-06",
+      "instrument": "us-sox-802",
+      "title": "Auditors retain audit records seven years (SEC Rule 2-06, under §1520(a)(2))",
+      "kind": "retention",
+      "applies_to": "Accountants auditing issuers or registered investment companies",
+      "requirement": "Keep workpapers and other records relevant to the audit or review, including correspondence and electronic records containing conclusions, opinions, analyses or financial data, for seven years after the audit or review concludes.",
+      "retention": {
+        "period": "P7Y",
+        "trigger": "The accountant concludes the audit or review",
+        "period_months": 84
+      },
+      "source": {
+        "citation": "17 CFR 210.2-06(a)",
+        "url": "https://www.ecfr.gov/current/title-17/section-210.2-06#p-210.2-06(a)",
+        "quote": "(a) For a period of seven years after an accountant concludes an audit or review of an issuer's financial statements to which section 10A(a) of the Securities Exchange Act of 1934 (15 U.S.C. 78j-1(a)) applies, or of the financial statements of any investment company registered under section 8 of the Investment Company Act of 1940 (15 U.S.C. 80a-8), the accountant shall retain records relevant to the audit or review, including workpapers and other documents that form the basis of the audit or review, and memoranda, correspondence, communications, other documents, and records (including electronic records), which:",
+        "retrieved": "2026-09-18",
+        "text_as_of": "eCFR, up to date as of 2026-09-16"
+      },
+      "confidence": "high",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Quote compared verbatim against the official text"
+      },
+      "review_due": "2027-03-18",
+      "controls": [
+        "ctl-retention-schedule"
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "ctl-access-restriction",
+      "title": "Least-privilege access to records, with dedicated keys",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-204-2.g3",
+        "us-cftc-1-31.c2"
+      ],
+      "implementation": "Restrict access to the records buckets to named roles for authorized personnel and regulator-access procedures. Encrypt with customer-managed KMS keys whose key policies name the same roles. Log every access through the audit trail.",
+      "evidence": [
+        "IAM and bucket policies for the records buckets, with periodic access reviews",
+        "KMS key policies and key usage logs"
+      ],
+      "aws": [
+        {
+          "service": "AWS IAM",
+          "configuration": "Role-based least privilege scoped to records buckets",
+          "doc": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"
+        },
+        {
+          "service": "AWS KMS",
+          "configuration": "Customer-managed keys per records domain",
+          "doc": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-audit-trail",
+      "title": "Tamper-evident audit trail of record creation, modification and deletion",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.f2i",
+        "us-cftc-1-31.c2",
+        "eu-mifid2-art16-6.dr72"
+      ],
+      "implementation": "Log S3 data events for every records bucket to a CloudTrail trail with log file integrity validation. Keep the trail in an Object Lock bucket in a separate log-archive account. Versioning on the records buckets keeps prior content, so a modified record can be re-created. This combination is what the 17a-4(f)(2)(i)(A) audit-trail alternative requires. Firms that choose the WORM option still need an input audit system under 17a-4(f)(3)(iii), and this trail provides it.",
+      "evidence": [
+        "CloudTrail trail configuration with data events on the records buckets and LogFileValidationEnabled true",
+        "Periodic output of validate-logs showing the digest chain intact",
+        "Log-archive bucket Object Lock configuration"
+      ],
+      "limits": "CloudTrail records API actions, not business-level edits made inside an application database. An application that changes records before writing them to S3 needs its own audit trail.",
+      "aws": [
+        {
+          "service": "AWS CloudTrail (data events, log file integrity validation)",
+          "configuration": "Organization trail, S3 data events for records buckets, log file validation on, delivered to a locked log-archive bucket",
+          "doc": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html"
+        },
+        {
+          "service": "AWS CloudTrail Lake",
+          "configuration": "Event data store for queryable retention of the same events",
+          "doc": "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-communications-capture",
+      "title": "Capture and retain business communications and recorded calls",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.b",
+        "us-cftc-1-31.b2",
+        "eu-mifid2-art16-6.recordings"
+      ],
+      "implementation": "Route every approved business communication channel (email, chat, recorded telephony) to capture that writes into the WORM records buckets under the communications retention class. For telephony on Amazon Connect, send call recordings to a locked bucket. Channels that cannot be captured are prohibited for business use, mirroring the Article 16(7) duty to prevent unrecordable communications on private equipment.",
+      "evidence": [
+        "Channel inventory showing the capture path for each approved channel",
+        "Connect instance storage configuration pointing recordings at the locked bucket",
+        "Surveillance sampling reports that confirm capture completeness"
+      ],
+      "limits": "Capturing third-party messaging apps needs vendor archiving connectors, which are outside this corpus.",
+      "aws": [
+        {
+          "service": "Amazon Connect call recording",
+          "configuration": "Recordings delivered to an Object Lock bucket under the communications retention class",
+          "doc": "https://docs.aws.amazon.com/connect/latest/adminguide/set-up-recordings.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-indefinite-and-legal-hold",
+      "title": "Legal holds for indefinite retention and anticipated investigations",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.d",
+        "us-sox-802.1519"
+      ],
+      "implementation": "Place an Object Lock legal hold on life-of-enterprise records (charter documents, minute books, registration forms), because a legal hold has no expiry date. Keep a documented legal-hold procedure. When a federal investigation or proceeding is reasonably anticipated, it places holds on the relevant records and suspends lifecycle expiration for them, so routine deletion cannot become the destruction that 18 U.S.C. 1519 criminalises.",
+      "evidence": [
+        "Legal-hold register listing each matter, its scope, the date the hold was placed, and who authorised it",
+        "S3 object metadata showing ObjectLockLegalHoldStatus ON for held objects",
+        "CloudTrail events for PutObjectLegalHold, showing who placed and removed each hold"
+      ],
+      "limits": "The technical hold only works if the procedure is triggered in time. Knowing when a matter is contemplated is a legal judgement, not something the platform decides.",
+      "aws": [
+        {
+          "service": "Amazon S3 Object Lock legal hold",
+          "configuration": "Legal hold ON for life-of-enterprise classes and for records in scope of an active matter",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-integrity-verification",
+      "title": "Automated verification of storage completeness and accuracy",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.f2ii",
+        "us-cftc-1-31.c2"
+      ],
+      "implementation": "Upload every record with an S3 additional checksum computed by the producer. Reconcile on a schedule: compare the producing system's record manifest with S3 Inventory (completeness), and recompute stored checksums against the manifest (accuracy). Alert on any gap.",
+      "evidence": [
+        "Scheduled reconciliation reports comparing expected and stored record counts and checksums, retained with the records",
+        "Alarm history for reconciliation failures and their resolution"
+      ],
+      "aws": [
+        {
+          "service": "Amazon S3 additional checksums",
+          "configuration": "SHA-256 checksum supplied on upload and stored with each object",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html"
+        },
+        {
+          "service": "Amazon S3 Inventory",
+          "configuration": "Inventory including checksum algorithm, feeding the reconciliation job",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-inventory.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-records-register",
+      "title": "Register of required records, their producing systems and locations",
+      "kind": "organizational",
+      "satisfies": [
+        "us-sec-17a-3.a",
+        "us-sec-17a-3.a6",
+        "us-finra-4511.a",
+        "eu-mifid2-art16-6.records",
+        "us-sec-17a-4.f3iv",
+        "us-sec-204-2.g2",
+        "us-cftc-1-31.c2"
+      ],
+      "implementation": "Maintain a register that maps each record type the rules require to its producing system, owner, retention class and storage location, plus the index keys needed to find any single record. Generate a searchable index (record id, class, dates, account, S3 key) from S3 Inventory and object metadata, queryable with Athena. The same register is the up-to-date system inventory that CFTC 1.31(c)(2)(iii) requires.",
+      "evidence": [
+        "The register, versioned, reviewed at least as often as this corpus's review cycle",
+        "Athena query results locating sample records on request, kept as test evidence",
+        "AWS Config resource inventory for the systems named in the register"
+      ],
+      "aws": [
+        {
+          "service": "Amazon Athena over S3 Inventory",
+          "configuration": "Tables over inventory and metadata exports providing the locate-any-record index",
+          "doc": "https://docs.aws.amazon.com/athena/latest/ug/what-is.html"
+        },
+        {
+          "service": "AWS Config",
+          "configuration": "Resource inventory of the systems in the register",
+          "doc": "https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-redundant-copy",
+      "title": "Separately stored, locked redundant copy",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.f2v",
+        "us-sec-204-2.g2iii",
+        "us-cftc-1-31.c2"
+      ],
+      "implementation": "Back up the records buckets with AWS Backup to a vault in a separate AWS account, with Vault Lock in compliance mode and a minimum retention of at least the longest period in the retention schedule. Keep the copy in the project's designated region unless a second region has been deliberately approved. The separation that matters here is account and credential isolation, which protects against the loss of the primary system.",
+      "evidence": [
+        "Backup plan and vault configuration showing Vault Lock in compliance mode and its minimum retention",
+        "Restore-test records proving the copy can serve as the redundant set"
+      ],
+      "aws": [
+        {
+          "service": "AWS Backup Vault Lock",
+          "configuration": "Compliance-mode vault lock in a dedicated backup account; minimum retention at least the longest scheduled period",
+          "doc": "https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-regulator-production",
+      "title": "Tested procedure for producing records to regulators",
+      "kind": "organizational",
+      "satisfies": [
+        "us-sec-17a-4.j",
+        "us-sec-17a-4.f3iv",
+        "us-sec-204-2.g2",
+        "us-cftc-1-31.d3",
+        "eu-mifid2-art16-6.recordings"
+      ],
+      "implementation": "Keep a production runbook covering the request, the locate query against the records register, export in both human-readable and reasonably usable electronic formats with any audit trail, and delivery. Run it on a schedule against sampled records and time each run, so that \"promptly\" is backed by evidence. The same path serves client requests for MiFID II recordings.",
+      "evidence": [
+        "The runbook and the dated results of each production drill, including elapsed time",
+        "Delivered production packages and their manifests"
+      ],
+      "aws": [
+        {
+          "service": "Amazon S3 Batch Operations",
+          "configuration": "Bulk copy of located records and audit-trail extracts into a production bucket",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-regulatory-undertakings",
+      "title": "Executive and third-party undertakings for electronic records",
+      "kind": "organizational",
+      "satisfies": [
+        "us-sec-17a-4.f3v",
+        "us-sec-17a-4.i"
+      ],
+      "implementation": "File the 17a-4(f)(3)(v) undertaking with the designated examining authority, signed by a designated executive officer (who may appoint designated officers and specialists) or by a designated third party. For records held in a cloud provider's storage, either obtain the provider's full 17a-4(i)(1)(i) undertaking, or establish and document independent access. Independent access means the firm can reach, examine and furnish the records without the provider's intervention, which makes the shorter 17a-4(i)(1)(ii) undertaking available.",
+      "evidence": [
+        "Filed undertakings, with the date and recipient of each filing",
+        "Written appointments of designated officers and specialists",
+        "An independent-access test showing the firm retrieving and producing records using only its own credentials"
+      ],
+      "limits": "No AWS configuration satisfies this control. It is a filing and a governance act that the firm must perform.",
+      "aws": [],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-retention-schedule",
+      "title": "Retention schedule mapping record classes to periods and triggers",
+      "kind": "organizational",
+      "satisfies": [
+        "us-sec-17a-4.a",
+        "us-sec-17a-4.b",
+        "us-sec-17a-4.c",
+        "us-sec-204-2.e1",
+        "us-sec-204-2.e2",
+        "us-finra-4511.b",
+        "us-cftc-1-31.b1",
+        "us-cftc-1-31.b2",
+        "us-cftc-1-31.b3",
+        "us-cftc-1-31.b4",
+        "eu-mifid2-art16-6.recordings",
+        "eu-mifid2-art16-6.mifir25",
+        "us-sox-802.1520",
+        "us-sox-802.rule2-06"
+      ],
+      "implementation": "Keep a retention schedule, generated from this corpus's export, that assigns every record class a period, a trigger and an accessibility window. Put fixed-from-creation classes in buckets whose default retention equals the period. Trigger-based classes (account closure, end of fiscal year, transaction termination, end of the enterprise) cannot know their end date at write time. Write them with the minimum known retention, then extend the retain-until date when the trigger event occurs. Compliance mode allows extending a retention period but never shortening it. Where regimes overlap, take the longest applicable period.",
+      "evidence": [
+        "The retention schedule, versioned, with each row citing an obligation id from this corpus",
+        "S3 Inventory reports showing each object's retain-until date against the schedule",
+        "Records of the jobs that extend retention on trigger events, for example S3 Batch Operations manifests and completion reports"
+      ],
+      "limits": "The corpus carries the regulatory floor only. Litigation, tax and client-contract retention can exceed it and must be added to the schedule separately.",
+      "aws": [
+        {
+          "service": "Amazon S3 Object Lock retention periods",
+          "configuration": "Bucket default retention per record class; per-object retain-until dates extended on trigger events",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html",
+          "quote": "When an object is locked in compliance mode, its retention mode can't be changed, and its retention period can't be shortened."
+        },
+        {
+          "service": "Amazon S3 Batch Operations",
+          "configuration": "Bulk retain-until extension when a trigger event (for example account closure) fires",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html"
+        },
+        {
+          "service": "Amazon S3 Inventory",
+          "configuration": "Daily inventory including Object Lock retain-until date and mode",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-inventory.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    },
+    {
+      "id": "ctl-worm-storage",
+      "title": "Non-rewriteable, non-erasable record storage",
+      "kind": "technical",
+      "satisfies": [
+        "us-sec-17a-4.f2i",
+        "us-finra-4511.c",
+        "us-sec-204-2.g3",
+        "us-cftc-1-31.c2",
+        "eu-mifid2-art16-6.dr72"
+      ],
+      "implementation": "Write regulatory records only to S3 buckets created with Object Lock enabled and a default retention in compliance mode. Compliance mode is the WORM option in Rule 17a-4(f)(2)(i)(B). Governance mode is not, because privileged users can bypass it. Enable versioning (Object Lock requires it) so that a correction is written as a new version and the prior content survives, which is what Delegated Regulation 2017/565 Article 72(1)(b) asks for.",
+      "evidence": [
+        "Bucket ObjectLockConfiguration showing ObjectLockEnabled and a DefaultRetention in COMPLIANCE mode",
+        "AWS Config rule s3-bucket-default-lock-enabled reporting COMPLIANT for every records bucket",
+        "The Cohasset Associates compliance assessment of S3 Object Lock that AWS links from its documentation, filed with the control evidence"
+      ],
+      "limits": "The Cohasset assessment covers the storage layer only. The firm still owns the retention schedule, the audit system for inputs under 17a-4(f)(3)(iii), and the undertakings.",
+      "aws": [
+        {
+          "service": "Amazon S3 Object Lock",
+          "configuration": "Object Lock enabled at bucket creation; default retention mode COMPLIANCE; versioning on",
+          "doc": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html",
+          "quote": "S3 Object Lock has been assessed by Cohasset Associates for use in environments that are subject to SEC 17a-4, CFTC, and FINRA regulations."
+        },
+        {
+          "service": "AWS Config",
+          "configuration": "Managed rule s3-bucket-default-lock-enabled scoped to the records buckets",
+          "doc": "https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-default-lock-enabled.html"
+        }
+      ],
+      "confidence": "medium",
+      "verified": {
+        "date": "2026-09-18",
+        "by": "claude-opus-5 agent session (not reviewed by counsel)",
+        "method": "Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation."
+      },
+      "review_due": "2027-03-18"
+    }
+  ],
+  "unmigrated_references": [
+    {
+      "title": "Federal Reserve — Supervision & Regulation",
+      "url": "https://www.federalreserve.gov/supervisionreg.htm",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Federal Reserve — Stress Tests & Capital Planning",
+      "url": "https://www.federalreserve.gov/supervisionreg/stress-tests-capital-planning.htm",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Federal Reserve — Reporting Forms",
+      "url": "https://www.federalreserve.gov/apps/reportforms/",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "OCC — Bank Supervision",
+      "url": "https://www.occ.treas.gov/topics/supervision-and-examination/index-supervision-and-examination.html",
+      "authority": "occ",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "OCC — Capital Requirements",
+      "url": "https://www.occ.treas.gov/topics/supervision-and-examination/capital/index-capital.html",
+      "authority": "occ",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "FDIC — Regulations & Examinations",
+      "url": "https://www.fdic.gov/resources/regulations/",
+      "authority": "fdic",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "FDIC — Risk Management Manual of Examination Policies",
+      "url": "https://www.fdic.gov/resources/supervision-and-examinations/examination-policies-manual/",
+      "authority": "fdic",
+      "jurisdiction": "US",
+      "topic": "banking",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "SEC — Statutes and Regulations",
+      "url": "https://www.sec.gov/rules-regulations/statutes-regulations",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "sec.gov refuses requests without a declared User-Agent; it resolves with one."
+      }
+    },
+    {
+      "title": "Securities Act of 1933 (15 U.S.C. chapter 2A)",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2A&edition=prelim",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "statute",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously pointed at the frozen 2019 edition of the U.S. Code."
+      },
+      "replaces": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2A.pdf"
+      ]
+    },
+    {
+      "title": "Securities Exchange Act of 1934 (15 U.S.C. chapter 2B)",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2B&edition=prelim",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "statute",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously pointed at the frozen 2019 edition of the U.S. Code."
+      },
+      "replaces": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2B.pdf"
+      ]
+    },
+    {
+      "title": "Investment Company Act of 1940 (15 U.S.C. chapter 2D, subchapter I)",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2D/subchapter1&edition=prelim",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "statute",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "This and the Advisers Act entry both pointed at the whole chapter 2D PDF, which contains both Acts. Each now points at its own subchapter."
+      },
+      "replaces": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2D.pdf"
+      ]
+    },
+    {
+      "title": "Investment Advisers Act of 1940 (15 U.S.C. chapter 2D, subchapter II)",
+      "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2D/subchapter2&edition=prelim",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "statute",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "This and the Investment Company Act entry both pointed at the whole chapter 2D PDF, which contains both Acts. Each now points at its own subchapter."
+      },
+      "replaces": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2D.pdf"
+      ]
+    },
+    {
+      "title": "Investment Advisers Act rules (17 CFR part 275)",
+      "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Investment Company Act rules (17 CFR part 270)",
+      "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-270",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Securities Exchange Act rules (17 CFR part 240)",
+      "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-240",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Securities Act rules (17 CFR part 230)",
+      "url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "PCAOB — Auditing standards (applied in SOX Section 404 audits)",
+      "url": "https://pcaobus.org/oversight/standards",
+      "authority": "pcaob",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "FINRA — Rulebooks",
+      "url": "https://www.finra.org/rules-guidance/rulebooks",
+      "authority": "finra",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "MSRB — Rules",
+      "url": "https://www.msrb.org/Rules-and-Interpretations/MSRB-Rules",
+      "authority": "msrb",
+      "jurisdiction": "US",
+      "topic": "capital-markets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously a finra.org address, which also no longer resolves. The MSRB publishes its own rulebook."
+      },
+      "replaces": [
+        "https://www.finra.org/rules-guidance/rulebooks/municipal-securities-rulemaking-board-rules"
+      ]
+    },
+    {
+      "title": "NAIC — Insurance Regulatory Information System (IRIS)",
+      "url": "https://content.naic.org/cipr-topics/insurance-regulatory-information-system-iris",
+      "authority": "naic",
+      "jurisdiction": "US",
+      "topic": "insurance",
+      "kind": "portal",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "Refuses automated requests (HTTP 403). Previously titled \"Regulatory Framework\"; the page covers IRIS only."
+      }
+    },
+    {
+      "title": "NY DFS — Regulations (banking and insurance)",
+      "url": "https://www.dfs.ny.gov/industry_guidance/regulations",
+      "authority": "nydfs",
+      "jurisdiction": "US-NY",
+      "topic": "insurance",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The insurance guidance page it replaces returns 404. Previously filed under United States federal."
+      },
+      "replaces": [
+        "https://www.dfs.ny.gov/industry_guidance/insurance"
+      ]
+    },
+    {
+      "title": "CFPB — Final rules",
+      "url": "https://www.consumerfinance.gov/rules-policy/final-rules/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "CFPB — Regulations",
+      "url": "https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "CFPB — Compliance resources",
+      "url": "https://www.consumerfinance.gov/compliance/compliance-resources/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Regulation B (Equal Credit Opportunity Act)",
+      "url": "https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Regulation E (Electronic Fund Transfers, 12 CFR 1005)",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1005/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The compliance-resources page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.consumerfinance.gov/compliance/compliance-resources/deposit-and-payments-resources/electronic-fund-transfers/"
+      ]
+    },
+    {
+      "title": "Regulation Z (Truth in Lending, 12 CFR 1026)",
+      "url": "https://www.consumerfinance.gov/rules-policy/regulations/1026/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The compliance-resources page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.consumerfinance.gov/compliance/compliance-resources/lending-resources/truth-lending/"
+      ]
+    },
+    {
+      "title": "Fair Credit Reporting Act (FCRA)",
+      "url": "https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/fair-credit-reporting-act/",
+      "authority": "cfpb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Federal Reserve — Payment Systems",
+      "url": "https://www.federalreserve.gov/paymentsystems.htm",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "SEC — Crypto assets and emerging technology (Division of Enforcement)",
+      "url": "https://www.sec.gov/about/divisions-offices/division-enforcement/cyber-crypto-assets-emerging-technology",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The digital-assets spotlight page returns 404. This is where sec.gov now redirects its own crypto-assets topic page."
+      },
+      "replaces": [
+        "https://www.sec.gov/spotlight/digital-assets"
+      ]
+    },
+    {
+      "title": "SEC — Safeguarding Advisory Client Assets (Release IA-6240)",
+      "url": "https://www.sec.gov/files/rules/proposed/2023/ia-6240.pdf",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "proposal",
+      "status": "withdrawn",
+      "status_note": "A proposed rule (File S7-04-23), never adopted. The SEC withdrew it in Federal Register document 2025-11110, published 2025-06-17. Previously listed as \"Investment Adviser Custody Rule Amendments\", as though in force.",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous address under rules/final/ returns 404."
+      },
+      "replaces": [
+        "https://www.sec.gov/files/rules/final/2023/ia-6240.pdf"
+      ]
+    },
+    {
+      "title": "SEC — Custody of Digital Asset Securities by Special Purpose Broker-Dealers (Release 34-90788)",
+      "url": "https://www.sec.gov/files/rules/policy/2020/34-90788.pdf",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "status": "unverified",
+      "status_note": "A Commission statement, not a rule amendment. The release gives its effective date as 2021-04-27. Whether it is still in effect was not checked.",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous address under rules/final/ returns 404. Previously titled \"Customer Protection Rule Modifications\"."
+      },
+      "replaces": [
+        "https://www.sec.gov/files/rules/final/2020/34-90788.pdf"
+      ]
+    },
+    {
+      "title": "SEC Corporation Finance — TurnKey Jet no-action letter (2019)",
+      "url": "https://www.sec.gov/divisions/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous address without /divisions/ returns 404. Previously titled \"Digital Asset Securities Guidance\"; it is a single no-action letter."
+      },
+      "replaces": [
+        "https://www.sec.gov/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm"
+      ]
+    },
+    {
+      "title": "LabCFTC — A CFTC Primer on Virtual Currencies",
+      "url": "https://www.cftc.gov/sites/default/files/idc/groups/public/documents/file/labcftc_primercurrencies100417.pdf",
+      "authority": "cftc",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous address returns 404."
+      },
+      "replaces": [
+        "https://www.cftc.gov/sites/default/files/2019-12/9-17-15%20LabCFTC_PrimerOnVirtualCurrencies.pdf"
+      ]
+    },
+    {
+      "title": "CFTC — Press release 8051-20 (digital asset derivatives)",
+      "url": "https://www.cftc.gov/PressRoom/PressReleases/8051-20",
+      "authority": "cftc",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "IRS — Notice 2014-21 (virtual currency)",
+      "url": "https://www.irs.gov/irb/2014-16_IRB#NOT-2014-21",
+      "authority": "irs",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "IRS — Revenue Ruling 2019-24 (hard forks)",
+      "url": "https://www.irs.gov/irb/2019-44_IRB#REV-RUL-2019-24",
+      "authority": "irs",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "IRS — Revenue Ruling 2023-14 (staking rewards)",
+      "url": "https://www.irs.gov/irb/2023-33_IRB#REV-RUL-2023-14",
+      "authority": "irs",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "IRS — Digital asset broker reporting final rule (Federal Register 2024-14004)",
+      "url": "https://www.federalregister.gov/documents/2024/07/09/2024-14004/gross-proceeds-and-basis-reporting-by-brokers-and-determination-of-amount-realized-and-basis-for",
+      "authority": "irs",
+      "jurisdiction": "US",
+      "topic": "digital-assets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "NY DFS — BitLicense regulation (23 NYCRR Part 200)",
+      "url": "https://govt.westlaw.com/nycrr/Browse/Home/NewYork/UnofficialNewYorkCodesRulesandRegulations?guid=I7444ce80169611e594630000845b8d3e",
+      "authority": "nydfs",
+      "jurisdiction": "US-NY",
+      "topic": "digital-assets",
+      "kind": "regulation",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under United States federal."
+      }
+    },
+    {
+      "title": "NY DFS — Guidance on listing virtual currencies (industry letter, 2023-11-15)",
+      "url": "https://www.dfs.ny.gov/industry_guidance/industry_letters/il20231115_listing_virtual_currencies",
+      "authority": "nydfs",
+      "jurisdiction": "US-NY",
+      "topic": "digital-assets",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under United States federal."
+      }
+    },
+    {
+      "title": "GENIUS Act — Guiding and Establishing National Innovation for U.S. Stablecoins Act (Pub. L. 119-27)",
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "statute",
+      "status": "enacted",
+      "status_note": "S. 1582, approved 2025-07-18. Section 20 makes it effective on the earlier of 18 months after enactment or 120 days after the primary federal payment stablecoin regulators issue final implementing regulations. Whether regulations have triggered the earlier date was not checked. This is the US federal stablecoin law the previous list omitted.",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "Stablecoin TRUST Act (S. 4356, 117th Congress)",
+      "url": "https://www.congress.gov/bill/117th-congress/senate-bill/4356/text",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "bill",
+      "status": "not_enacted",
+      "status_note": "A bill that died when the 117th Congress ended. The previous list presented it as current law. Superseded in substance by the GENIUS Act.",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "congress.gov refuses automated requests (HTTP 403)."
+      }
+    },
+    {
+      "title": "Clarity for Payment Stablecoins Act (H.R. 4766, 118th Congress)",
+      "url": "https://www.congress.gov/bill/118th-congress/house-bill/4766",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "bill",
+      "status": "not_enacted",
+      "status_note": "A bill that died when the 118th Congress ended. The previous list presented it as current law. Superseded in substance by the GENIUS Act.",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "congress.gov refuses automated requests (HTTP 403)."
+      }
+    },
+    {
+      "title": "OCC — Federally chartered banks and thrifts may participate in independent node verification networks and use stablecoins for payment activities (2021)",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2021/nr-occ-2021-2.html",
+      "authority": "occ",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "OCC — Clarifies bank authority to engage in certain cryptocurrency activities (2025)",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-16.html",
+      "authority": "occ",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Added alongside the 2021 release because it revisits the same authority. Title taken from the page."
+      }
+    },
+    {
+      "title": "Federal Reserve — Money and Payments, The U.S. Dollar in the Age of Digital Transformation (discussion paper)",
+      "url": "https://www.federalreserve.gov/publications/money-and-payments-discussion-paper.htm",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "stablecoins",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "EBA — Single Rulebook",
+      "url": "https://www.eba.europa.eu/activities/single-rulebook",
+      "authority": "eba",
+      "jurisdiction": "EU",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The regulation-and-policy page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.eba.europa.eu/regulation-and-policy"
+      ]
+    },
+    {
+      "title": "ECB — Banking Supervision",
+      "url": "https://www.bankingsupervision.europa.eu/banking/html/index.en.html",
+      "authority": "ecb",
+      "jurisdiction": "EU",
+      "topic": "banking",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "ESMA — Databases and registers",
+      "url": "https://www.esma.europa.eu/publications-and-data/databases-and-registers",
+      "authority": "esma",
+      "jurisdiction": "EU",
+      "topic": "capital-markets",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The rules-databases-library page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.esma.europa.eu/rules-databases-library"
+      ]
+    },
+    {
+      "title": "EIOPA — Regulation and policy",
+      "url": "https://www.eiopa.europa.eu/browse/regulation-and-policy_en",
+      "authority": "eiopa",
+      "jurisdiction": "EU",
+      "topic": "insurance",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "EBA — Payment services and electronic money",
+      "url": "https://www.eba.europa.eu/regulation-and-policy/payment-services-and-electronic-money",
+      "authority": "eba",
+      "jurisdiction": "EU",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "ECB — Payments & Markets",
+      "url": "https://www.ecb.europa.eu/paym/html/index.en.html",
+      "authority": "ecb",
+      "jurisdiction": "EU",
+      "topic": "payments-consumer",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "DORA — Regulation (EU) 2022/2554 on digital operational resilience",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "authority": "eu-legislature",
+      "jurisdiction": "EU",
+      "topic": "operational-resilience",
+      "kind": "regulation",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "EUR-Lex answers automated requests with a bot challenge (HTTP 202). Previously linked a Council press release under a title naming the Regulation."
+      },
+      "replaces": [
+        "https://www.consilium.europa.eu/en/press/press-releases/2022/11/28/digital-finance-council-adopts-digital-operational-resilience-act/"
+      ]
+    },
+    {
+      "title": "ESMA — Digital Operational Resilience Act (DORA)",
+      "url": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/digital-operational-resilience-act-dora",
+      "authority": "esma",
+      "jurisdiction": "EU",
+      "topic": "operational-resilience",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous policy-activities address returns 404."
+      },
+      "replaces": [
+        "https://www.esma.europa.eu/policy-activities/digital-finance-and-innovation/digital-operational-resilience-act-dora"
+      ]
+    },
+    {
+      "title": "NIST Cybersecurity Framework",
+      "url": "https://www.nist.gov/cyberframework",
+      "authority": "nist",
+      "jurisdiction": "US",
+      "topic": "cybersecurity",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global. NIST is a US federal agency."
+      }
+    },
+    {
+      "title": "NIST SP 800-53 Rev. 5 — Security and Privacy Controls",
+      "url": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+      "authority": "nist",
+      "jurisdiction": "US",
+      "topic": "cybersecurity",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global. NIST is a US federal agency."
+      }
+    },
+    {
+      "title": "GDPR — Regulation (EU) 2016/679, including Article 32 (security of processing)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "authority": "eu-legislature",
+      "jurisdiction": "EU",
+      "topic": "data-protection",
+      "kind": "regulation",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "EUR-Lex answers automated requests with a bot challenge (HTTP 202). Replaces two gdpr-info.eu links, an unofficial third-party mirror, with the official text. Previously filed under Global."
+      },
+      "replaces": [
+        "https://gdpr-info.eu/",
+        "https://gdpr-info.eu/art-32-gdpr/"
+      ]
+    },
+    {
+      "title": "HHS — HIPAA Security Rule",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/security/index.html",
+      "authority": "hhs",
+      "jurisdiction": "US",
+      "topic": "healthcare",
+      "kind": "guidance",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "hhs.gov refuses automated requests (HTTP 403). Previously filed under Global."
+      }
+    },
+    {
+      "title": "HHS — HIPAA Privacy Rule",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
+      "authority": "hhs",
+      "jurisdiction": "US",
+      "topic": "healthcare",
+      "kind": "guidance",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "hhs.gov refuses automated requests (HTTP 403). Previously filed under Global."
+      }
+    },
+    {
+      "title": "FinCEN — Statutes and regulations (Bank Secrecy Act)",
+      "url": "https://www.fincen.gov/resources/statutes-regulations",
+      "authority": "fincen",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "FinCEN — Anti-Money Laundering Act of 2020",
+      "url": "https://www.fincen.gov/anti-money-laundering-act-2020",
+      "authority": "fincen",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "FinCEN — Guidance on convertible virtual currencies (2019)",
+      "url": "https://www.fincen.gov/sites/default/files/2019-05/FinCEN%20Guidance%20CVC%20FINAL%20508.pdf",
+      "authority": "fincen",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "guidance",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "FinCEN — Virtual currency advisory (dated May 2020 in its address)",
+      "url": "https://www.fincen.gov/sites/default/files/advisory/2020-05-04/FinCEN%20Advisory%20CVC%20May%202020.pdf",
+      "authority": "fincen",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "guidance",
+      "link": {
+        "status": "broken",
+        "checked": "2026-09-18",
+        "note": "Returns 404 and no replacement was found on FinCEN's advisories index. The document could not be identified, so it is kept as a dead reference rather than guessed at."
+      }
+    },
+    {
+      "title": "U.S. Treasury — Terrorism and Illicit Finance",
+      "url": "https://home.treasury.gov/policy-issues/terrorism-and-illicit-finance",
+      "authority": "treasury",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "OFAC — Sanctions programs",
+      "url": "https://ofac.treasury.gov/",
+      "authority": "treasury",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "OCC — BSA/AML compliance",
+      "url": "https://www.occ.gov/topics/supervision-and-examination/bsa/index-bsa.html",
+      "authority": "occ",
+      "jurisdiction": "US",
+      "topic": "aml",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Previously filed under Global."
+      }
+    },
+    {
+      "title": "SEC whistleblower provisions (15 U.S.C. 78u-6)",
+      "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section78u-6&num=0&edition=prelim",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "statute",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "SEC — Whistleblower Program",
+      "url": "https://www.sec.gov/enforcement-litigation/whistleblower-program",
+      "authority": "sec",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous address now redirects here."
+      },
+      "replaces": [
+        "https://www.sec.gov/whistleblower"
+      ]
+    },
+    {
+      "title": "CFTC — Whistleblower Program",
+      "url": "https://www.cftc.gov/ConsumerProtection/WhistleblowerProgram/index.htm",
+      "authority": "cftc",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18"
+      }
+    },
+    {
+      "title": "OSHA — Whistleblower Protection Program",
+      "url": "https://www.whistleblowers.gov/",
+      "authority": "osha",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "Replaces two addresses for the same OSHA fact sheet. The osha.gov one returns 404; the dol.gov one refuses automated requests."
+      },
+      "replaces": [
+        "https://www.osha.gov/workers/file-complaint/whistleblower/WB_Factsheet",
+        "https://www.dol.gov/agencies/osha/workers/file-complaint/whistleblower/WB_Factsheet"
+      ]
+    },
+    {
+      "title": "PCAOB — Tips and referrals",
+      "url": "https://pcaobus.org/oversight/enforcement/tips-referrals",
+      "authority": "pcaob",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The previous whistleblower page returns 404."
+      },
+      "replaces": [
+        "https://www.pcaob.org/oversight/other/whistleblower"
+      ]
+    },
+    {
+      "title": "FDIC — Consumer assistance topics",
+      "url": "https://www.fdic.gov/consumer-resource-center/consumer-assistance-topics",
+      "authority": "fdic",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The complaint page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.fdic.gov/resources/consumers/consumer-assistance/file-complaint/"
+      ]
+    },
+    {
+      "title": "Federal Reserve Consumer Help — complaints about banks",
+      "url": "https://www.federalreserveconsumerhelp.gov/",
+      "authority": "frb",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "portal",
+      "link": {
+        "status": "ok",
+        "checked": "2026-09-18",
+        "note": "The complaint procedures page it replaces returns 404."
+      },
+      "replaces": [
+        "https://www.federalreserve.gov/consumerscommunities/consumer-complaints-against-banks.htm"
+      ]
+    },
+    {
+      "title": "Dodd-Frank Wall Street Reform and Consumer Protection Act (H.R. 4173, 111th Congress)",
+      "url": "https://www.congress.gov/bill/111th-congress/house-bill/4173",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "statute",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "congress.gov refuses automated requests (HTTP 403)."
+      }
+    },
+    {
+      "title": "Sarbanes-Oxley Act of 2002 (H.R. 3763, 107th Congress)",
+      "url": "https://www.congress.gov/bill/107th-congress/house-bill/3763",
+      "authority": "us-congress",
+      "jurisdiction": "US",
+      "topic": "whistleblower",
+      "kind": "statute",
+      "link": {
+        "status": "blocked",
+        "checked": "2026-09-18",
+        "note": "congress.gov refuses automated requests (HTTP 403). Section 802 is migrated as an instrument."
+      }
+    }
+  ],
+  "coverage": {
+    "by_jurisdiction": {
+      "US": {
+        "instruments": 6,
+        "obligations": 30,
+        "obligations_with_control": 30,
+        "unmigrated_references": 64
+      },
+      "US-NY": {
+        "instruments": 0,
+        "obligations": 0,
+        "obligations_with_control": 0,
+        "unmigrated_references": 3
+      },
+      "EU": {
+        "instruments": 1,
+        "obligations": 4,
+        "obligations_with_control": 4,
+        "unmigrated_references": 9
+      },
+      "INTL": {
+        "instruments": 0,
+        "obligations": 0,
+        "obligations_with_control": 0,
+        "unmigrated_references": 0
+      }
+    },
+    "confidence": {
+      "instruments": {
+        "high": 6,
+        "medium": 1,
+        "low": 0
+      },
+      "obligations": {
+        "high": 30,
+        "medium": 4,
+        "low": 0
+      },
+      "controls": {
+        "high": 0,
+        "medium": 11,
+        "low": 0
+      }
+    },
+    "unmigrated_link_status": {
+      "ok": 66,
+      "blocked": 9,
+      "broken": 1
+    },
+    "obligations_without_control": []
+  }
+}

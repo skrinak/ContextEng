@@ -1,0 +1,20 @@
+id: us-sec-17a-3
+title: SEC Rule 17a-3 — Records to be made by certain exchange members, brokers and dealers
+short: SEC 17a-3
+authority: sec
+jurisdiction: US
+type: regulation
+citation: 17 CFR 240.17a-3
+url: https://www.ecfr.gov/current/title-17/section-240.17a-3
+status: in_force
+status_as_of: "2026-09-16"
+topics: [capital-markets, recordkeeping]
+cloud_relevance: high
+applies_to: Exchange members, brokers and dealers registered under section 15 of the Exchange Act
+summary: Defines which books and records a broker-dealer must create and keep current. It sets no retention periods; those are in Rule 17a-4.
+confidence: high
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim.
+review_due: "2027-03-18"

@@ -1,0 +1,25 @@
+id: ctl-audit-trail
+title: Tamper-evident audit trail of record creation, modification and deletion
+kind: technical
+satisfies: [us-sec-17a-4.f2i, us-cftc-1-31.c2, eu-mifid2-art16-6.dr72]
+implementation: >-
+  Log S3 data events for every records bucket to a CloudTrail trail with log file integrity validation. Keep the trail in an Object Lock bucket in a separate log-archive account. Versioning on the records buckets keeps prior content, so a modified record can be re-created. This combination is what the 17a-4(f)(2)(i)(A) audit-trail alternative requires. Firms that choose the WORM option still need an input audit system under 17a-4(f)(3)(iii), and this trail provides it.
+evidence:
+  - CloudTrail trail configuration with data events on the records buckets and LogFileValidationEnabled true
+  - Periodic output of validate-logs showing the digest chain intact
+  - Log-archive bucket Object Lock configuration
+limits: >-
+  CloudTrail records API actions, not business-level edits made inside an application database. An application that changes records before writing them to S3 needs its own audit trail.
+aws:
+  - service: AWS CloudTrail (data events, log file integrity validation)
+    configuration: Organization trail, S3 data events for records buckets, log file validation on, delivered to a locked log-archive bucket
+    doc: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-log-file-validation-intro.html
+  - service: AWS CloudTrail Lake
+    configuration: Event data store for queryable retention of the same events
+    doc: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

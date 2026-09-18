@@ -1,0 +1,3 @@
+description: A record past its review date fails rather than quietly misinforming
+expect: stale
+today: "2026-07-01"

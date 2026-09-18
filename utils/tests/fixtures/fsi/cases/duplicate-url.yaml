@@ -1,0 +1,11 @@
+description: Two entries cite one address (the Investment Company Act / Advisers Act defect)
+expect: duplicate-url
+append:
+  holdings:
+    - title: Fixture duplicate of the rulebook entry
+      url: https://www.finra.org/rules-guidance/rulebooks/
+      authority: finra
+      jurisdiction: US
+      topic: capital-markets
+      kind: portal
+      link: {status: ok, checked: "2026-01-01"}

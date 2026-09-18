@@ -26,12 +26,17 @@ Tracking `decisions/2026-07-29 - Conform ContextEng to the groundwork archetype.
 Tracking `decisions/2026-09-17 - Replacing FSIregulation.md with a validated corpus.md`.
 
 - [x] Survey the replacement, its taxonomy placement and its inbound references `[completed]` — found two demonstrable defects in the current file (duplicate citation URL, authority/host mismatch) and one legislative-status error
-- [ ] **User-owned:** decide where generated machine-consumable JSON lives — `specs/fsi/dist/` recommended, `decisions/evals/` is the stated home for script output but assumes dated one-off records `[pending]`
-- [ ] Toolchain, schemas and validator with a fixture per failure mode. No corpus data until the detectors exist `[pending]`
-- [ ] Seed corpus, Layer 1, seven auditability instruments `[pending]`
-- [ ] Rendering, export, link verification, coverage report. `docs/FSIregulation.md` becomes generated at the same address `[pending]`
-- [ ] Obligations for the seven, every source fetched and every duration quoted `[pending]`
-- [ ] Re-vendor `CLAUDE.md` after its FSI bullet repoints, confirm `contract-sync` green `[pending]`
+- [x] Fix the defects the survey found `[completed]` — each Act points at its own subchapter; MSRB points at msrb.org; HIPAA, NIST, GDPR and AML moved out of "Global"; GENIUS Act added, and the 2022–23 stablecoin bills marked not enacted. Also found and fixed: 17 dead links and a withdrawn SEC proposal presented as law
+- [x] Where generated machine-consumable JSON lives `[completed]` — the record's recommendation, at `specs/fsi/export/` (`dist/` is gitignored repo-wide); exception recorded in `specs/README.md`. **Owner to confirm**
+- [x] Toolchain, schemas and validator with a fixture per failure mode `[completed]` — `utils/fsi_corpus.py`, 20 case fixtures, `make fsi-check`, CI `fsi-corpus.yml`
+- [x] Seed corpus, Layer 1, seven auditability instruments `[completed]`
+- [x] Rendering, export, link verification, coverage report `[completed]` — `docs/FSIregulation.md` generated at the same address, plus `docs/regulations/{us,eu}.md` and `specs/fsi/export/corpus.json`
+- [x] Obligations for the seven, every source fetched and every duration quoted `[completed]` — 34 obligations; quotes compared verbatim against source text retrieved 2026-09-18
+- [x] Controls and AWS bindings `[completed]` — 11 controls; every obligation has at least one
+- [x] Re-vendor `CLAUDE.md` after its FSI bullet repoints `[completed]` — not needed, because the address did not move
+- [ ] **User-owned:** human/counsel review of the 34 obligations before relying on them `[pending]`
+- [ ] Flip the decision record to `Shipped` once this work is merged `[pending]`
+- [ ] Next cluster: model risk and AI governance, then operational resilience and third-party risk, UK, EU core `[pending]`
 
 ## Open
 

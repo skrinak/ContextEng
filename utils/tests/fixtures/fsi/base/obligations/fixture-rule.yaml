@@ -1,0 +1,15 @@
+- id: fixture-rule.a
+  instrument: fixture-rule
+  title: Six-year retention
+  kind: retention
+  applies_to: Fixture firms
+  requirement: Preserve fixture records for at least 6 years, the first two years easily accessible.
+  retention: {period: P6Y, accessible_period: P2Y, trigger: Record creation}
+  source:
+    citation: 17 CFR 999.1(a)
+    url: https://www.ecfr.gov/current/title-17/section-999.1#p-999.1(a)
+    quote: Every fixture firm must preserve for a period of not less than 6 years, the first two years in an easily accessible place, all fixture records.
+    retrieved: "2026-01-01"
+  confidence: high
+  verified: {date: "2026-01-01", by: fixture, method: fixture}
+  review_due: "2026-06-30"

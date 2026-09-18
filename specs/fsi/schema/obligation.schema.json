@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skrinak/ContextEng/specs/fsi/schema/obligation.schema.json",
+  "title": "Layer 2: an obligation (what a firm must evidence)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "instrument", "title", "kind", "applies_to", "requirement", "source", "confidence", "verified", "review_due"],
+  "properties": {
+    "id": {"$ref": "common.schema.json#/$defs/id"},
+    "instrument": {"$ref": "common.schema.json#/$defs/id"},
+    "title": {"type": "string", "minLength": 1},
+    "kind": {"enum": ["creation", "retention", "form", "production", "undertaking", "preservation"]},
+    "applies_to": {"type": "string", "minLength": 1},
+    "requirement": {"type": "string", "minLength": 1},
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trigger"],
+      "properties": {
+        "period": {"$ref": "common.schema.json#/$defs/duration"},
+        "trigger": {"type": "string", "minLength": 1},
+        "accessible_period": {"$ref": "common.schema.json#/$defs/duration"},
+        "extended_period": {"$ref": "common.schema.json#/$defs/duration"},
+        "indefinite": {"type": "boolean"}
+      }
+    },
+    "see_also": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "note": {"type": "string"},
+    "source": {"$ref": "common.schema.json#/$defs/source"},
+    "confidence": {"enum": ["high", "medium"]},
+    "verified": {"$ref": "common.schema.json#/$defs/verified"},
+    "review_due": {"$ref": "common.schema.json#/$defs/date"}
+  }
+}

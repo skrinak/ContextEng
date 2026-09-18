@@ -1,16 +1,16 @@
 # Replacing FSIregulation.md with a validated corpus
 
-> **Status:** Proposed
+> **Status:** In-progress
 > **Pairs-with:** [`../docs/FSIregulation.md`](../docs/FSIregulation.md)
 
 ## Context
 
 [`docs/FSIregulation.md`](../docs/FSIregulation.md) is 116 lines of categorised hyperlinks: three
-geographic headings, sub-category sub-headings, roughly 90 links, no source of record behind it. It is
+geographic headings, sub-category sub-headings, 76 links, no source of record behind it. It is
 filed in the bucket table as "Reference guidance" and it is the artifact `CLAUDE.md` points an agent
 at when a workload is regulated.
 
-The form has eight failure modes, and this file has all of them. Two are already present and
+The form has predictable failure modes, and this file has every one of them. Two are already present and
 mechanically demonstrable rather than hypothetical:
 
 - The Investment Company Act and the Investment Advisers Act entries resolve to the **same URL**
@@ -90,9 +90,9 @@ New `Makefile` targets in the existing style, `.PHONY` with a rationale comment.
 alongside `docs-links.yml`. The reference guard checks paths in non-markdown files too, so corpus YAML
 carrying repo-relative paths is in scope for it, with `doclink: ignore` as the escape.
 
-**6. Content parity is a trap, and this is the finding worth arguing about.** The 90 existing links
+**6. Content parity is a trap, and this is the finding worth arguing about.** The 76 existing links
 lift to instrument records mechanically, in an afternoon. But an honest migration cannot mark them
-`confidence: high`, because that level means the primary source was actually read, and reading 90
+`confidence: high`, because that level means the primary source was actually read, and reading 76
 primary sources is the entire cost of this project. A faithful lift therefore produces a corpus that is
 *visibly* mostly low-confidence, which reads as a regression to anyone who liked the old file's
 unearned authority. That reaction should be expected and refused: the confidence levels are the
@@ -100,7 +100,7 @@ improvement, not a defect in it.
 
 ## Recommended scope
 
-Do not migrate all 90 links in one pass. Ship the machinery, then one verified cluster:
+Do not migrate all 76 links in one pass. Ship the machinery, then one verified cluster:
 
 1. Toolchain, taxonomy, schemas, validator with fixtures. No corpus data. Proves the failure modes are
    detectable before anything can exhibit them.
@@ -130,5 +130,36 @@ operational resilience and third-party risk, then the UK, then EU core regimes.
   for crypto, where several areas have no applicable standard at all: institutional key management,
   proof-of-reserves attestation, the DeFi authorization perimeter, and autonomous agents transacting
   on-chain. A reader currently cannot tell those apart from topics nobody got round to.
-- Nothing above is implemented. This record is the survey, and the placement question in item 1 wants
+- As surveyed, nothing above was implemented. See Outcome for what was built, and the placement question in item 1 wanted
   an answer before the first line of code.
+
+## Outcome (2026-09-18)
+
+Recommended scope items 1 to 5 are implemented. The survey's counts were corrected in place while this
+record was still open: the file held 76 links, not roughly 90.
+
+- **Placement question answered.** The recommendation was adopted, at `specs/fsi/export/` rather than
+  `specs/fsi/dist/`, because `dist/` is ignored repo-wide. The trade is recorded in `specs/README.md` as
+  its second documented exception.
+- **The corpus.** Seven instruments (SEC 17a-3, 17a-4 and 204-2, FINRA 4511, CFTC 1.31, MiFID II
+  Art 16(6), SOX 802), 34 obligations and 11 controls, all under `specs/fsi/`. Every obligation's quote was
+  compared verbatim against text retrieved from eCFR, finra.org, uscode.house.gov and publications.europa.eu.
+  All 34 obligations have at least one control. The US records are `high`. The EU records are `medium`: the
+  Official Journal originals were read, but EUR-Lex refuses automated retrieval of consolidated text.
+- **Two corrections to this record's own findings.** The Investment Company Act / Advisers Act URL was not
+  wrong for either Act: chapter 2D of Title 15 contains both. It was imprecise, and each Act now points at its
+  own subchapter. Separately, the survey missed a whole defect class: at migration, 13 links returned 404
+  (17 counting sec.gov pages that return 404 once a User-Agent is declared). The SEC "custody rule
+  amendments" entry was a proposed rule, withdrawn on 2025-06-17. All are corrected in `holding.yaml`, with the
+  replaced address kept against each entry. One dead FinCEN link could not be identified and stays recorded as
+  dead rather than guessed at.
+- **Tooling.** `utils/fsi_corpus.py`, `utils/fsi_render.py` and `utils/fsi_links.py`, with 20 failure-mode
+  fixtures in `utils/tests/fixtures/fsi/cases/`. CI runs `make fsi-check` on every push, plus a weekly
+  scheduled link check. The first link report is `decisions/evals/2026-09-18-fsi-link-check.md`.
+- **`CLAUDE.md` did not need re-vendoring.** Its FSI bullet points at `docs/FSIregulation.md`, and that
+  address did not move.
+- **Still open.** A human reviewer, ideally counsel, should confirm the obligations before anyone relies on
+  them; `verified.by` says so on every record. Quote verification against live sources is not automated: it
+  was done once, against text fetched on 2026-09-18. Records that mark a regulatory gap (the Consequences bullet
+  on crypto) are not modelled yet. Expansion continues one cluster per change, in the order given above.
+

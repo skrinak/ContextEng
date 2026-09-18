@@ -1,0 +1,86 @@
+- id: us-sec-204-2.e1
+  instrument: us-sec-204-2
+  title: Five-year retention from the end of the fiscal year of the last entry
+  kind: retention
+  applies_to: Registered investment advisers
+  requirement: Keep the required books and records in an easily accessible place for at least five years from the end of the fiscal year of the last entry, the first two years in an appropriate office of the adviser.
+  retention: {period: P5Y, accessible_period: P2Y, trigger: "End of the fiscal year during which the last entry was made on the record"}
+  source:
+    citation: 17 CFR 275.204-2(e)(1)
+    url: https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(e)(1)
+    quote: >-
+      shall be maintained and preserved in an easily accessible place for a period of not less than five years from the end of the fiscal year during which the last entry was made on such record, the first two years in an appropriate office of the investment adviser.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-sec-204-2.e2
+  instrument: us-sec-204-2
+  title: Organizational records kept three years past termination of the enterprise
+  kind: retention
+  applies_to: Registered investment advisers
+  requirement: Keep partnership articles, articles of incorporation, charters, minute books and stock certificate books in the principal office until at least three years after the enterprise terminates.
+  retention: {period: P3Y, trigger: "Termination of the enterprise"}
+  source:
+    citation: 17 CFR 275.204-2(e)(2)
+    url: https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(e)(2)
+    quote: >-
+      (2) Partnership articles and any amendments thereto, articles of incorporation, charters, minute books, and stock certificate books of the investment adviser and of any predecessor, shall be maintained in the principal office of the investment adviser and preserved until at least three years after termination of the enterprise.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-sec-204-2.g2
+  instrument: us-sec-204-2
+  title: Index electronic records and produce them promptly
+  kind: production
+  applies_to: Investment advisers keeping records on micrographic or electronic storage media
+  requirement: Arrange and index records so any one can be located, and promptly provide on request a true copy in its stored format, a printout, and the means to access, view and print it.
+  source:
+    citation: 17 CFR 275.204-2(g)(2)(i)-(ii)
+    url: https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(2)
+    quote: >-
+      (i) Arrange and index the records in a way that permits easy location, access, and retrieval of any particular record; (ii) Provide promptly any of the following that the Commission (by its examiners or other representatives) may request:
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-sec-204-2.g2iii
+  instrument: us-sec-204-2
+  title: Separately stored duplicate copy for the full retention period
+  kind: form
+  applies_to: Investment advisers keeping records on micrographic or electronic storage media
+  requirement: Store a duplicate copy of every record separately, on any permitted medium, for as long as the original must be preserved.
+  source:
+    citation: 17 CFR 275.204-2(g)(2)(iii)
+    url: https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(2)(iii)
+    quote: >-
+      (iii) Separately store, for the time required for preservation of the original record, a duplicate copy of the record on any medium allowed by this section.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-sec-204-2.g3
+  instrument: us-sec-204-2
+  title: Safeguard electronic records and limit access
+  kind: form
+  applies_to: Investment advisers keeping records on electronic storage media
+  requirement: Maintain procedures that reasonably safeguard records from loss, alteration or destruction, limit access to authorized personnel and the Commission, and ensure that reproductions of non-electronic originals are complete, true and legible.
+  source:
+    citation: 17 CFR 275.204-2(g)(3)
+    url: https://www.ecfr.gov/current/title-17/section-275.204-2#p-275.204-2(g)(3)
+    quote: >-
+      (i) To maintain and preserve the records, so as to reasonably safeguard them from loss, alteration, or destruction; (ii) To limit access to the records to properly authorized personnel and the Commission (including its examiners and other representatives); and (iii) To reasonably ensure that any reproduction of a non-electronic original record on electronic storage media is complete, true, and legible when retrieved.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"

@@ -1,0 +1,22 @@
+id: ctl-integrity-verification
+title: Automated verification of storage completeness and accuracy
+kind: technical
+satisfies: [us-sec-17a-4.f2ii, us-cftc-1-31.c2]
+implementation: >-
+  Upload every record with an S3 additional checksum computed by the producer. Reconcile on a schedule: compare the producing system's record manifest with S3 Inventory (completeness), and recompute stored checksums against the manifest (accuracy). Alert on any gap.
+evidence:
+  - Scheduled reconciliation reports comparing expected and stored record counts and checksums, retained with the records
+  - Alarm history for reconciliation failures and their resolution
+aws:
+  - service: Amazon S3 additional checksums
+    configuration: SHA-256 checksum supplied on upload and stored with each object
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/checking-object-integrity.html
+  - service: Amazon S3 Inventory
+    configuration: Inventory including checksum algorithm, feeding the reconciliation job
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-inventory.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

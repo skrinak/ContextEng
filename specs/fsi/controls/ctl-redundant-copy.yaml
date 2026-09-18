@@ -1,0 +1,19 @@
+id: ctl-redundant-copy
+title: Separately stored, locked redundant copy
+kind: technical
+satisfies: [us-sec-17a-4.f2v, us-sec-204-2.g2iii, us-cftc-1-31.c2]
+implementation: >-
+  Back up the records buckets with AWS Backup to a vault in a separate AWS account, with Vault Lock in compliance mode and a minimum retention of at least the longest period in the retention schedule. Keep the copy in the project's designated region unless a second region has been deliberately approved. The separation that matters here is account and credential isolation, which protects against the loss of the primary system.
+evidence:
+  - Backup plan and vault configuration showing Vault Lock in compliance mode and its minimum retention
+  - Restore-test records proving the copy can serve as the redundant set
+aws:
+  - service: AWS Backup Vault Lock
+    configuration: Compliance-mode vault lock in a dedicated backup account; minimum retention at least the longest scheduled period
+    doc: https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

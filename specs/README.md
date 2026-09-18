@@ -13,6 +13,8 @@ customer repos, so **moving a file here is a breaking change in someone else's r
 | `PRD_DevelopmentPrompt.md` | Humans and agents starting a PRD |
 | `TaskListGenerator.md` | Pointer — the payload stays at `../docs/TaskListGenerator.md` |
 | `Code-Reviewer.md` | Fetched by raw URL on a review cadence |
+| `fsi/` | The FSI regulatory corpus (YAML and JSON Schemas), parsed by `utils/fsi_*.py`; see `fsi/README.md` |
+| `fsi/export/corpus.json` | Generated export that agents fetch by address. Its path is API |
 
 ## The documented exception
 
@@ -21,6 +23,15 @@ files of one downstream repo alone, plus seeded customer repositories we cannot 
 that curls it receives HTTP 200 whatever sits there, so a pointer at that address **fails silently** —
 the consumer gets a redirect note instead of a spec with no error to notice. Taxonomically it belongs
 here; the public-API constraint outranks tidiness, and this paragraph is the record of that trade.
+
+## The second documented exception
+
+**`fsi/export/corpus.json` is generated, and it lives here anyway.** The rule is that script output goes to
+`../decisions/evals/`, but that bucket holds dated one-off records, and this export has to stay at one
+stable address because agents fetch it. It passes this bucket's membership test exactly: a machine parses
+it and the path is API. The trade is that generated and curated content share a bucket. The file is marked
+by its `generated_by` field, and CI fails if it drifts from the YAML it is built from. The directory is
+`export/`, not `dist/`, because `dist/` is ignored repo-wide.
 
 Before moving anything in this directory: grep every repo, check every raw URL, and remember that a
 200-returning stub does not preserve a machine-facing contract.

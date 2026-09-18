@@ -1,0 +1,22 @@
+name: fsi-corpus
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - name: Validate corpus, fail on generated-file drift, run the fixture suite
+        run: make fsi-check
+  links:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - name: Check every cited address; fail only when a recorded-good address is now dead
+        run: make fsi-links

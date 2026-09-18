@@ -1,0 +1,11 @@
+description: A US instrument filed under a Global heading (HIPAA under Global)
+expect: jurisdiction-mismatch
+append:
+  holdings:
+    - title: HHS — HIPAA Security Rule
+      url: https://www.hhs.gov/hipaa/for-professionals/security/index.html
+      authority: hhs
+      jurisdiction: INTL
+      topic: healthcare
+      kind: guidance
+      link: {status: ok, checked: "2026-01-01"}

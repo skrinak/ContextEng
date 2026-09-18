@@ -1,0 +1,53 @@
+- id: us-sox-802.1519
+  instrument: us-sox-802
+  title: Do not destroy, alter or falsify records to obstruct a federal matter
+  kind: preservation
+  applies_to: Any person
+  requirement: Do not knowingly destroy, alter, conceal or falsify any record with intent to obstruct a federal investigation or bankruptcy case, including one only contemplated. The penalty is imprisonment of up to 20 years. In practice this means suspending routine deletion under a legal hold once such a matter is reasonably anticipated.
+  source:
+    citation: 18 U.S.C. 1519 (added by SOX §802(a))
+    url: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1519&num=0&edition=prelim
+    quote: >-
+      Whoever knowingly alters, destroys, mutilates, conceals, covers up, falsifies, or makes a false entry in any record, document, or tangible object with the intent to impede, obstruct, or influence the investigation or proper administration of any matter within the jurisdiction of any department or agency of the United States or any case filed under title 11, or in relation to or contemplation of any such matter or case, shall be fined under this title, imprisoned not more than 20 years, or both.
+    retrieved: "2026-09-18"
+    text_as_of: U.S. Code, prelim edition as published by the Office of the Law Revision Counsel
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the official text}
+  review_due: "2027-03-18"
+
+- id: us-sox-802.1520
+  instrument: us-sox-802
+  title: Auditors retain audit and review workpapers five years (statutory floor)
+  kind: retention
+  applies_to: Accountants auditing issuers under section 10A(a) of the Exchange Act
+  requirement: Keep all audit or review workpapers for five years from the end of the fiscal period in which the audit or review concluded. SEC Rule 2-06 extends this.
+  retention: {period: P5Y, trigger: "End of the fiscal period in which the audit or review was concluded"}
+  see_also: [us-sox-802.rule2-06]
+  source:
+    citation: 18 U.S.C. 1520(a)(1)
+    url: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1520&num=0&edition=prelim
+    quote: >-
+      (a)(1) Any accountant who conducts an audit of an issuer of securities to which section 10A(a) of the Securities Exchange Act of 1934 (15 U.S.C. 78j–1(a)) applies, shall maintain all audit or review workpapers for a period of 5 years from the end of the fiscal period in which the audit or review was concluded.
+    retrieved: "2026-09-18"
+    text_as_of: U.S. Code, prelim edition as published by the Office of the Law Revision Counsel
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the official text}
+  review_due: "2027-03-18"
+
+- id: us-sox-802.rule2-06
+  instrument: us-sox-802
+  title: Auditors retain audit records seven years (SEC Rule 2-06, under §1520(a)(2))
+  kind: retention
+  applies_to: Accountants auditing issuers or registered investment companies
+  requirement: Keep workpapers and other records relevant to the audit or review, including correspondence and electronic records containing conclusions, opinions, analyses or financial data, for seven years after the audit or review concludes.
+  retention: {period: P7Y, trigger: "The accountant concludes the audit or review"}
+  source:
+    citation: 17 CFR 210.2-06(a)
+    url: https://www.ecfr.gov/current/title-17/section-210.2-06#p-210.2-06(a)
+    quote: >-
+      (a) For a period of seven years after an accountant concludes an audit or review of an issuer's financial statements to which section 10A(a) of the Securities Exchange Act of 1934 (15 U.S.C. 78j-1(a)) applies, or of the financial statements of any investment company registered under section 8 of the Investment Company Act of 1940 (15 U.S.C. 80a-8), the accountant shall retain records relevant to the audit or review, including workpapers and other documents that form the basis of the audit or review, and memoranda, correspondence, communications, other documents, and records (including electronic records), which:
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the official text}
+  review_due: "2027-03-18"

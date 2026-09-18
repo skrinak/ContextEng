@@ -1,0 +1,12 @@
+description: A non-current status asserted with no statement of how it was established
+expect: status-missing
+append:
+  holdings:
+    - title: Fixture withdrawn proposal
+      url: https://www.sec.gov/files/rules/proposed/2023/fixture.pdf
+      authority: sec
+      jurisdiction: US
+      topic: capital-markets
+      kind: proposal
+      status: withdrawn
+      link: {status: ok, checked: "2026-01-01"}

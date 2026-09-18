@@ -1,0 +1,20 @@
+description: An instrument that names the law and states no obligation (the whole old file)
+expect: citation-without-obligation
+append:
+  instruments:
+    - id: fixture-bare
+      title: Fixture Bare — A citation with nothing in it
+      short: Fixture Bare
+      authority: sec
+      jurisdiction: US
+      type: regulation
+      citation: 17 CFR 999.2
+      url: https://www.ecfr.gov/current/title-17/section-999.2
+      status: in_force
+      status_as_of: "2026-01-01"
+      topics: [recordkeeping]
+      cloud_relevance: low
+      summary: Bare citation.
+      confidence: low
+      verified: {date: "2026-01-01", by: fixture, method: fixture}
+      review_due: "2026-06-30"

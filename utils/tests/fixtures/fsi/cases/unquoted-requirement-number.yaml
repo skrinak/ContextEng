@@ -1,0 +1,4 @@
+description: A number in the plain-English requirement that the quote does not contain
+expect: unquoted-number
+set:
+  - {collection: obligations, index: 0, path: [requirement], value: Preserve fixture records and notify the regulator within 30 days.}

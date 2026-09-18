@@ -1,0 +1,11 @@
+description: A bill listed with no legislative status, so it reads as law (the 2022-2023 stablecoin bills)
+expect: status-missing
+append:
+  holdings:
+    - title: Fixture Stablecoin Act
+      url: https://www.congress.gov/bill/117th-congress/senate-bill/9999
+      authority: us-congress
+      jurisdiction: US
+      topic: stablecoins
+      kind: bill
+      link: {status: blocked, checked: "2026-01-01"}

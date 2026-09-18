@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skrinak/ContextEng/specs/fsi/schema/instrument.schema.json",
+  "title": "Layer 1: an instrument (what the law is)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "short", "authority", "jurisdiction", "type", "citation", "url", "status", "status_as_of", "topics", "cloud_relevance", "summary", "confidence", "verified", "review_due"],
+  "properties": {
+    "id": {"$ref": "common.schema.json#/$defs/id"},
+    "title": {"type": "string", "minLength": 1},
+    "short": {"type": "string", "minLength": 1},
+    "authority": {"$ref": "common.schema.json#/$defs/id"},
+    "jurisdiction": {"type": "string"},
+    "type": {"enum": ["statute", "regulation", "delegated-regulation", "directive", "sro-rule"]},
+    "citation": {"type": "string", "minLength": 1},
+    "url": {"$ref": "common.schema.json#/$defs/url"},
+    "status": {"$ref": "common.schema.json#/$defs/status"},
+    "status_as_of": {"$ref": "common.schema.json#/$defs/date"},
+    "status_note": {"type": "string"},
+    "superseded_by": {"$ref": "common.schema.json#/$defs/id"},
+    "topics": {"type": "array", "minItems": 1, "items": {"$ref": "common.schema.json#/$defs/topic"}},
+    "cloud_relevance": {"enum": ["high", "medium", "low"]},
+    "applies_to": {"type": "string"},
+    "summary": {"type": "string", "minLength": 1},
+    "confidence": {"$ref": "common.schema.json#/$defs/confidence"},
+    "verified": {"$ref": "common.schema.json#/$defs/verified"},
+    "review_due": {"$ref": "common.schema.json#/$defs/date"}
+  }
+}

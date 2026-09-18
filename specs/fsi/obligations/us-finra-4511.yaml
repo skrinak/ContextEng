@@ -1,0 +1,50 @@
+- id: us-finra-4511.a
+  instrument: us-finra-4511
+  title: Make and preserve books and records required by FINRA and Exchange Act rules
+  kind: creation
+  applies_to: FINRA member firms
+  requirement: Make and preserve the books and records required by FINRA rules, the Exchange Act and the applicable Exchange Act rules.
+  see_also: [us-sec-17a-3.a]
+  source:
+    citation: FINRA Rule 4511(a)
+    url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511
+    quote: >-
+      (a) Members shall make and preserve books and records as required under the FINRA rules, the Exchange Act and the applicable Exchange Act rules.
+    retrieved: "2026-09-18"
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the rule text published on finra.org}
+  review_due: "2027-03-18"
+
+- id: us-finra-4511.b
+  instrument: us-finra-4511
+  title: Six-year default retention where no other period is specified
+  kind: retention
+  applies_to: FINRA member firms
+  requirement: Preserve FINRA books and records that have no period specified in FINRA rules or applicable Exchange Act rules for at least six years.
+  retention: {period: P6Y, trigger: "The rule states the period without naming its start."}
+  source:
+    citation: FINRA Rule 4511(b)
+    url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511
+    quote: >-
+      (b) Members shall preserve for a period of at least six years those FINRA books and records for which there is no specified period under the FINRA rules or applicable Exchange Act rules.
+    retrieved: "2026-09-18"
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the rule text published on finra.org}
+  review_due: "2027-03-18"
+
+- id: us-finra-4511.c
+  instrument: us-finra-4511
+  title: Preserve in a format and media that complies with SEA Rule 17a-4
+  kind: form
+  applies_to: FINRA member firms
+  requirement: Preserve records required by FINRA rules in a format and media that complies with SEA Rule 17a-4.
+  see_also: [us-sec-17a-4.f2i]
+  source:
+    citation: FINRA Rule 4511(c)
+    url: https://www.finra.org/rules-guidance/rulebooks/finra-rules/4511
+    quote: >-
+      (c) All books and records required to be made pursuant to the FINRA rules shall be preserved in a format and media that complies with SEA Rule 17a-4.
+    retrieved: "2026-09-18"
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the rule text published on finra.org}
+  review_due: "2027-03-18"

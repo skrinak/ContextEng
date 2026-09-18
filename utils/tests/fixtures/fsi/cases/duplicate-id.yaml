@@ -1,0 +1,4 @@
+description: Two records share an id
+expect: duplicate-id
+set:
+  - {collection: controls, index: 0, path: [id], value: fixture-rule.a}

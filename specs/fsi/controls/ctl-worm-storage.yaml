@@ -1,0 +1,26 @@
+id: ctl-worm-storage
+title: Non-rewriteable, non-erasable record storage
+kind: technical
+satisfies: [us-sec-17a-4.f2i, us-finra-4511.c, us-sec-204-2.g3, us-cftc-1-31.c2, eu-mifid2-art16-6.dr72]
+implementation: >-
+  Write regulatory records only to S3 buckets created with Object Lock enabled and a default retention in compliance mode. Compliance mode is the WORM option in Rule 17a-4(f)(2)(i)(B). Governance mode is not, because privileged users can bypass it. Enable versioning (Object Lock requires it) so that a correction is written as a new version and the prior content survives, which is what Delegated Regulation 2017/565 Article 72(1)(b) asks for.
+evidence:
+  - Bucket ObjectLockConfiguration showing ObjectLockEnabled and a DefaultRetention in COMPLIANCE mode
+  - AWS Config rule s3-bucket-default-lock-enabled reporting COMPLIANT for every records bucket
+  - The Cohasset Associates compliance assessment of S3 Object Lock that AWS links from its documentation, filed with the control evidence
+limits: >-
+  The Cohasset assessment covers the storage layer only. The firm still owns the retention schedule, the audit system for inputs under 17a-4(f)(3)(iii), and the undertakings.
+aws:
+  - service: Amazon S3 Object Lock
+    configuration: Object Lock enabled at bucket creation; default retention mode COMPLIANCE; versioning on
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+    quote: S3 Object Lock has been assessed by Cohasset Associates for use in environments that are subject to SEC 17a-4, CFTC, and FINRA regulations.
+  - service: AWS Config
+    configuration: Managed rule s3-bucket-default-lock-enabled scoped to the records buckets
+    doc: https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-default-lock-enabled.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

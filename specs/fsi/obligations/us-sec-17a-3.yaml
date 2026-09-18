@@ -1,0 +1,35 @@
+- id: us-sec-17a-3.a
+  instrument: us-sec-17a-3
+  title: Make and keep current the required books and records
+  kind: creation
+  applies_to: Exchange members, brokers and dealers
+  requirement: Create each book and record listed in paragraph (a) of the rule and keep it current. Retention periods are set by the preservation rule; see the linked obligations.
+  see_also: [us-sec-17a-4.a, us-sec-17a-4.b]
+  source:
+    citation: 17 CFR 240.17a-3(a)
+    url: https://www.ecfr.gov/current/title-17/section-240.17a-3#p-240.17a-3(a)
+    quote: >-
+      Every member of a national securities exchange who transacts a business in securities directly with others than members of a national securities exchange, every broker or dealer who transacts a business in securities through the medium of any such member, and every broker or dealer registered pursuant to section 15 of the Act (15 U.S.C. 78o) must make and keep current the following books and records relating to its business:
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-sec-17a-3.a6
+  instrument: us-sec-17a-3
+  title: Order memoranda with time of receipt, entry and execution
+  kind: creation
+  applies_to: Exchange members, brokers and dealers
+  requirement: Keep a memorandum of every brokerage order or instruction, whether executed or not, showing its terms, the account, when it was received and entered, the execution price, who handled it, and where feasible when it was executed or cancelled.
+  see_also: [us-sec-17a-4.b]
+  source:
+    citation: 17 CFR 240.17a-3(a)(6)(i)(A)
+    url: https://www.ecfr.gov/current/title-17/section-240.17a-3#p-240.17a-3(a)(6)(i)(A)
+    quote: >-
+      The memorandum must show the terms and conditions of the order or instructions and of any modification or cancellation thereof, the account for which entered, the time the order was received, the time of entry, the price at which executed, the identity of each associated person, if any, responsible for the account, the identity of any other person who entered or accepted the order on behalf of the customer, or, if a customer entered the order on an electronic system, a notation of that entry; and, to the extent feasible, the time of execution or cancellation.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"

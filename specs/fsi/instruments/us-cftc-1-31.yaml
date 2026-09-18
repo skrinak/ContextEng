@@ -1,0 +1,20 @@
+id: us-cftc-1-31
+title: CFTC Regulation 1.31 — Regulatory records; retention and production
+short: CFTC 1.31
+authority: cftc
+jurisdiction: US
+type: regulation
+citation: 17 CFR 1.31
+url: https://www.ecfr.gov/current/title-17/section-1.31
+status: in_force
+status_as_of: "2026-09-16"
+topics: [capital-markets, recordkeeping]
+cloud_relevance: high
+applies_to: Any person required by the Commodity Exchange Act or CFTC regulations to keep regulatory records
+summary: Retention periods, form and manner of retention (authenticity, reliability, system inventory) and inspection and production duties for CFTC regulatory records.
+confidence: high
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim.
+review_due: "2027-03-18"

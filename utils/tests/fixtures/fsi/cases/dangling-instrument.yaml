@@ -1,0 +1,4 @@
+description: An obligation attached to an instrument that does not exist
+expect: dangling-ref
+set:
+  - {collection: obligations, index: 0, path: [instrument], value: fixture-missing}

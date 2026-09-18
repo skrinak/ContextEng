@@ -1,0 +1,29 @@
+id: ctl-retention-schedule
+title: Retention schedule mapping record classes to periods and triggers
+kind: organizational
+satisfies: [us-sec-17a-4.a, us-sec-17a-4.b, us-sec-17a-4.c, us-sec-204-2.e1, us-sec-204-2.e2, us-finra-4511.b, us-cftc-1-31.b1, us-cftc-1-31.b2, us-cftc-1-31.b3, us-cftc-1-31.b4, eu-mifid2-art16-6.recordings, eu-mifid2-art16-6.mifir25, us-sox-802.1520, us-sox-802.rule2-06]
+implementation: >-
+  Keep a retention schedule, generated from this corpus's export, that assigns every record class a period, a trigger and an accessibility window. Put fixed-from-creation classes in buckets whose default retention equals the period. Trigger-based classes (account closure, end of fiscal year, transaction termination, end of the enterprise) cannot know their end date at write time. Write them with the minimum known retention, then extend the retain-until date when the trigger event occurs. Compliance mode allows extending a retention period but never shortening it. Where regimes overlap, take the longest applicable period.
+evidence:
+  - The retention schedule, versioned, with each row citing an obligation id from this corpus
+  - S3 Inventory reports showing each object's retain-until date against the schedule
+  - Records of the jobs that extend retention on trigger events, for example S3 Batch Operations manifests and completion reports
+limits: >-
+  The corpus carries the regulatory floor only. Litigation, tax and client-contract retention can exceed it and must be added to the schedule separately.
+aws:
+  - service: Amazon S3 Object Lock retention periods
+    configuration: Bucket default retention per record class; per-object retain-until dates extended on trigger events
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+    quote: When an object is locked in compliance mode, its retention mode can't be changed, and its retention period can't be shortened.
+  - service: Amazon S3 Batch Operations
+    configuration: Bulk retain-until extension when a trigger event (for example account closure) fires
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html
+  - service: Amazon S3 Inventory
+    configuration: Daily inventory including Object Lock retain-until date and mode
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-inventory.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

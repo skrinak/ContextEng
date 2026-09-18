@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skrinak/ContextEng/specs/fsi/schema/holding.schema.json",
+  "title": "Unmigrated reference: a link lifted from the pre-corpus list, not yet an instrument",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "url", "authority", "jurisdiction", "topic", "kind", "link"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "url": {"$ref": "common.schema.json#/$defs/url"},
+    "authority": {"$ref": "common.schema.json#/$defs/id"},
+    "jurisdiction": {"type": "string"},
+    "topic": {"$ref": "common.schema.json#/$defs/topic"},
+    "kind": {"enum": ["portal", "statute", "regulation", "guidance", "proposal", "bill"]},
+    "status": {"$ref": "common.schema.json#/$defs/status"},
+    "status_note": {"type": "string"},
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checked"],
+      "properties": {
+        "status": {"enum": ["ok", "blocked", "broken"]},
+        "checked": {"$ref": "common.schema.json#/$defs/date"},
+        "note": {"type": "string"}
+      }
+    },
+    "replaces": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/url"}}
+  }
+}

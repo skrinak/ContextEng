@@ -1,0 +1,5 @@
+description: Obligations derived from something that is not law in force
+expect: not-in-force
+set:
+  - {collection: instruments, index: 0, path: [status], value: not_enacted}
+  - {collection: instruments, index: 0, path: [status_note], value: Died at the end of the Congress.}

@@ -12,7 +12,8 @@ change.
 | `AGENTCORE_FIRST.md` | Architecture, buy-vs-build ledger, migration playbook |
 | `REPOSITORY_TAXONOMY.md` | The tree design and its full rationale |
 | `WORKFLOW_NARRATIVE.md` | The development workflow in detail |
-| `FEDERATED_SSO.md` · `FSIregulation.md` | Reference guidance |
+| `FEDERATED_SSO.md` | Reference guidance |
+| `FSIregulation.md` · `regulations/` | **Generated** from `../specs/fsi/` by `make fsi-render`. CI fails if they drift, so edit the corpus rather than these files |
 | `TaskListGenerator.md` | **A spec living here by public-API constraint** — see `../specs/README.md` |
 | `images/` | Whiteboard boards + their regenerable `.content.txt` sources |
 

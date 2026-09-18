@@ -1,0 +1,4 @@
+description: A retention period the quoted source does not state
+expect: unquoted-number
+set:
+  - {collection: obligations, index: 0, path: [retention, period], value: P7Y}

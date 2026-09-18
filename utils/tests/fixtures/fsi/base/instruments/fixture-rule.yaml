@@ -1,0 +1,16 @@
+id: fixture-rule
+title: Fixture Rule — Records to be preserved
+short: Fixture Rule
+authority: sec
+jurisdiction: US
+type: regulation
+citation: 17 CFR 999.1
+url: https://www.ecfr.gov/current/title-17/section-999.1
+status: in_force
+status_as_of: "2026-01-01"
+topics: [recordkeeping]
+cloud_relevance: high
+summary: A fictional rule used only by the fixture suite.
+confidence: high
+verified: {date: "2026-01-01", by: fixture, method: fixture}
+review_due: "2026-06-30"

@@ -1,0 +1,20 @@
+id: us-sox-802
+title: Sarbanes-Oxley Act of 2002, Section 802 — Criminal penalties for altering documents
+short: SOX 802
+authority: us-congress
+jurisdiction: US
+type: statute
+citation: Pub. L. 107-204, title VIII, §802 (18 U.S.C. 1519, 1520)
+url: https://www.govinfo.gov/content/pkg/PLAW-107publ204/html/PLAW-107publ204.htm
+status: in_force
+status_as_of: "2026-09-18"
+topics: [capital-markets, recordkeeping]
+cloud_relevance: medium
+applies_to: Anyone, for 18 U.S.C. 1519. Accountants auditing issuers, for 18 U.S.C. 1520 and SEC Rule 2-06.
+summary: Makes destroying or altering records to obstruct a federal matter a crime, and requires auditors to retain audit workpapers. SEC Rule 2-06 implements the workpaper retention.
+confidence: high
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Read the current primary text retrieved from the official publisher; every quoted obligation was compared against it verbatim.
+review_due: "2027-03-18"

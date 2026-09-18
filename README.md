@@ -119,7 +119,7 @@ repo inherited dead links — invisible from in here, where the paths resolve. S
 - **[docs/FEDERATED_SSO.md](docs/FEDERATED_SSO.md)** - Federated sign-in (Google, GitHub, enterprise SAML/OIDC), forced MFA, and identity linking — and where AgentCore Identity is *not* the answer (human SSO is Cognito's job, not the workload-auth layer).
 - **[runbooks/UV Setup.md](runbooks/UV%20Setup.md)** - Python UV package manager setup guide
 - **[docs/WORKFLOW_NARRATIVE.md](docs/WORKFLOW_NARRATIVE.md)** - Detailed workflow documentation
-- **[docs/FSIregulation.md](docs/FSIregulation.md)** - Financial-services regulatory reference links
+- **[docs/FSIregulation.md](docs/FSIregulation.md)** - Financial-services regulatory corpus: retention and recordkeeping obligations quoted from primary sources, with the AWS controls that implement them. Generated from [specs/fsi/](specs/fsi/) and never hand-edited
 
 ### Diagrams
 

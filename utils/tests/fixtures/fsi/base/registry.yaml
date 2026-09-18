@@ -1,0 +1,39 @@
+jurisdictions:
+  US:
+    name: United States (federal)
+    publisher_hosts: [ecfr.gov, congress.gov]
+  EU:
+    name: European Union
+    publisher_hosts: [eur-lex.europa.eu]
+  INTL:
+    name: International standard-setters
+    publisher_hosts: []
+authorities:
+  sec:
+    name: Securities and Exchange Commission
+    jurisdiction: US
+    hosts: [sec.gov]
+  finra:
+    name: Financial Industry Regulatory Authority
+    jurisdiction: US
+    hosts: [finra.org]
+  msrb:
+    name: Municipal Securities Rulemaking Board
+    jurisdiction: US
+    hosts: [msrb.org]
+  hhs:
+    name: U.S. Department of Health and Human Services
+    jurisdiction: US
+    hosts: [hhs.gov]
+  us-congress:
+    name: U.S. Congress
+    jurisdiction: US
+    hosts: [congress.gov]
+  eu-legislature:
+    name: European Parliament, Council and Commission
+    jurisdiction: EU
+    hosts: []
+vendors:
+  aws:
+    name: Amazon Web Services
+    hosts: [docs.aws.amazon.com]

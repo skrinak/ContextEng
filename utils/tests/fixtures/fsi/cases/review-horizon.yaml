@@ -1,0 +1,4 @@
+description: A review date set beyond the permitted horizon
+expect: stale
+set:
+  - {collection: obligations, index: 0, path: [review_due], value: "2027-06-30"}

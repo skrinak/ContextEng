@@ -1,0 +1,11 @@
+description: An official instrument cited through an unofficial third-party mirror (gdpr-info.eu)
+expect: authority-host
+append:
+  holdings:
+    - title: GDPR
+      url: https://gdpr-info.eu/
+      authority: eu-legislature
+      jurisdiction: EU
+      topic: data-protection
+      kind: regulation
+      link: {status: ok, checked: "2026-01-01"}

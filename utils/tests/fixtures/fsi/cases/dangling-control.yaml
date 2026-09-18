@@ -1,0 +1,4 @@
+description: A control that claims to satisfy an obligation that does not exist
+expect: dangling-ref
+set:
+  - {collection: controls, index: 0, path: [satisfies], value: [fixture-rule.a, fixture-rule.zz]}

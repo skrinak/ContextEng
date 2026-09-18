@@ -1,0 +1,23 @@
+id: ctl-records-register
+title: Register of required records, their producing systems and locations
+kind: organizational
+satisfies: [us-sec-17a-3.a, us-sec-17a-3.a6, us-finra-4511.a, eu-mifid2-art16-6.records, us-sec-17a-4.f3iv, us-sec-204-2.g2, us-cftc-1-31.c2]
+implementation: >-
+  Maintain a register that maps each record type the rules require to its producing system, owner, retention class and storage location, plus the index keys needed to find any single record. Generate a searchable index (record id, class, dates, account, S3 key) from S3 Inventory and object metadata, queryable with Athena. The same register is the up-to-date system inventory that CFTC 1.31(c)(2)(iii) requires.
+evidence:
+  - The register, versioned, reviewed at least as often as this corpus's review cycle
+  - Athena query results locating sample records on request, kept as test evidence
+  - AWS Config resource inventory for the systems named in the register
+aws:
+  - service: Amazon Athena over S3 Inventory
+    configuration: Tables over inventory and metadata exports providing the locate-any-record index
+    doc: https://docs.aws.amazon.com/athena/latest/ug/what-is.html
+  - service: AWS Config
+    configuration: Resource inventory of the systems in the register
+    doc: https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

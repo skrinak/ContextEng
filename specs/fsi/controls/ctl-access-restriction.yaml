@@ -1,0 +1,22 @@
+id: ctl-access-restriction
+title: Least-privilege access to records, with dedicated keys
+kind: technical
+satisfies: [us-sec-204-2.g3, us-cftc-1-31.c2]
+implementation: >-
+  Restrict access to the records buckets to named roles for authorized personnel and regulator-access procedures. Encrypt with customer-managed KMS keys whose key policies name the same roles. Log every access through the audit trail.
+evidence:
+  - IAM and bucket policies for the records buckets, with periodic access reviews
+  - KMS key policies and key usage logs
+aws:
+  - service: AWS IAM
+    configuration: Role-based least privilege scoped to records buckets
+    doc: https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
+  - service: AWS KMS
+    configuration: Customer-managed keys per records domain
+    doc: https://docs.aws.amazon.com/kms/latest/developerguide/overview.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

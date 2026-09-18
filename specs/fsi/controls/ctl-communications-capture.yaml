@@ -1,0 +1,22 @@
+id: ctl-communications-capture
+title: Capture and retain business communications and recorded calls
+kind: technical
+satisfies: [us-sec-17a-4.b, us-cftc-1-31.b2, eu-mifid2-art16-6.recordings]
+implementation: >-
+  Route every approved business communication channel (email, chat, recorded telephony) to capture that writes into the WORM records buckets under the communications retention class. For telephony on Amazon Connect, send call recordings to a locked bucket. Channels that cannot be captured are prohibited for business use, mirroring the Article 16(7) duty to prevent unrecordable communications on private equipment.
+evidence:
+  - Channel inventory showing the capture path for each approved channel
+  - Connect instance storage configuration pointing recordings at the locked bucket
+  - Surveillance sampling reports that confirm capture completeness
+limits: >-
+  Capturing third-party messaging apps needs vendor archiving connectors, which are outside this corpus.
+aws:
+  - service: Amazon Connect call recording
+    configuration: Recordings delivered to an Object Lock bucket under the communications retention class
+    doc: https://docs.aws.amazon.com/connect/latest/adminguide/set-up-recordings.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"

@@ -1,0 +1,13 @@
+id: fixture-worm
+title: Fixture WORM storage
+kind: technical
+satisfies: [fixture-rule.a]
+implementation: Store fixture records in compliance-mode object lock.
+evidence: [Bucket object lock configuration]
+aws:
+  - service: Amazon S3 Object Lock
+    configuration: Compliance mode
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html
+confidence: medium
+verified: {date: "2026-01-01", by: fixture, method: fixture}
+review_due: "2026-06-30"

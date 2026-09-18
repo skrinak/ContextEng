@@ -1,0 +1,4 @@
+description: A retention period that is not an ISO 8601 duration
+expect: schema
+set:
+  - {collection: obligations, index: 0, path: [retention, period], value: 6 years}

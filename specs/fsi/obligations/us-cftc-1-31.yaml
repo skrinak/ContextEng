@@ -1,0 +1,105 @@
+- id: us-cftc-1-31.b1
+  instrument: us-cftc-1-31
+  title: Swap records kept five years after the transaction ends
+  kind: retention
+  applies_to: CFTC records entities holding records of swaps or related cash or forward transactions
+  requirement: Keep regulatory records of each swap or related cash or forward transaction from creation until the transaction terminates, matures, expires, or is transferred, assigned or novated, and for at least five years after that.
+  retention: {period: P5Y, trigger: "Termination, maturity, expiration, transfer, assignment or novation date of the transaction"}
+  source:
+    citation: 17 CFR 1.31(b)(1)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(1)
+    quote: >-
+      (1) A records entity shall keep regulatory records of any swap or related cash or forward transaction (as defined in § 23.200(i) of this chapter), other than regulatory records required by § 23.202(a)(1) and (b)(1)-(3) of this chapter, from the date the regulatory record was created until the termination, maturity, expiration, transfer, assignment, or novation date of the transaction and for a period of not less than five years after such date.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-cftc-1-31.b2
+  instrument: us-cftc-1-31
+  title: Oral communications kept one year
+  kind: retention
+  applies_to: CFTC records entities required to retain oral communications
+  requirement: Keep regulatory records of oral communications for at least one year from the date of the communication.
+  retention: {period: P1Y, trigger: "Date of the communication"}
+  source:
+    citation: 17 CFR 1.31(b)(2)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(2)
+    quote: >-
+      (2) A records entity that is required to retain oral communications, shall keep regulatory records of oral communications for a period of not less than one year from the date of such communication.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-cftc-1-31.b3
+  instrument: us-cftc-1-31
+  title: All other regulatory records kept five years from creation
+  kind: retention
+  applies_to: CFTC records entities
+  requirement: Keep every other regulatory record for at least five years from the date it was created.
+  retention: {period: P5Y, trigger: "Date the record was created"}
+  source:
+    citation: 17 CFR 1.31(b)(3)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(3)
+    quote: >-
+      (3) A records entity shall keep each regulatory record other than the records described in paragraphs (b)(1) or (b)(2) of this section for a period of not less than five years from the date on which the record was created.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-cftc-1-31.b4
+  instrument: us-cftc-1-31
+  title: Electronic records readily accessible for the whole retention period
+  kind: retention
+  applies_to: CFTC records entities
+  requirement: Keep paper-only regulatory records readily accessible for at least two years, and electronic regulatory records readily accessible for the whole required period.
+  retention: {accessible_period: P2Y, trigger: "Paper-only records are readily accessible for the stated window; electronic records stay readily accessible for their full retention period."}
+  source:
+    citation: 17 CFR 1.31(b)(4)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(b)(4)
+    quote: >-
+      (4) A records entity shall keep regulatory records exclusively created and maintained on paper readily accessible for no less than two years. A records entity shall keep electronic regulatory records readily accessible for the duration of the required record keeping period.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-cftc-1-31.c2
+  instrument: us-cftc-1-31
+  title: Systems and controls for authentic, reliable, available electronic records, plus a system inventory
+  kind: form
+  applies_to: CFTC records entities maintaining electronic regulatory records
+  requirement: Establish systems that preserve the security, signature and data of electronic records, ensure they can be produced and stay available through a disruption, and keep an up-to-date inventory of every system needed to access or produce them.
+  source:
+    citation: 17 CFR 1.31(c)(2)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(c)(2)
+    quote: >-
+      (2) Electronic regulatory records. Each records entity maintaining electronic regulatory records shall establish appropriate systems and controls that ensure the authenticity and reliability of electronic regulatory records, including, without limitation: [...] (ii) Systems that ensure the records entity is able to produce electronic regulatory records in accordance with this section, and ensure the availability of such regulatory records in the event of an emergency or other disruption of the records entity's electronic record retention systems; and (iii) The creation and maintenance of an up-to-date inventory that identifies and describes each system that maintains information necessary for accessing or producing electronic regulatory records.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"
+
+- id: us-cftc-1-31.d3
+  instrument: us-cftc-1-31
+  title: Produce electronic records promptly in the form and medium requested
+  kind: production
+  applies_to: CFTC records entities
+  requirement: Produce electronic regulatory records promptly, in the reasonable form and medium a Commission representative specifies.
+  source:
+    citation: 17 CFR 1.31(d)(3)
+    url: https://www.ecfr.gov/current/title-17/section-1.31#p-1.31(d)(3)
+    quote: >-
+      (ii) A records entity must produce such regulatory records in the form and medium requested promptly, upon request, unless otherwise directed by the Commission representative.
+    retrieved: "2026-09-18"
+    text_as_of: eCFR, up to date as of 2026-09-16
+  confidence: high
+  verified: {date: "2026-09-18", by: claude-opus-5 agent session (not reviewed by counsel), method: Quote compared verbatim against the eCFR text}
+  review_due: "2027-03-18"

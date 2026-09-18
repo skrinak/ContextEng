@@ -1,0 +1,4 @@
+description: An obligation cannot be low confidence; it must be quoted from a read source
+expect: schema
+set:
+  - {collection: obligations, index: 0, path: [confidence], value: low}

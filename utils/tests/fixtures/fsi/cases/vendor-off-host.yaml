@@ -1,0 +1,4 @@
+description: A control binding documented on a host that is not the vendor's
+expect: authority-host
+set:
+  - {collection: controls, index: 0, path: [aws, 0, doc], value: "https://www.example-cloud-blog.com/object-lock"}

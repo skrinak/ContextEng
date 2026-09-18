@@ -1,0 +1,21 @@
+id: eu-mifid2-art16-6
+title: MiFID II Article 16(6) — Record-keeping by investment firms
+short: MiFID II Art 16(6)
+authority: eu-legislature
+jurisdiction: EU
+type: directive
+citation: Directive 2014/65/EU, Article 16(6)
+url: https://eur-lex.europa.eu/eli/dir/2014/65/oj
+status: in_force
+status_as_of: "2026-09-18"
+status_note: Status taken from the Official Journal text; the consolidated version was not compared, because EUR-Lex refuses automated retrieval.
+topics: [capital-markets, recordkeeping]
+cloud_relevance: high
+applies_to: Investment firms authorised under MiFID II
+summary: Article 16(6) requires records sufficient for supervision but states no retention period. The periods come from Article 16(7) for recorded communications and MiFIR Article 25(1) for order and transaction data. Commission Delegated Regulation 2017/565 Article 72 sets the storage-medium conditions.
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Read the Official Journal texts of Directive 2014/65/EU, Regulation 600/2014 and Delegated Regulation 2017/565 from publications.europa.eu. Consolidated versions not compared, hence medium confidence.
+review_due: "2027-03-18"

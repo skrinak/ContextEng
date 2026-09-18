@@ -1,0 +1,112 @@
+jurisdictions:
+  US:
+    name: United States (federal)
+    publisher_hosts: [ecfr.gov, govinfo.gov, federalregister.gov, uscode.house.gov, congress.gov]
+  US-NY:
+    name: New York State
+    publisher_hosts: [govt.westlaw.com]
+  EU:
+    name: European Union
+    publisher_hosts: [eur-lex.europa.eu, publications.europa.eu]
+  INTL:
+    name: International standard-setters
+    publisher_hosts: []
+
+authorities:
+  us-congress:
+    name: U.S. Congress
+    jurisdiction: US
+    hosts: [congress.gov]
+  sec:
+    name: Securities and Exchange Commission
+    jurisdiction: US
+    hosts: [sec.gov]
+  finra:
+    name: Financial Industry Regulatory Authority
+    jurisdiction: US
+    hosts: [finra.org]
+  msrb:
+    name: Municipal Securities Rulemaking Board
+    jurisdiction: US
+    hosts: [msrb.org]
+  cftc:
+    name: Commodity Futures Trading Commission
+    jurisdiction: US
+    hosts: [cftc.gov]
+  frb:
+    name: Federal Reserve Board
+    jurisdiction: US
+    hosts: [federalreserve.gov, federalreserveconsumerhelp.gov]
+  occ:
+    name: Office of the Comptroller of the Currency
+    jurisdiction: US
+    hosts: [occ.gov, occ.treas.gov]
+  fdic:
+    name: Federal Deposit Insurance Corporation
+    jurisdiction: US
+    hosts: [fdic.gov]
+  cfpb:
+    name: Consumer Financial Protection Bureau
+    jurisdiction: US
+    hosts: [consumerfinance.gov]
+  irs:
+    name: Internal Revenue Service
+    jurisdiction: US
+    hosts: [irs.gov]
+  treasury:
+    name: U.S. Department of the Treasury
+    jurisdiction: US
+    hosts: [home.treasury.gov, ofac.treasury.gov]
+  fincen:
+    name: Financial Crimes Enforcement Network
+    jurisdiction: US
+    hosts: [fincen.gov]
+  pcaob:
+    name: Public Company Accounting Oversight Board
+    jurisdiction: US
+    hosts: [pcaobus.org]
+  osha:
+    name: Occupational Safety and Health Administration
+    jurisdiction: US
+    hosts: [osha.gov, whistleblowers.gov, dol.gov]
+  hhs:
+    name: U.S. Department of Health and Human Services
+    jurisdiction: US
+    hosts: [hhs.gov]
+  nist:
+    name: National Institute of Standards and Technology
+    jurisdiction: US
+    hosts: [nist.gov]
+  naic:
+    name: National Association of Insurance Commissioners
+    jurisdiction: US
+    hosts: [naic.org]
+  nydfs:
+    name: New York State Department of Financial Services
+    jurisdiction: US-NY
+    hosts: [dfs.ny.gov]
+  eu-legislature:
+    name: European Parliament, Council and Commission
+    jurisdiction: EU
+    hosts: [consilium.europa.eu]
+  eba:
+    name: European Banking Authority
+    jurisdiction: EU
+    hosts: [eba.europa.eu]
+  ecb:
+    name: European Central Bank
+    jurisdiction: EU
+    hosts: [ecb.europa.eu, bankingsupervision.europa.eu]
+  esma:
+    name: European Securities and Markets Authority
+    jurisdiction: EU
+    hosts: [esma.europa.eu]
+  eiopa:
+    name: European Insurance and Occupational Pensions Authority
+    jurisdiction: EU
+    hosts: [eiopa.europa.eu]
+
+vendors:
+  aws:
+    name: Amazon Web Services
+    hosts: [docs.aws.amazon.com, aws.amazon.com]

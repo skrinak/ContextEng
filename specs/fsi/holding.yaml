@@ -1,0 +1,835 @@
+- title: Federal Reserve — Supervision & Regulation
+  url: https://www.federalreserve.gov/supervisionreg.htm
+  authority: frb
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Federal Reserve — Stress Tests & Capital Planning
+  url: https://www.federalreserve.gov/supervisionreg/stress-tests-capital-planning.htm
+  authority: frb
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Federal Reserve — Reporting Forms
+  url: https://www.federalreserve.gov/apps/reportforms/
+  authority: frb
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: OCC — Bank Supervision
+  url: https://www.occ.treas.gov/topics/supervision-and-examination/index-supervision-and-examination.html
+  authority: occ
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: OCC — Capital Requirements
+  url: https://www.occ.treas.gov/topics/supervision-and-examination/capital/index-capital.html
+  authority: occ
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: FDIC — Regulations & Examinations
+  url: https://www.fdic.gov/resources/regulations/
+  authority: fdic
+  jurisdiction: US
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: FDIC — Risk Management Manual of Examination Policies
+  url: https://www.fdic.gov/resources/supervision-and-examinations/examination-policies-manual/
+  authority: fdic
+  jurisdiction: US
+  topic: banking
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: SEC — Statutes and Regulations
+  url: https://www.sec.gov/rules-regulations/statutes-regulations
+  authority: sec
+  jurisdiction: US
+  topic: capital-markets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "sec.gov refuses requests without a declared User-Agent; it resolves with one."
+
+- title: Securities Act of 1933 (15 U.S.C. chapter 2A)
+  url: https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2A&edition=prelim
+  authority: us-congress
+  jurisdiction: US
+  topic: capital-markets
+  kind: statute
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously pointed at the frozen 2019 edition of the U.S. Code."
+  replaces: [https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2A.pdf]
+
+- title: Securities Exchange Act of 1934 (15 U.S.C. chapter 2B)
+  url: https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2B&edition=prelim
+  authority: us-congress
+  jurisdiction: US
+  topic: capital-markets
+  kind: statute
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously pointed at the frozen 2019 edition of the U.S. Code."
+  replaces: [https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2B.pdf]
+
+- title: Investment Company Act of 1940 (15 U.S.C. chapter 2D, subchapter I)
+  url: https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2D/subchapter1&edition=prelim
+  authority: us-congress
+  jurisdiction: US
+  topic: capital-markets
+  kind: statute
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "This and the Advisers Act entry both pointed at the whole chapter 2D PDF, which contains both Acts. Each now points at its own subchapter."
+  replaces: [https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2D.pdf]
+
+- title: Investment Advisers Act of 1940 (15 U.S.C. chapter 2D, subchapter II)
+  url: https://uscode.house.gov/view.xhtml?path=/prelim@title15/chapter2D/subchapter2&edition=prelim
+  authority: us-congress
+  jurisdiction: US
+  topic: capital-markets
+  kind: statute
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "This and the Investment Company Act entry both pointed at the whole chapter 2D PDF, which contains both Acts. Each now points at its own subchapter."
+  replaces: [https://www.govinfo.gov/content/pkg/USCODE-2019-title15/pdf/USCODE-2019-title15-chap2D.pdf]
+
+- title: Investment Advisers Act rules (17 CFR part 275)
+  url: https://www.ecfr.gov/current/title-17/chapter-II/part-275
+  authority: sec
+  jurisdiction: US
+  topic: capital-markets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Investment Company Act rules (17 CFR part 270)
+  url: https://www.ecfr.gov/current/title-17/chapter-II/part-270
+  authority: sec
+  jurisdiction: US
+  topic: capital-markets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Securities Exchange Act rules (17 CFR part 240)
+  url: https://www.ecfr.gov/current/title-17/chapter-II/part-240
+  authority: sec
+  jurisdiction: US
+  topic: capital-markets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Securities Act rules (17 CFR part 230)
+  url: https://www.ecfr.gov/current/title-17/chapter-II/part-230
+  authority: sec
+  jurisdiction: US
+  topic: capital-markets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: PCAOB — Auditing standards (applied in SOX Section 404 audits)
+  url: https://pcaobus.org/oversight/standards
+  authority: pcaob
+  jurisdiction: US
+  topic: capital-markets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: FINRA — Rulebooks
+  url: https://www.finra.org/rules-guidance/rulebooks
+  authority: finra
+  jurisdiction: US
+  topic: capital-markets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: MSRB — Rules
+  url: https://www.msrb.org/Rules-and-Interpretations/MSRB-Rules
+  authority: msrb
+  jurisdiction: US
+  topic: capital-markets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously a finra.org address, which also no longer resolves. The MSRB publishes its own rulebook."
+  replaces: [https://www.finra.org/rules-guidance/rulebooks/municipal-securities-rulemaking-board-rules]
+
+- title: NAIC — Insurance Regulatory Information System (IRIS)
+  url: https://content.naic.org/cipr-topics/insurance-regulatory-information-system-iris
+  authority: naic
+  jurisdiction: US
+  topic: insurance
+  kind: portal
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "Refuses automated requests (HTTP 403). Previously titled \"Regulatory Framework\"; the page covers IRIS only."
+
+- title: NY DFS — Regulations (banking and insurance)
+  url: https://www.dfs.ny.gov/industry_guidance/regulations
+  authority: nydfs
+  jurisdiction: US-NY
+  topic: insurance
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The insurance guidance page it replaces returns 404. Previously filed under United States federal."
+  replaces: [https://www.dfs.ny.gov/industry_guidance/insurance]
+
+- title: CFPB — Final rules
+  url: https://www.consumerfinance.gov/rules-policy/final-rules/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: CFPB — Regulations
+  url: https://www.consumerfinance.gov/policy-compliance/rulemaking/regulations/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: CFPB — Compliance resources
+  url: https://www.consumerfinance.gov/compliance/compliance-resources/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Regulation B (Equal Credit Opportunity Act)
+  url: https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Regulation E (Electronic Fund Transfers, 12 CFR 1005)
+  url: https://www.consumerfinance.gov/rules-policy/regulations/1005/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The compliance-resources page it replaces returns 404."
+  replaces: [https://www.consumerfinance.gov/compliance/compliance-resources/deposit-and-payments-resources/electronic-fund-transfers/]
+
+- title: Regulation Z (Truth in Lending, 12 CFR 1026)
+  url: https://www.consumerfinance.gov/rules-policy/regulations/1026/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The compliance-resources page it replaces returns 404."
+  replaces: [https://www.consumerfinance.gov/compliance/compliance-resources/lending-resources/truth-lending/]
+
+- title: Fair Credit Reporting Act (FCRA)
+  url: https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/fair-credit-reporting-act/
+  authority: cfpb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Federal Reserve — Payment Systems
+  url: https://www.federalreserve.gov/paymentsystems.htm
+  authority: frb
+  jurisdiction: US
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: SEC — Crypto assets and emerging technology (Division of Enforcement)
+  url: https://www.sec.gov/about/divisions-offices/division-enforcement/cyber-crypto-assets-emerging-technology
+  authority: sec
+  jurisdiction: US
+  topic: digital-assets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The digital-assets spotlight page returns 404. This is where sec.gov now redirects its own crypto-assets topic page."
+  replaces: [https://www.sec.gov/spotlight/digital-assets]
+
+- title: SEC — Safeguarding Advisory Client Assets (Release IA-6240)
+  url: https://www.sec.gov/files/rules/proposed/2023/ia-6240.pdf
+  authority: sec
+  jurisdiction: US
+  topic: digital-assets
+  kind: proposal
+  status: withdrawn
+  status_note: A proposed rule (File S7-04-23), never adopted. The SEC withdrew it in Federal Register document 2025-11110, published 2025-06-17. Previously listed as "Investment Adviser Custody Rule Amendments", as though in force.
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous address under rules/final/ returns 404."
+  replaces: [https://www.sec.gov/files/rules/final/2023/ia-6240.pdf]
+
+- title: SEC — Custody of Digital Asset Securities by Special Purpose Broker-Dealers (Release 34-90788)
+  url: https://www.sec.gov/files/rules/policy/2020/34-90788.pdf
+  authority: sec
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  status: unverified
+  status_note: A Commission statement, not a rule amendment. The release gives its effective date as 2021-04-27. Whether it is still in effect was not checked.
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous address under rules/final/ returns 404. Previously titled \"Customer Protection Rule Modifications\"."
+  replaces: [https://www.sec.gov/files/rules/final/2020/34-90788.pdf]
+
+- title: SEC Corporation Finance — TurnKey Jet no-action letter (2019)
+  url: https://www.sec.gov/divisions/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm
+  authority: sec
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous address without /divisions/ returns 404. Previously titled \"Digital Asset Securities Guidance\"; it is a single no-action letter."
+  replaces: [https://www.sec.gov/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm]
+
+- title: LabCFTC — A CFTC Primer on Virtual Currencies
+  url: https://www.cftc.gov/sites/default/files/idc/groups/public/documents/file/labcftc_primercurrencies100417.pdf
+  authority: cftc
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous address returns 404."
+  replaces: [https://www.cftc.gov/sites/default/files/2019-12/9-17-15%20LabCFTC_PrimerOnVirtualCurrencies.pdf]
+
+- title: CFTC — Press release 8051-20 (digital asset derivatives)
+  url: https://www.cftc.gov/PressRoom/PressReleases/8051-20
+  authority: cftc
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: IRS — Notice 2014-21 (virtual currency)
+  url: https://www.irs.gov/irb/2014-16_IRB#NOT-2014-21
+  authority: irs
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: IRS — Revenue Ruling 2019-24 (hard forks)
+  url: https://www.irs.gov/irb/2019-44_IRB#REV-RUL-2019-24
+  authority: irs
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: IRS — Revenue Ruling 2023-14 (staking rewards)
+  url: https://www.irs.gov/irb/2023-33_IRB#REV-RUL-2023-14
+  authority: irs
+  jurisdiction: US
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: IRS — Digital asset broker reporting final rule (Federal Register 2024-14004)
+  url: https://www.federalregister.gov/documents/2024/07/09/2024-14004/gross-proceeds-and-basis-reporting-by-brokers-and-determination-of-amount-realized-and-basis-for
+  authority: irs
+  jurisdiction: US
+  topic: digital-assets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: NY DFS — BitLicense regulation (23 NYCRR Part 200)
+  url: https://govt.westlaw.com/nycrr/Browse/Home/NewYork/UnofficialNewYorkCodesRulesandRegulations?guid=I7444ce80169611e594630000845b8d3e
+  authority: nydfs
+  jurisdiction: US-NY
+  topic: digital-assets
+  kind: regulation
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under United States federal."
+
+- title: NY DFS — Guidance on listing virtual currencies (industry letter, 2023-11-15)
+  url: https://www.dfs.ny.gov/industry_guidance/industry_letters/il20231115_listing_virtual_currencies
+  authority: nydfs
+  jurisdiction: US-NY
+  topic: digital-assets
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under United States federal."
+
+- title: GENIUS Act — Guiding and Establishing National Innovation for U.S. Stablecoins Act (Pub. L. 119-27)
+  url: https://www.govinfo.gov/content/pkg/PLAW-119publ27/html/PLAW-119publ27.htm
+  authority: us-congress
+  jurisdiction: US
+  topic: stablecoins
+  kind: statute
+  status: enacted
+  status_note: S. 1582, approved 2025-07-18. Section 20 makes it effective on the earlier of 18 months after enactment or 120 days after the primary federal payment stablecoin regulators issue final implementing regulations. Whether regulations have triggered the earlier date was not checked. This is the US federal stablecoin law the previous list omitted.
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: Stablecoin TRUST Act (S. 4356, 117th Congress)
+  url: https://www.congress.gov/bill/117th-congress/senate-bill/4356/text
+  authority: us-congress
+  jurisdiction: US
+  topic: stablecoins
+  kind: bill
+  status: not_enacted
+  status_note: A bill that died when the 117th Congress ended. The previous list presented it as current law. Superseded in substance by the GENIUS Act.
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "congress.gov refuses automated requests (HTTP 403)."
+
+- title: Clarity for Payment Stablecoins Act (H.R. 4766, 118th Congress)
+  url: https://www.congress.gov/bill/118th-congress/house-bill/4766
+  authority: us-congress
+  jurisdiction: US
+  topic: stablecoins
+  kind: bill
+  status: not_enacted
+  status_note: A bill that died when the 118th Congress ended. The previous list presented it as current law. Superseded in substance by the GENIUS Act.
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "congress.gov refuses automated requests (HTTP 403)."
+
+- title: OCC — Federally chartered banks and thrifts may participate in independent node verification networks and use stablecoins for payment activities (2021)
+  url: https://www.occ.gov/news-issuances/news-releases/2021/nr-occ-2021-2.html
+  authority: occ
+  jurisdiction: US
+  topic: stablecoins
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: OCC — Clarifies bank authority to engage in certain cryptocurrency activities (2025)
+  url: https://www.occ.gov/news-issuances/news-releases/2025/nr-occ-2025-16.html
+  authority: occ
+  jurisdiction: US
+  topic: stablecoins
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Added alongside the 2021 release because it revisits the same authority. Title taken from the page."
+
+- title: Federal Reserve — Money and Payments, The U.S. Dollar in the Age of Digital Transformation (discussion paper)
+  url: https://www.federalreserve.gov/publications/money-and-payments-discussion-paper.htm
+  authority: frb
+  jurisdiction: US
+  topic: stablecoins
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: EBA — Single Rulebook
+  url: https://www.eba.europa.eu/activities/single-rulebook
+  authority: eba
+  jurisdiction: EU
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The regulation-and-policy page it replaces returns 404."
+  replaces: [https://www.eba.europa.eu/regulation-and-policy]
+
+- title: ECB — Banking Supervision
+  url: https://www.bankingsupervision.europa.eu/banking/html/index.en.html
+  authority: ecb
+  jurisdiction: EU
+  topic: banking
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: ESMA — Databases and registers
+  url: https://www.esma.europa.eu/publications-and-data/databases-and-registers
+  authority: esma
+  jurisdiction: EU
+  topic: capital-markets
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The rules-databases-library page it replaces returns 404."
+  replaces: [https://www.esma.europa.eu/rules-databases-library]
+
+- title: EIOPA — Regulation and policy
+  url: https://www.eiopa.europa.eu/browse/regulation-and-policy_en
+  authority: eiopa
+  jurisdiction: EU
+  topic: insurance
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: EBA — Payment services and electronic money
+  url: https://www.eba.europa.eu/regulation-and-policy/payment-services-and-electronic-money
+  authority: eba
+  jurisdiction: EU
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: ECB — Payments & Markets
+  url: https://www.ecb.europa.eu/paym/html/index.en.html
+  authority: ecb
+  jurisdiction: EU
+  topic: payments-consumer
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: DORA — Regulation (EU) 2022/2554 on digital operational resilience
+  url: https://eur-lex.europa.eu/eli/reg/2022/2554/oj
+  authority: eu-legislature
+  jurisdiction: EU
+  topic: operational-resilience
+  kind: regulation
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "EUR-Lex answers automated requests with a bot challenge (HTTP 202). Previously linked a Council press release under a title naming the Regulation."
+  replaces: [https://www.consilium.europa.eu/en/press/press-releases/2022/11/28/digital-finance-council-adopts-digital-operational-resilience-act/]
+
+- title: ESMA — Digital Operational Resilience Act (DORA)
+  url: https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/digital-operational-resilience-act-dora
+  authority: esma
+  jurisdiction: EU
+  topic: operational-resilience
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous policy-activities address returns 404."
+  replaces: [https://www.esma.europa.eu/policy-activities/digital-finance-and-innovation/digital-operational-resilience-act-dora]
+
+- title: NIST Cybersecurity Framework
+  url: https://www.nist.gov/cyberframework
+  authority: nist
+  jurisdiction: US
+  topic: cybersecurity
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global. NIST is a US federal agency."
+
+- title: NIST SP 800-53 Rev. 5 — Security and Privacy Controls
+  url: https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final
+  authority: nist
+  jurisdiction: US
+  topic: cybersecurity
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global. NIST is a US federal agency."
+
+- title: GDPR — Regulation (EU) 2016/679, including Article 32 (security of processing)
+  url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+  authority: eu-legislature
+  jurisdiction: EU
+  topic: data-protection
+  kind: regulation
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "EUR-Lex answers automated requests with a bot challenge (HTTP 202). Replaces two gdpr-info.eu links, an unofficial third-party mirror, with the official text. Previously filed under Global."
+  replaces: [https://gdpr-info.eu/, https://gdpr-info.eu/art-32-gdpr/]
+
+- title: HHS — HIPAA Security Rule
+  url: https://www.hhs.gov/hipaa/for-professionals/security/index.html
+  authority: hhs
+  jurisdiction: US
+  topic: healthcare
+  kind: guidance
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "hhs.gov refuses automated requests (HTTP 403). Previously filed under Global."
+
+- title: HHS — HIPAA Privacy Rule
+  url: https://www.hhs.gov/hipaa/for-professionals/privacy/index.html
+  authority: hhs
+  jurisdiction: US
+  topic: healthcare
+  kind: guidance
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "hhs.gov refuses automated requests (HTTP 403). Previously filed under Global."
+
+- title: FinCEN — Statutes and regulations (Bank Secrecy Act)
+  url: https://www.fincen.gov/resources/statutes-regulations
+  authority: fincen
+  jurisdiction: US
+  topic: aml
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: FinCEN — Anti-Money Laundering Act of 2020
+  url: https://www.fincen.gov/anti-money-laundering-act-2020
+  authority: fincen
+  jurisdiction: US
+  topic: aml
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: FinCEN — Guidance on convertible virtual currencies (2019)
+  url: https://www.fincen.gov/sites/default/files/2019-05/FinCEN%20Guidance%20CVC%20FINAL%20508.pdf
+  authority: fincen
+  jurisdiction: US
+  topic: aml
+  kind: guidance
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: FinCEN — Virtual currency advisory (dated May 2020 in its address)
+  url: https://www.fincen.gov/sites/default/files/advisory/2020-05-04/FinCEN%20Advisory%20CVC%20May%202020.pdf
+  authority: fincen
+  jurisdiction: US
+  topic: aml
+  kind: guidance
+  link:
+    status: broken
+    checked: "2026-09-18"
+    note: "Returns 404 and no replacement was found on FinCEN's advisories index. The document could not be identified, so it is kept as a dead reference rather than guessed at."
+
+- title: U.S. Treasury — Terrorism and Illicit Finance
+  url: https://home.treasury.gov/policy-issues/terrorism-and-illicit-finance
+  authority: treasury
+  jurisdiction: US
+  topic: aml
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: OFAC — Sanctions programs
+  url: https://ofac.treasury.gov/
+  authority: treasury
+  jurisdiction: US
+  topic: aml
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: OCC — BSA/AML compliance
+  url: https://www.occ.gov/topics/supervision-and-examination/bsa/index-bsa.html
+  authority: occ
+  jurisdiction: US
+  topic: aml
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Previously filed under Global."
+
+- title: SEC whistleblower provisions (15 U.S.C. 78u-6)
+  url: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section78u-6&num=0&edition=prelim
+  authority: us-congress
+  jurisdiction: US
+  topic: whistleblower
+  kind: statute
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: SEC — Whistleblower Program
+  url: https://www.sec.gov/enforcement-litigation/whistleblower-program
+  authority: sec
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous address now redirects here."
+  replaces: [https://www.sec.gov/whistleblower]
+
+- title: CFTC — Whistleblower Program
+  url: https://www.cftc.gov/ConsumerProtection/WhistleblowerProgram/index.htm
+  authority: cftc
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+
+- title: OSHA — Whistleblower Protection Program
+  url: https://www.whistleblowers.gov/
+  authority: osha
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "Replaces two addresses for the same OSHA fact sheet. The osha.gov one returns 404; the dol.gov one refuses automated requests."
+  replaces: [https://www.osha.gov/workers/file-complaint/whistleblower/WB_Factsheet, https://www.dol.gov/agencies/osha/workers/file-complaint/whistleblower/WB_Factsheet]
+
+- title: PCAOB — Tips and referrals
+  url: https://pcaobus.org/oversight/enforcement/tips-referrals
+  authority: pcaob
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The previous whistleblower page returns 404."
+  replaces: [https://www.pcaob.org/oversight/other/whistleblower]
+
+- title: FDIC — Consumer assistance topics
+  url: https://www.fdic.gov/consumer-resource-center/consumer-assistance-topics
+  authority: fdic
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The complaint page it replaces returns 404."
+  replaces: [https://www.fdic.gov/resources/consumers/consumer-assistance/file-complaint/]
+
+- title: Federal Reserve Consumer Help — complaints about banks
+  url: https://www.federalreserveconsumerhelp.gov/
+  authority: frb
+  jurisdiction: US
+  topic: whistleblower
+  kind: portal
+  link:
+    status: ok
+    checked: "2026-09-18"
+    note: "The complaint procedures page it replaces returns 404."
+  replaces: [https://www.federalreserve.gov/consumerscommunities/consumer-complaints-against-banks.htm]
+
+- title: Dodd-Frank Wall Street Reform and Consumer Protection Act (H.R. 4173, 111th Congress)
+  url: https://www.congress.gov/bill/111th-congress/house-bill/4173
+  authority: us-congress
+  jurisdiction: US
+  topic: whistleblower
+  kind: statute
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "congress.gov refuses automated requests (HTTP 403)."
+
+- title: Sarbanes-Oxley Act of 2002 (H.R. 3763, 107th Congress)
+  url: https://www.congress.gov/bill/107th-congress/house-bill/3763
+  authority: us-congress
+  jurisdiction: US
+  topic: whistleblower
+  kind: statute
+  link:
+    status: blocked
+    checked: "2026-09-18"
+    note: "congress.gov refuses automated requests (HTTP 403). Section 802 is migrated as an instrument."

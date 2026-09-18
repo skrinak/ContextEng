@@ -1,0 +1,19 @@
+id: ctl-regulator-production
+title: Tested procedure for producing records to regulators
+kind: organizational
+satisfies: [us-sec-17a-4.j, us-sec-17a-4.f3iv, us-sec-204-2.g2, us-cftc-1-31.d3, eu-mifid2-art16-6.recordings]
+implementation: >-
+  Keep a production runbook covering the request, the locate query against the records register, export in both human-readable and reasonably usable electronic formats with any audit trail, and delivery. Run it on a schedule against sampled records and time each run, so that "promptly" is backed by evidence. The same path serves client requests for MiFID II recordings.
+evidence:
+  - The runbook and the dated results of each production drill, including elapsed time
+  - Delivered production packages and their manifests
+aws:
+  - service: Amazon S3 Batch Operations
+    configuration: Bulk copy of located records and audit-trail extracts into a production bucket
+    doc: https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html
+confidence: medium
+verified:
+  date: "2026-09-18"
+  by: claude-opus-5 agent session (not reviewed by counsel)
+  method: Mapped against the quoted obligation text; AWS behaviour taken from the linked AWS documentation. This is design guidance, not a legal opinion or an attestation.
+review_due: "2027-03-18"
