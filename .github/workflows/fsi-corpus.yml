@@ -20,3 +20,5 @@ jobs:
       - uses: astral-sh/setup-uv@v6
       - name: Check every cited address; fail only when a recorded-good address is now dead
         run: make fsi-links
+        env:
+          FSI_LINKCHECK_CONTACT: ${{ secrets.FSI_LINKCHECK_CONTACT }}

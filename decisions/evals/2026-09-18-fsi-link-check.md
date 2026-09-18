@@ -18,12 +18,6 @@
 | blocked | blocked | 403 | <https://www.congress.gov/bill/118th-congress/house-bill/4766> | `holding.yaml#Clarity for Payment Stablecoins Act (H.R. 4766, 118th Congress)` |
 | blocked | blocked | 403 | <https://www.hhs.gov/hipaa/for-professionals/privacy/index.html> | `holding.yaml#HHS — HIPAA Privacy Rule` |
 | blocked | blocked | 403 | <https://www.hhs.gov/hipaa/for-professionals/security/index.html> | `holding.yaml#HHS — HIPAA Security Rule` |
-| blocked | ok | 403 | <https://www.sec.gov/about/divisions-offices/division-enforcement/cyber-crypto-assets-emerging-technology> | `holding.yaml#SEC — Crypto assets and emerging technology (Division of Enforcement)` |
-| blocked | ok | 403 | <https://www.sec.gov/divisions/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm> | `holding.yaml#SEC Corporation Finance — TurnKey Jet no-action letter (2019)` |
-| blocked | ok | 403 | <https://www.sec.gov/enforcement-litigation/whistleblower-program> | `holding.yaml#SEC — Whistleblower Program` |
-| blocked | ok | 403 | <https://www.sec.gov/files/rules/policy/2020/34-90788.pdf> | `holding.yaml#SEC — Custody of Digital Asset Securities by Special Purpose Broker-Dealers (Release 34-90788)` |
-| blocked | ok | 403 | <https://www.sec.gov/files/rules/proposed/2023/ia-6240.pdf> | `holding.yaml#SEC — Safeguarding Advisory Client Assets (Release IA-6240)` |
-| blocked | ok | 403 | <https://www.sec.gov/rules-regulations/statutes-regulations> | `holding.yaml#SEC — Statutes and Regulations` |
 | blocked | ok | 403 | <https://www.whistleblowers.gov/> | `holding.yaml#OSHA — Whistleblower Protection Program` |
 | ok | ok | 200 | <https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final> | `holding.yaml#NIST SP 800-53 Rev. 5 — Security and Privacy Controls` |
 | ok | ok | 200 | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/batch-ops.html> | `controls/ctl-regulator-production.yaml#ctl-regulator-production` |
@@ -106,5 +100,11 @@
 | ok | ok | 200 | <https://www.occ.gov/topics/supervision-and-examination/bsa/index-bsa.html> | `holding.yaml#OCC — BSA/AML compliance` |
 | ok | ok | 200 | <https://www.occ.treas.gov/topics/supervision-and-examination/capital/index-capital.html> | `holding.yaml#OCC — Capital Requirements` |
 | ok | ok | 200 | <https://www.occ.treas.gov/topics/supervision-and-examination/index-supervision-and-examination.html> | `holding.yaml#OCC — Bank Supervision` |
+| ok | ok | 200 | <https://www.sec.gov/about/divisions-offices/division-enforcement/cyber-crypto-assets-emerging-technology> | `holding.yaml#SEC — Crypto assets and emerging technology (Division of Enforcement)` |
+| ok | ok | 200 | <https://www.sec.gov/divisions/corpfin/cf-noaction/2019/turnkey-jet-040219-2a1.htm> | `holding.yaml#SEC Corporation Finance — TurnKey Jet no-action letter (2019)` |
+| ok | ok | 200 | <https://www.sec.gov/enforcement-litigation/whistleblower-program> | `holding.yaml#SEC — Whistleblower Program` |
+| ok | ok | 200 | <https://www.sec.gov/files/rules/policy/2020/34-90788.pdf> | `holding.yaml#SEC — Custody of Digital Asset Securities by Special Purpose Broker-Dealers (Release 34-90788)` |
+| ok | ok | 200 | <https://www.sec.gov/files/rules/proposed/2023/ia-6240.pdf> | `holding.yaml#SEC — Safeguarding Advisory Client Assets (Release IA-6240)` |
+| ok | ok | 200 | <https://www.sec.gov/rules-regulations/statutes-regulations> | `holding.yaml#SEC — Statutes and Regulations` |
 
-101 addresses: 81 ok, 19 blocked or unverifiable, 1 broken.
+101 addresses: 87 ok, 13 blocked or unverifiable, 1 broken.
